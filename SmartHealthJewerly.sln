@@ -5,7 +5,7 @@ VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserInterface", "UserInterface\UserInterface.csproj", "{C1373B38-7FE6-4471-B103-0891FE8701BF}"
 EndProject
-Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Back", "Back\Back.pyproj", "{5372113D-76D9-434C-B1FA-DCE4A40E3E0F}"
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Backend", "Back\Backend.pyproj", "{5372113D-76D9-434C-B1FA-DCE4A40E3E0F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
