@@ -5,7 +5,7 @@
     <ProjectGuid>5372113d-76d9-434c-b1fa-dce4a40e3e0f</ProjectGuid>
     <ProjectHome>
     </ProjectHome>
-    <StartupFile>analysis.py</StartupFile>
+    <StartupFile>utils.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -24,6 +24,7 @@
   <ItemGroup>
     <Compile Include="alert.py" />
     <Compile Include="analysis.py" />
+    <Compile Include="utils.py" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
