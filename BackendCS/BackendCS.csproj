@@ -43,11 +43,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Buffer.cs" />
+    <Compile Include="Patient\ContactPerson.cs" />
+    <Compile Include="Patient\Disease.cs" />
+    <Compile Include="Event\CriticalHeartRateEvent.cs" />
+    <Compile Include="Event\NewHeartRateEvent.cs" />
+    <Compile Include="Patient\HealthData.cs" />
+    <Compile Include="Measurement\HeartRate.cs" />
+    <Compile Include="Measurement\Humidity.cs" />
+    <Compile Include="Measurement\Measurement.cs" />
+    <Compile Include="Measurement\Motion.cs" />
+    <Compile Include="Measurement\Temperature.cs" />
+    <Compile Include="Patient\NotificationMethod.cs" />
+    <Compile Include="Patient\Patient.cs" />
+    <Compile Include="Patient\Profile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Patient\Report.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
