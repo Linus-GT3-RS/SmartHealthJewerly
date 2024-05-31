@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BackendCS.Measurement
 {
-    internal class EnvironmentTemperature : ISensorSingle
+    public class EnvironmentTemperature : ISensorSingle
     {
         private float _envTemp;
 

@@ -8,24 +8,24 @@ using System.Xml.Linq;
 
 namespace BackendCS.Measurement
 {
-    interface ISensorSingle
+    public interface ISensorSingle
     {
         void vProcessSingleData(string data);
     }
 
-    interface ISensorMulti
+    public interface ISensorMulti
     {
         void vProcessMultiData(string[] data);
     }
 
 
-    internal class Measurement
+    public class Measurement
     {
         private readonly IPort _port;
         private static readonly object _lock = new object();
 
-        private readonly List<ISensorSingle> _sensorsSingle;
-        private readonly List<ISensorMulti> _sensorsMulti;
+        public readonly List<ISensorSingle> _sensorsSingle;
+        public readonly List<ISensorMulti> _sensorsMulti;
 
 
         /*

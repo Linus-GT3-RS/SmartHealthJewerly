@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BackendCS.Measurement
 {
-    internal class Humidity : ISensorSingle
+    public class Humidity : ISensorSingle
     {
         private float _humidity;
 

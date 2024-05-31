@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BackendCS.Measurement
 {
-    internal class Motion : ISensorMulti
+    public class Motion : ISensorMulti
     {
         //acceleration of the axis
         private float _accX;
