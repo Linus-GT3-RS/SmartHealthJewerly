@@ -1,4 +1,4 @@
- !! Always create new branch when adding new stuff !! 
+!! Always create new branch when adding new stuff !!
 
 ### Git & Github
 
@@ -6,9 +6,11 @@
 
 [How to work with Git & Github in MCVS: watch from opened timestamp till end](https://www.youtube.com/watch?t=458&v=BWqpTpo1kfw&feature=youtu.be)
 
+### Git / Github in MCVS
+[How to work with Git / Github in MCVS](https://www.youtube.com/watch?v=BWqpTpo1kfw) <br />
+[How to install Python in Visual Studio](https://www.youtube.com/watch?v=oUwz2mc4BFA)
 
 ### Python
 [Call Pythoncode in C#](https://www.youtube.com/watch?v=1sOTTXlIhZo)
 
-
-Feel free to add usefull stuff / informations yourself
+Feel free to add useful stuff / information yourself
