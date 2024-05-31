@@ -160,7 +160,7 @@ namespace GUI_Toto
 
       private void initializeSerialPort()
       {
-         serialPort = new SerialPort("COM4", 115200); // Ändern Sie COM3 entsprechend dem Anschluss des Arduinos
+         serialPort = new SerialPort("COM4", 115200);
          serialPort.DataReceived += new SerialDataReceivedEventHandler(DataReceivedHandler);
 
          try

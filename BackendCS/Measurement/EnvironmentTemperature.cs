@@ -6,20 +6,20 @@ using System.Threading.Tasks;
 
 namespace BackendCS.Measurement
 {
-    internal class HeartRate : ISensorSingle
+    internal class EnvironmentTemperature : ISensorSingle
     {
-        private int _heartRate;
+        private float _envTemp;
 
 
         public void vProcessSingleData(string data)
         {
-            _heartRate = int.Parse(data);
+            _envTemp = float.Parse(data);
         }
 
 
-        public int iGetHeartRate()
+        public float fGetEnvTemp()
         {
-            return _heartRate;
+            return _envTemp;
         }
     }
 }

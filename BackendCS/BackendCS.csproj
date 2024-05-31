@@ -43,6 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Measurement\BodyTemperature.cs" />
+    <Compile Include="Measurement\Brightness.cs" />
+    <Compile Include="Measurement\Hardware.cs" />
     <Compile Include="Patient\ContactPerson.cs" />
     <Compile Include="Patient\Disease.cs" />
     <Compile Include="Event\CriticalHeartRateEvent.cs" />
@@ -52,7 +55,7 @@
     <Compile Include="Measurement\Humidity.cs" />
     <Compile Include="Measurement\Measurement.cs" />
     <Compile Include="Measurement\Motion.cs" />
-    <Compile Include="Measurement\Temperature.cs" />
+    <Compile Include="Measurement\EnvironmentTemperature.cs" />
     <Compile Include="Patient\NotificationMethod.cs" />
     <Compile Include="Patient\Patient.cs" />
     <Compile Include="Patient\Profile.cs" />
