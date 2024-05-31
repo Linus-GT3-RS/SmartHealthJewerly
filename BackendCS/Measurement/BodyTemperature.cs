@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BackendCS.Measurement
 {
-    internal class BodyTemperature : ISensorSingle
+    public class BodyTemperature : ISensorSingle
     {
         private float _bodyTemp;
 

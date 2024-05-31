@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 
 namespace BackendCS.Measurement
 {
-    interface IPort
+    public interface IPort
     {
         void vDisconnectHardware();
         void vConnectHardware(SerialDataReceivedEventHandler dataReceivedHandler);
     }
 
-    internal class Hardware : IPort
+    public class Hardware : IPort
     {
         private const int _baudRate = 115200;
         private SerialPort _serialPort;

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BackendCS.Measurement
 {
-    internal class Brightness : ISensorSingle
+    public class Brightness : ISensorSingle
     {
         private int _brightness;
 

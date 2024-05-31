@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BackendCS.Measurement
 {
-    internal class HeartRate : ISensorSingle
+    public class HeartRate : ISensorSingle
     {
         private int _heartRate;
 
