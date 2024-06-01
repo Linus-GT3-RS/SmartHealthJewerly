@@ -31,15 +31,9 @@ namespace BackendCS.Measurement
         }
 
 
-        public float[] fGetAccMotion()
+        public float[] fGetMultiData()
         {
-            return new float[] { _accX, _accY, _accZ };
-        }
-
-
-        public float[] fGetGyroMotion()
-        {
-            return new float[] { _gyroX, _gyroY, _gyroZ };
+            return new float[] { _accX, _accY, _accZ, _gyroX, _gyroY, _gyroZ };
         }
     }
 }

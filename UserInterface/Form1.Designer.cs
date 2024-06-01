@@ -31,39 +31,142 @@ namespace UserInterface
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.buttonStart = new System.Windows.Forms.Button();
+            this.labelBPM = new System.Windows.Forms.Label();
+            this.labelBodyTemp = new System.Windows.Forms.Label();
+            this.labelEnvTemp = new System.Windows.Forms.Label();
+            this.labelHumidity = new System.Windows.Forms.Label();
+            this.labelBrightness = new System.Windows.Forms.Label();
+            this.labelMotionAccX = new System.Windows.Forms.Label();
+            this.labelMotionAccY = new System.Windows.Forms.Label();
+            this.MotionAccZ = new System.Windows.Forms.Label();
+            this.buttonStop = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
+            // buttonStart
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(383, 142);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "label1";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.buttonStart.Location = new System.Drawing.Point(118, 68);
+            this.buttonStart.Name = "buttonStart";
+            this.buttonStart.Size = new System.Drawing.Size(178, 80);
+            this.buttonStart.TabIndex = 0;
+            this.buttonStart.Text = "Start Measurement";
+            this.buttonStart.UseVisualStyleBackColor = true;
+            this.buttonStart.Click += new System.EventHandler(this.buttonStart_Click);
+            // 
+            // labelBPM
+            // 
+            this.labelBPM.AutoSize = true;
+            this.labelBPM.Location = new System.Drawing.Point(467, 68);
+            this.labelBPM.Name = "labelBPM";
+            this.labelBPM.Size = new System.Drawing.Size(186, 25);
+            this.labelBPM.TabIndex = 1;
+            this.labelBPM.Text = "Beats per minute: ";
+            // 
+            // labelBodyTemp
+            // 
+            this.labelBodyTemp.AutoSize = true;
+            this.labelBodyTemp.Location = new System.Drawing.Point(874, 123);
+            this.labelBodyTemp.Name = "labelBodyTemp";
+            this.labelBodyTemp.Size = new System.Drawing.Size(194, 25);
+            this.labelBodyTemp.TabIndex = 2;
+            this.labelBodyTemp.Text = "Body temperature: ";
+            // 
+            // labelEnvTemp
+            // 
+            this.labelEnvTemp.AutoSize = true;
+            this.labelEnvTemp.Location = new System.Drawing.Point(467, 123);
+            this.labelEnvTemp.Name = "labelEnvTemp";
+            this.labelEnvTemp.Size = new System.Drawing.Size(265, 25);
+            this.labelEnvTemp.TabIndex = 3;
+            this.labelEnvTemp.Text = "Environment temperature: ";
+            // 
+            // labelHumidity
+            // 
+            this.labelHumidity.AutoSize = true;
+            this.labelHumidity.Location = new System.Drawing.Point(467, 176);
+            this.labelHumidity.Name = "labelHumidity";
+            this.labelHumidity.Size = new System.Drawing.Size(230, 25);
+            this.labelHumidity.TabIndex = 4;
+            this.labelHumidity.Text = "Environment humidity: ";
+            // 
+            // labelBrightness
+            // 
+            this.labelBrightness.AutoSize = true;
+            this.labelBrightness.Location = new System.Drawing.Point(467, 226);
+            this.labelBrightness.Name = "labelBrightness";
+            this.labelBrightness.Size = new System.Drawing.Size(126, 25);
+            this.labelBrightness.TabIndex = 5;
+            this.labelBrightness.Text = "Brightness: ";
+            // 
+            // labelMotionAccX
+            // 
+            this.labelMotionAccX.AutoSize = true;
+            this.labelMotionAccX.Location = new System.Drawing.Point(467, 373);
+            this.labelMotionAccX.Name = "labelMotionAccX";
+            this.labelMotionAccX.Size = new System.Drawing.Size(139, 25);
+            this.labelMotionAccX.TabIndex = 6;
+            this.labelMotionAccX.Text = "MotionAccX: ";
+            // 
+            // labelMotionAccY
+            // 
+            this.labelMotionAccY.AutoSize = true;
+            this.labelMotionAccY.Location = new System.Drawing.Point(709, 373);
+            this.labelMotionAccY.Name = "labelMotionAccY";
+            this.labelMotionAccY.Size = new System.Drawing.Size(140, 25);
+            this.labelMotionAccY.TabIndex = 7;
+            this.labelMotionAccY.Text = "MotionAccY: ";
+            // 
+            // MotionAccZ
+            // 
+            this.MotionAccZ.AutoSize = true;
+            this.MotionAccZ.Location = new System.Drawing.Point(945, 373);
+            this.MotionAccZ.Name = "MotionAccZ";
+            this.MotionAccZ.Size = new System.Drawing.Size(138, 25);
+            this.MotionAccZ.TabIndex = 8;
+            this.MotionAccZ.Text = "MotionAccZ: ";
+            // 
+            // buttonStop
+            // 
+            this.buttonStop.Location = new System.Drawing.Point(118, 258);
+            this.buttonStop.Name = "buttonStop";
+            this.buttonStop.Size = new System.Drawing.Size(178, 72);
+            this.buttonStop.TabIndex = 9;
+            this.buttonStop.Text = "Stop Measurement";
+            this.buttonStop.UseVisualStyleBackColor = true;
+            this.buttonStop.Click += new System.EventHandler(this.buttonStop_Click);
             // 
             // Form1
             // 
-            this.ClientSize = new System.Drawing.Size(1531, 718);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(1338, 623);
+            this.Controls.Add(this.buttonStop);
+            this.Controls.Add(this.MotionAccZ);
+            this.Controls.Add(this.labelMotionAccY);
+            this.Controls.Add(this.labelMotionAccX);
+            this.Controls.Add(this.labelBrightness);
+            this.Controls.Add(this.labelHumidity);
+            this.Controls.Add(this.labelEnvTemp);
+            this.Controls.Add(this.labelBodyTemp);
+            this.Controls.Add(this.labelBPM);
+            this.Controls.Add(this.buttonStart);
             this.Name = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
+
         #endregion
 
-        private System.Windows.Forms.Label HerzschlagSpannungsLabel;
-        private System.Windows.Forms.Label luftfeuchtigkeitsLabel;
-        private System.Windows.Forms.Label temperaturLabel;
-        private System.Windows.Forms.Label BPMLabel;
-        private System.Windows.Forms.Label dully;
-        private System.Windows.Forms.Label KoerperTemperaturLabel;
-        //private Chart chart1;
-        private System.Windows.Forms.Label label1;
+        private Button buttonStart;
+        private Label labelBPM;
+        private Label labelBodyTemp;
+        private Label labelEnvTemp;
+        private Label labelHumidity;
+        private Label labelBrightness;
+        private Label labelMotionAccX;
+        private Label labelMotionAccY;
+        private Label MotionAccZ;
+        private Button buttonStop;
     }
 }
 

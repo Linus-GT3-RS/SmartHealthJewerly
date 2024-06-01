@@ -17,7 +17,7 @@ namespace BackendCS.Measurement
         }
 
 
-        public float fGetBodyTemp()
+        public float fGetSingleData()
         {
             return _bodyTemp;
         }

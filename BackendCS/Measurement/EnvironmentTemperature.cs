@@ -17,7 +17,7 @@ namespace BackendCS.Measurement
         }
 
 
-        public float fGetEnvTemp()
+        public float fGetSingleData()
         {
             return _envTemp;
         }
