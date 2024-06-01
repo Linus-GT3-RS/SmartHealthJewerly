@@ -17,7 +17,7 @@ namespace BackendCS.Measurement
         }
 
 
-        public float fGetHumidity()
+        public float fGetSingleData()
         {
             return _humidity;
         }

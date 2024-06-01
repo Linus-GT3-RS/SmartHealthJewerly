@@ -17,9 +17,9 @@ namespace BackendCS.Measurement
         }
 
 
-        public int iGetBrightness()
+        public float fGetSingleData()
         {
-            return _brightness;
+            return (float)_brightness;
         }
     }
 }

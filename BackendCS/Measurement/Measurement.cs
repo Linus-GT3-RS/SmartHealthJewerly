@@ -11,17 +11,19 @@ namespace BackendCS.Measurement
     public interface ISensorSingle
     {
         void vProcessSingleData(string data);
+        float fGetSingleData();
     }
 
     public interface ISensorMulti
     {
         void vProcessMultiData(string[] data);
+        float[] fGetMultiData();
     }
 
 
     public class Measurement
     {
-        private readonly IPort _port;
+        private IPort _port;
         private static readonly object _lock = new object();
 
         public readonly List<ISensorSingle> _sensorsSingle;
@@ -32,9 +34,8 @@ namespace BackendCS.Measurement
         * Constructor overgive the port
         * create all sensor objects
         */
-        public Measurement(IPort port)
+        public Measurement()
         {
-            _port = port;
             _sensorsSingle = new List<ISensorSingle>
             {
                 new HeartRate(),
@@ -50,13 +51,14 @@ namespace BackendCS.Measurement
         }
 
 
-        public void StartMeasurement()
+        public void vStartMeasurement()
         {
+            _port = new Hardware();
             _port.vConnectHardware(DataReceivedHandler);
         }
 
 
-        public void StopMeasurement()
+        public void vStopMeasurement()
         {
             _port.vDisconnectHardware();
         }

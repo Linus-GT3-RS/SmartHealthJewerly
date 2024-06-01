@@ -19,6 +19,12 @@ namespace BackendCS.Measurement
         private SerialPort _serialPort;
 
 
+        public SerialPort sGetSerialPort()
+        {
+            return _serialPort;
+        }
+
+
         /*
          * Call the function to disconnect the Serial Port
         */
