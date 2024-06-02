@@ -10,6 +10,25 @@ namespace BackendCS
     {
         private String _firstname;
         private String _lastname;
+        private String _phonenumber;
+        private String _email;
         private NotificationMethod _notificationMethod;
+
+        public void SetNotificationMethod(NotificationMethod notificationMethod)
+        {
+            _notificationMethod = notificationMethod;
+        }
+
+        public void Notify(string message)
+        {
+            if(_notificationMethod.GetType() == typeof(SMS))
+            {
+                SMS.Send(_phonenumber,message);
+            }
+            else
+            {
+                Email.Send(_email, "Warning", message);
+            }
+        }
     }
 }

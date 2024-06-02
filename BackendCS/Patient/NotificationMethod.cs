@@ -9,8 +9,9 @@ using System.Xml.Linq;
 
 namespace BackendCS
 {
-    internal abstract class NotificationMethod
+    interface NotificationMethod
     {
+
     }
 
     class SMS : NotificationMethod
@@ -45,7 +46,7 @@ namespace BackendCS
 
     class Email : NotificationMethod
     {
-        static void Send(string email, string subject, string message)
+        public static void Send(string email, string subject, string message)
         {
             string mail = "smarthealthjewelry@gmail.com";
             string pw = "dvnz ufel zien mfvo";
