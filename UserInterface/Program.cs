@@ -16,7 +16,11 @@ namespace UserInterface
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            
+            Application.Run(new SplashScreen_Form());
+            Application.Run(new MainScreen_Form()); // entire appl will be closed aber calling .close() earlier
+            // --> only visible in release
+
         }
     }
 }

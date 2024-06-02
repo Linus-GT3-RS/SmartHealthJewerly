@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace UserInterface
 {
-    public partial class Form1 : Form
+    public partial class MainScreen_Form : Form
     {
-        public Form1()
+        public MainScreen_Form()
         {
             InitializeComponent();
         }
