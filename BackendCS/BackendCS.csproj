@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GUIBackend.cs" />
     <Compile Include="Patient\ContactPerson.cs" />
     <Compile Include="Patient\Disease.cs" />
     <Compile Include="Event\CriticalHeartRateEvent.cs" />
