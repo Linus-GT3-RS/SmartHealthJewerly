@@ -6,20 +6,20 @@ using System.Threading.Tasks;
 
 namespace BackendCS.Measurement
 {
-    public class Humidity : ISensorSingle
+    public class BodyTemperature : ISensorSingle
     {
-        private float _humidity;
+        private float _bodyTemp;
 
 
         public void vProcessSingleData(string data)
         {
-            _humidity = float.Parse(data);
+            _bodyTemp = float.Parse(data);
         }
 
 
         public float fGetSingleData()
         {
-            return _humidity;
+            return _bodyTemp;
         }
     }
 }

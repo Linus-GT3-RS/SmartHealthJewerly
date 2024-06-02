@@ -4,9 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BackendCS.Measurement
+namespace BackendCS
 {
-    internal class Temperature
+    internal class Program
     {
+        static void Main(string[] args)
+        {
+            
+        }
     }
 }
