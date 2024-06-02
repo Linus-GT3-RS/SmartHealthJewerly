@@ -14,6 +14,16 @@ namespace BackendCS
         private String _email;
         private NotificationMethod _notificationMethod;
 
+
+        ContactPerson(string firstname, string lastname, string phonenumber, string email, NotificationMethod notificationMethod)
+        {
+            _firstname = firstname;
+            _lastname = lastname;
+            _phonenumber = phonenumber;
+            _email = email;
+            _notificationMethod = notificationMethod;
+        }
+
         public void SetNotificationMethod(NotificationMethod notificationMethod)
         {
             _notificationMethod = notificationMethod;
