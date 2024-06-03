@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.SqlServer.Server;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -42,7 +43,11 @@ namespace UserInterface
             if(circProgressBar.Value == 100)
             {
                 timer1.Enabled = false;
-                this.Close();
+                timer1.Dispose();
+
+                this.Hide();
+
+                // TODO trigger event that this form is closed (enum übergabe?)
             }
         }
     }

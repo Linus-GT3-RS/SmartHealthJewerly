@@ -58,6 +58,12 @@
     <Compile Include="MainScreen_Form.Designer.cs">
       <DependentUpon>MainScreen_Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="Manager_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager_Form.Designer.cs">
+      <DependentUpon>Manager_Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="SplashScreen_Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +74,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="MainScreen_Form.resx">
       <DependentUpon>MainScreen_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager_Form.resx">
+      <DependentUpon>Manager_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SplashScreen_Form.resx">
       <DependentUpon>SplashScreen_Form.cs</DependentUpon>

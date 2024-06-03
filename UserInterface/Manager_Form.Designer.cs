@@ -1,6 +1,6 @@
 ﻿namespace UserInterface
 {
-    partial class MainScreen_Form
+    partial class Manager_Form
     {
         /// <summary>
         /// Required designer variable.
@@ -30,13 +30,13 @@
         {
             this.SuspendLayout();
             // 
-            // MainScreen_Form
+            // Manager_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "MainScreen_Form";
-            this.Text = "Main_Screen_Form";
+            this.Name = "Manager_Form";
+            this.Text = "Manager_Form";
             this.ResumeLayout(false);
 
         }
