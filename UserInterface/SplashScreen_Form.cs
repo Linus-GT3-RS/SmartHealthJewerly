@@ -43,11 +43,8 @@ namespace UserInterface
             if(circProgressBar.Value == 100)
             {
                 timer1.Enabled = false;
-                timer1.Dispose();
 
-                this.Hide();
-
-                // TODO trigger event that this form is closed (enum übergabe?)
+                this.Close();
             }
         }
     }
