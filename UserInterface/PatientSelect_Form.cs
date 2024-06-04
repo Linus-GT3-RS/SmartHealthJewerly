@@ -10,12 +10,11 @@ using System.Windows.Forms;
 
 namespace UserInterface
 {
-    public partial class MainScreen_Form : Form
+    public partial class PatientSelect_Form : Form
     {
-        public MainScreen_Form()
+        public PatientSelect_Form()
         {
             InitializeComponent();
         }
-
     }
 }

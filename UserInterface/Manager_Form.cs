@@ -12,13 +12,8 @@ namespace UserInterface
 {
     public partial class Manager_Form : Form
     {
-        // public static Manager_Form manager;
-
-
         public Manager_Form()
         {
-            // manager = this;
-
             // start invisible manager form
             WindowState = FormWindowState.Minimized;
             FormBorderStyle = FormBorderStyle.SizableToolWindow;
@@ -27,14 +22,20 @@ namespace UserInterface
             InitializeComponent();
 
             var splashScreen = new SplashScreen_Form();
-            splashScreen.FormClosing += SplashScreen_OnFormClosing;
             splashScreen.Show();
+            splashScreen.VisibleChanged += SplashScreen_OnFormHiding;
         }
 
-        private void SplashScreen_OnFormClosing(object sender, FormClosingEventArgs e)
+        private void SplashScreen_OnFormHiding(object sender, EventArgs e)
         {
-            var f = new MainScreen_Form();
-            f.Show();
+            var logInScreen = new LogIn_Form();
+            logInScreen.Show();
+            logInScreen.FormClosing += LogInScreen_OnFormClosing;
+        }
+
+        private void LogInScreen_OnFormClosing(object sender, FormClosingEventArgs e)
+        {
+            
         }
     }
 }

@@ -44,7 +44,7 @@ namespace UserInterface
             {
                 timer1.Enabled = false;
 
-                this.Close();
+                this.Hide();                
             }
         }
     }

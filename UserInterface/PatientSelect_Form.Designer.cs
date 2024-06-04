@@ -1,6 +1,6 @@
 ﻿namespace UserInterface
 {
-    partial class MainScreen_Form
+    partial class PatientSelect_Form
     {
         /// <summary>
         /// Required designer variable.
@@ -28,17 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            // 
-            // MainScreen_Form
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "MainScreen_Form";
-            this.Text = "Main_Screen_Form";
-            this.ResumeLayout(false);
-
+            this.Text = "PatientSelect_Form";
         }
 
         #endregion
