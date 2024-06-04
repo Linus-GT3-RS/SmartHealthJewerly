@@ -35,7 +35,21 @@ namespace UserInterface
 
         private void LogInScreen_OnFormClosing(object sender, FormClosingEventArgs e)
         {
-            
+            var patientSelectScreen = new PatientSelect_Form();
+            patientSelectScreen.FormClosing += PatienSelectScreen_OnFormClosing;
+            patientSelectScreen.Show();
+        }
+
+        private void PatienSelectScreen_OnFormClosing(Object sender, FormClosingEventArgs e)
+        {
+            var homeScreen = new Home_Form();
+            homeScreen.FormClosed += HomeScreen_OnFormClosed;
+            homeScreen.Show();
+        }
+
+        private void HomeScreen_OnFormClosed(Object sender, FormClosedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

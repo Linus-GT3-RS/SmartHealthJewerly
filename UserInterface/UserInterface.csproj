@@ -93,6 +93,9 @@
     <EmbeddedResource Include="Manager_Form.resx">
       <DependentUpon>Manager_Form.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PatientSelect_Form.resx">
+      <DependentUpon>PatientSelect_Form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SplashScreen_Form.resx">
       <DependentUpon>SplashScreen_Form.cs</DependentUpon>
     </EmbeddedResource>
