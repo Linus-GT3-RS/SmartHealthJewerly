@@ -80,7 +80,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BackendCS\BackendCS.csproj">
+    <ProjectReference Include="..\Backend\Backend.csproj">
       <Project>{1fb49fa6-5438-437e-8ea7-2e4929e39ed5}</Project>
       <Name>BackendCS</Name>
     </ProjectReference>
