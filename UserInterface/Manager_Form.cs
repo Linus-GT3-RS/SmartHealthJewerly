@@ -21,30 +21,24 @@ namespace UserInterface
             Visible = false;            
             InitializeComponent();
 
-            var splashScreen = new SplashScreen_Form();
-            splashScreen.Show();
-            splashScreen.VisibleChanged += SplashScreen_OnFormHiding;
+
+            var logInScreen = new LogIn_Form();            
+            logInScreen.FormClosing += LogInScreen_OnFormClosing;
+            logInScreen.Show();
         }
 
         private void SplashScreen_OnFormHiding(object sender, EventArgs e)
         {
-            var logInScreen = new LogIn_Form();
-            logInScreen.Show();
-            logInScreen.FormClosing += LogInScreen_OnFormClosing;
+            var homeScreen = new Home_Form();
+            homeScreen.FormClosed += HomeScreen_OnFormClosed;
+            homeScreen.Show();
         }
 
         private void LogInScreen_OnFormClosing(object sender, FormClosingEventArgs e)
         {
-            var patientSelectScreen = new PatientSelect_Form();
-            patientSelectScreen.FormClosing += PatienSelectScreen_OnFormClosing;
-            patientSelectScreen.Show();
-        }
-
-        private void PatienSelectScreen_OnFormClosing(Object sender, FormClosingEventArgs e)
-        {
-            var homeScreen = new Home_Form();
-            homeScreen.FormClosed += HomeScreen_OnFormClosed;
-            homeScreen.Show();
+            var splashScreen = new SplashScreen_Form();
+            splashScreen.Show();
+            splashScreen.VisibleChanged += SplashScreen_OnFormHiding;
         }
 
         private void HomeScreen_OnFormClosed(Object sender, FormClosedEventArgs e)
