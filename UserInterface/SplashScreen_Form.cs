@@ -8,16 +8,33 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 
 namespace UserInterface
 {
     public partial class SplashScreen_Form : Form
     {
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+
+        private static extern IntPtr CreateRoundRectRgn
+            (
+            int nLeftRect,
+            int nTopRect,
+            int RightRect,
+            int nBottomRect,
+            int nWidthEllipse,
+            int nHeightEllipse
+            );
+
+
+
+
         private Random _randNumbGen;
 
         public SplashScreen_Form()
         {
             InitializeComponent();
+            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0,0, Width, Height, 32, 32));
 
             circProgressBar.Value = 0;
             _randNumbGen = new Random();
@@ -44,8 +61,13 @@ namespace UserInterface
             {
                 timer1.Enabled = false;
 
-                this.Hide();                
+                //this.Hide();                
             }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
