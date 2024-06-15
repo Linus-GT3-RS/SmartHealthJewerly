@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 using System.Threading;
+using BackendCS.Event;
 
 namespace BackendCS.Measurement
 {
@@ -21,6 +22,14 @@ namespace BackendCS.Measurement
         float[] fGetMultiData();
     }
 
+    public class PrintDataEventArgs
+    {
+        public string Message { get; private set; }
+
+        public PrintDataEventArgs()
+        {
+        }
+    }
 
     public class Measurement
     {
@@ -30,6 +39,8 @@ namespace BackendCS.Measurement
         public readonly List<ISensorSingle> _sensorsSingle;
         public readonly List<ISensorMulti> _sensorsMulti;
 
+        public delegate void PrintDataHandler(PrintDataEventArgs e);
+        public event PrintDataHandler PrintData;
 
         /*
         * Constructor overgive the port
@@ -90,6 +101,11 @@ namespace BackendCS.Measurement
                 });
                 workerThread.Start();
                 workerThread.Join();
+            }
+
+            if (PrintData != null) //check if UI is subscribed
+            {
+                PrintData(new PrintDataEventArgs()); //Throw new event so the GUI nows that it needs to update
             }
         }
         

@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BackendCS.Measurement;
 using BackendCS.Event;
+using System.Drawing.Printing;
 
 
 namespace UserInterface
@@ -18,14 +19,13 @@ namespace UserInterface
     {
         private Measurement measurement;
         bool bStop = false;
-        private PrintDataEvent printDataEvent = new PrintDataEvent();
 
         public Form1()
         {
             InitializeComponent();
 
             measurement = new Measurement();
-          
+            measurement.PrintData += vPrintMeasurements;
         }
 
 
@@ -40,16 +40,17 @@ namespace UserInterface
             measurement.vStartMeasurement(); //start measurement
         }
 
-
-        private void vPrintMeasurements()
+        //func gets only called, when measurement is finished receiving data
+        private void vPrintMeasurements(PrintDataEventArgs printDataEventArgs)
         {
-           
-            labelBPM.Text = "Beats per minute: " + measurement._sensorsSingle[0].fGetSingleData().ToString();
-            labelEnvTemp.Text = "Environment Temperature: " + measurement._sensorsSingle[1].fGetSingleData().ToString();
-            labelHumidity.Text = "Environment humidity: " + measurement._sensorsSingle[2].fGetSingleData().ToString();
-            labelBodyTemp.Text = "Body temperature: " + measurement._sensorsSingle[3].fGetSingleData().ToString();
-            labelBrightness.Text = "Brightness: " + measurement._sensorsSingle[4].fGetSingleData().ToString();
-          
+            BeginInvoke((Action)(() => //switch back to main thread
+            {
+                labelBPM.Text = "Beats per minute: " + measurement._sensorsSingle[0].fGetSingleData().ToString();
+                labelEnvTemp.Text = "Environment Temperature: " + measurement._sensorsSingle[1].fGetSingleData().ToString();
+                labelHumidity.Text = "Environment humidity: " + measurement._sensorsSingle[2].fGetSingleData().ToString();
+                labelBodyTemp.Text = "Body temperature: " + measurement._sensorsSingle[3].fGetSingleData().ToString();
+                labelBrightness.Text = "Brightness: " + measurement._sensorsSingle[4].fGetSingleData().ToString();
+            }));
         }
 
 
