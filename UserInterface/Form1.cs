@@ -18,7 +18,6 @@ namespace UserInterface
     {
         private Measurement measurement;
         bool bStop = false;
-
         private PrintDataEvent printDataEvent = new PrintDataEvent();
 
         public Form1()
