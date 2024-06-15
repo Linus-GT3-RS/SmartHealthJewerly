@@ -8,12 +8,12 @@ namespace BackendCS.Measurement
 {
     public class Brightness : ISensorSingle
     {
-        private int _brightness;
+        private float _brightness;
 
 
         public void vProcessSingleData(string data)
         {
-            _brightness = int.Parse(data);
+            _brightness = float.Parse(data);
         }
 
 
