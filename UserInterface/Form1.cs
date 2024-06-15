@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BackendCS.Measurement;
-
+using BackendCS.Event;
 
 
 namespace UserInterface
@@ -19,12 +19,14 @@ namespace UserInterface
         private Measurement measurement;
         bool bStop = false;
 
+        private PrintDataEvent printDataEvent = new PrintDataEvent();
 
         public Form1()
         {
             InitializeComponent();
 
             measurement = new Measurement();
+          
         }
 
 
@@ -36,32 +38,25 @@ namespace UserInterface
 
         private void buttonStart_Click(object sender, EventArgs e)
         {
-            measurement.vStartMeasurement();
-
-            while(!bStop)
-            {
-                vPrintMeasurements();
-            }
-
-            measurement.vStopMeasurement();
+            measurement.vStartMeasurement(); //start measurement
         }
 
 
         private void vPrintMeasurements()
         {
+           
             labelBPM.Text = "Beats per minute: " + measurement._sensorsSingle[0].fGetSingleData().ToString();
             labelEnvTemp.Text = "Environment Temperature: " + measurement._sensorsSingle[1].fGetSingleData().ToString();
             labelHumidity.Text = "Environment humidity: " + measurement._sensorsSingle[2].fGetSingleData().ToString();
             labelBodyTemp.Text = "Body temperature: " + measurement._sensorsSingle[3].fGetSingleData().ToString();
             labelBrightness.Text = "Brightness: " + measurement._sensorsSingle[4].fGetSingleData().ToString();
-            
-
+          
         }
 
 
         private void buttonStop_Click(object sender, EventArgs e)
         {
-            bStop = true;
+            measurement.vStopMeasurement(); //stop measurement
         }
     }
 }

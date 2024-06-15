@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
+using System.Threading;
 
 namespace BackendCS.Measurement
 {
@@ -69,18 +70,26 @@ namespace BackendCS.Measurement
         */
         private void DataReceivedHandler(object sender, SerialDataReceivedEventArgs e)
         {
+
             lock (_lock)
             {
-                SerialPort serialPort = (SerialPort)sender;
+                Thread workerThread = new Thread(() =>
+                {
+                    SerialPort serialPort = (SerialPort)sender;
+                    if (serialPort.IsOpen)
+                    {
+                        //read Datas into string
+                        string data = serialPort.ReadLine().Trim();
 
-                //read Datas into string
-                string data = serialPort.ReadLine().Trim();
+                        //seperate values
+                        string[] aData = data.Split(',');
 
-                //seperate values
-                string[] aData = data.Split(',');
-
-                vOrganizeSingleData(aData);
-                vOrganizeMultiData(aData);
+                        vOrganizeSingleData(aData);
+                        vOrganizeMultiData(aData);
+                    }
+                });
+                workerThread.Start();
+                workerThread.Join();
             }
         }
         
@@ -92,7 +101,7 @@ namespace BackendCS.Measurement
         {
             for(int i = 0; i < _sensorsSingle.Count; i++)
             {
-                if(!bCheckNAN(data[i]))
+                if(!bCheckNAN(data[i]) && data[i] != "")
                 {
                     _sensorsSingle[i].vProcessSingleData(data[i]);
                 }

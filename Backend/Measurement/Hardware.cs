@@ -42,7 +42,7 @@ namespace BackendCS.Measurement
         */
         public void vConnectHardware(SerialDataReceivedEventHandler dataReceivedHandler)
         {
-            _serialPort = new SerialPort("COM4", _baudRate);
+            _serialPort = new SerialPort("COM3", _baudRate);
             _serialPort.DataReceived += new SerialDataReceivedEventHandler(dataReceivedHandler);
 
             try
