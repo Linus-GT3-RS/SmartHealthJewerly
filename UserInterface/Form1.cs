@@ -23,8 +23,7 @@ namespace UserInterface
         public Form1()
         {
             InitializeComponent();
-            measurement = new Measurement();
-            measurement.PrintData += vPrintMeasurements;
+            this.Load += new EventHandler(FurtherInitialization); //form fertig geladen, dann weiter initialisieren
         }
 
 
@@ -32,6 +31,15 @@ namespace UserInterface
         {
             measurement.vStopMeasurement();
         }
+
+        //Rest der (Backend)-Initialisation
+        private void FurtherInitialization(object sender, EventArgs e)
+        {
+            measurement = new Measurement();                
+            measurement.PrintData += vPrintMeasurements;    //event hinterlegen
+            buttonStart.Enabled = true;                     //ab jetzt kann gemessen werden
+        }
+
 
 
         private void buttonStart_Click(object sender, EventArgs e)
@@ -61,8 +69,8 @@ namespace UserInterface
 
                 //motion
                 labelMotionAccX.Text = measurement._sensorsMulti[0].fGetMultiData()[0] + "";
-                labelMotionAccY.Text = measurement._sensorsMulti[0].fGetMultiData()[0] + "";
-                //labelMotionAccZ.Text = measurement._sensorsMulti.fGetMultiData(0);
+                labelMotionAccY.Text = measurement._sensorsMulti[0].fGetMultiData()[1] + "";
+                labelMotionAccZ.Text = measurement._sensorsMulti[0].fGetMultiData()[2] + "";
 
             }));
         }
