@@ -19,7 +19,7 @@ namespace UserInterface
     {
         private Measurement measurement;
         bool bStop = false;
-
+        System.Timers.Timer timer;
         public Form1()
         {
             InitializeComponent();
@@ -38,13 +38,25 @@ namespace UserInterface
             measurement = new Measurement();                
             measurement.PrintData += vPrintMeasurements;    //event hinterlegen
             buttonStart.Enabled = true;                     //ab jetzt kann gemessen werden
+
+
+            //timer wird genutzt um Helligkeit der GUI alle 10s zuupdaten
+            timer = new System.Timers.Timer(10000); // 10 Sekunden in Millisekunden
+            // Ereignis, das ausgelöst wird, wenn der Timer abläuft
+            timer.Elapsed += AdjustBrightness;
         }
 
 
+        private void buttonStop_Click(object sender, EventArgs e)
+        {
+            measurement.vStopMeasurement(); //stop measurement
+            timer.Stop();          // Timer stoppen
+        }
 
         private void buttonStart_Click(object sender, EventArgs e)
         {
             measurement.vStartMeasurement(); //start measurement
+            timer.Start();          // Timer starten
         }
 
         //func gets only called, when measurement is finished receiving data
@@ -76,9 +88,30 @@ namespace UserInterface
         }
 
 
-        private void buttonStop_Click(object sender, EventArgs e)
+        //GUI Color anpassen
+        private void AdjustBrightness(object sender, System.Timers.ElapsedEventArgs e)
         {
-            measurement.vStopMeasurement(); //stop measurement
+            //Werte holen
+            float brightnessVal = measurement._sensorsSingle[4].fGetSingleData();
+            int BrightnessPercentage = 100 - (int)Math.Round(BackendCS.Converter.BrightnessConverter.convert(brightnessVal) * 100, 1);
+
+
+            //wird gebraucht, damit GUI nicht komplett schwarz wird => 20 % helligkeit bruacht es schon
+            //falls mehr sein soll muss nur der Wert geändert werden
+           if (BrightnessPercentage < 20)
+           {
+                BrightnessPercentage = 20;
+           }
+
+
+            // Umrechnung des Prozentwerts in den RGB-Bereich (0-255)
+            int brightnessValue = (int)(BrightnessPercentage * 2.55); // 255 / 100 = 2.55
+
+            // Erstellen einer neuen Farbe mit den berechneten RGB-Werten
+            Color backgroundColor = Color.FromArgb(brightnessValue, brightnessValue, brightnessValue);
+
+            // Setzen der Hintergrundfarbe des Panels (oder des Formulars)
+            this.BackColor = backgroundColor;
         }
     }
 }
