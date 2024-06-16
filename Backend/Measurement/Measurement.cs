@@ -117,7 +117,7 @@ namespace BackendCS.Measurement
         {
             for(int i = 0; i < _sensorsSingle.Count; i++)
             {
-                if(!bCheckNAN(data[i]) && data[i] != "")
+                if(i < data.Length && !bCheckNAN(data[i]) && data[i] != "")
                 {
                     _sensorsSingle[i].vProcessSingleData(data[i]);
                 }

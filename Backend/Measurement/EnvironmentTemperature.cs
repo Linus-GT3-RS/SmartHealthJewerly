@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Globalization;
+
 
 namespace BackendCS.Measurement
 {
@@ -13,7 +15,7 @@ namespace BackendCS.Measurement
 
         public void vProcessSingleData(string data)
         {
-            _envTemp = float.Parse(data);
+            _envTemp = float.Parse(data, CultureInfo.InvariantCulture); //richtiger Parse mit Punkt
         }
 
 

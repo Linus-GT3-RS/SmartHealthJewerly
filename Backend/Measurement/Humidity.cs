@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Globalization;
 
 namespace BackendCS.Measurement
 {
@@ -13,7 +14,7 @@ namespace BackendCS.Measurement
 
         public void vProcessSingleData(string data)
         {
-            _humidity = float.Parse(data);
+            _humidity = float.Parse(data, CultureInfo.InvariantCulture); //richtiger Parse mit Punkt
         }
 
 

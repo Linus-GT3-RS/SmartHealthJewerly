@@ -39,7 +39,7 @@ namespace UserInterface
             this.labelBrightness = new System.Windows.Forms.Label();
             this.labelMotionAccX = new System.Windows.Forms.Label();
             this.labelMotionAccY = new System.Windows.Forms.Label();
-            this.MotionAccZ = new System.Windows.Forms.Label();
+            this.labelMotionAccZ = new System.Windows.Forms.Label();
             this.buttonStop = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -52,6 +52,7 @@ namespace UserInterface
             this.buttonStart.Text = "Start Measurement";
             this.buttonStart.UseVisualStyleBackColor = true;
             this.buttonStart.Click += new System.EventHandler(this.buttonStart_Click);
+            this.buttonStart.Enabled = false;
             // 
             // labelBPM
             // 
@@ -118,12 +119,12 @@ namespace UserInterface
             // 
             // MotionAccZ
             // 
-            this.MotionAccZ.AutoSize = true;
-            this.MotionAccZ.Location = new System.Drawing.Point(945, 373);
-            this.MotionAccZ.Name = "MotionAccZ";
-            this.MotionAccZ.Size = new System.Drawing.Size(138, 25);
-            this.MotionAccZ.TabIndex = 8;
-            this.MotionAccZ.Text = "MotionAccZ: ";
+            this.labelMotionAccZ.AutoSize = true;
+            this.labelMotionAccZ.Location = new System.Drawing.Point(945, 373);
+            this.labelMotionAccZ.Name = "MotionAccZ";
+            this.labelMotionAccZ.Size = new System.Drawing.Size(138, 25);
+            this.labelMotionAccZ.TabIndex = 8;
+            this.labelMotionAccZ.Text = "MotionAccZ: ";
             // 
             // buttonStop
             // 
@@ -139,7 +140,7 @@ namespace UserInterface
             // 
             this.ClientSize = new System.Drawing.Size(1338, 623);
             this.Controls.Add(this.buttonStop);
-            this.Controls.Add(this.MotionAccZ);
+            this.Controls.Add(this.labelMotionAccZ);
             this.Controls.Add(this.labelMotionAccY);
             this.Controls.Add(this.labelMotionAccX);
             this.Controls.Add(this.labelBrightness);
@@ -165,7 +166,7 @@ namespace UserInterface
         private Label labelBrightness;
         private Label labelMotionAccX;
         private Label labelMotionAccY;
-        private Label MotionAccZ;
+        private Label labelMotionAccZ;
         private Button buttonStop;
     }
 }
