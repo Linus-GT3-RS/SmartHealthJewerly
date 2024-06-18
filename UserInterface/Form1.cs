@@ -20,6 +20,8 @@ namespace UserInterface
         private Measurement measurement;
         bool bStop = false;
         System.Timers.Timer timer;
+        HeartRate heart;
+
         public Form1()
         {
             InitializeComponent();
@@ -68,11 +70,11 @@ namespace UserInterface
             float environmentTemperature = measurement._sensorsSingle[1].fGetSingleData();
             float environmentHumidity = measurement._sensorsSingle[2].fGetSingleData();
             float bodyTemperature = measurement._sensorsSingle[3].fGetSingleData();
-            float BPM = measurement._sensorsSingle[0].fGetSingleData();
-
+            heart = (HeartRate)measurement._sensorsSingle[0];
+            
             BeginInvoke((Action)(() => //switch back to main thread
             {
-                labelBPM.Text = "Beats per minute: " + BPM;
+                labelBPM.Text = "Beats per minute: " + heart.fGetSingleData();
                 labelEnvTemp.Text = "Environment Temperature: " + environmentTemperature.ToString("F1") + " Grad";
                 labelHumidity.Text = "Environment humidity: " + environmentHumidity.ToString("F1") + "% Luftfeuchte";
                 labelBodyTemp.Text = "Body temperature: " + bodyTemperature.ToString("F1") + " Grad";
@@ -80,10 +82,18 @@ namespace UserInterface
 
 
                 //motion
-                labelMotionAccX.Text = measurement._sensorsMulti[0].fGetMultiData()[0] + "";
-                labelMotionAccY.Text = measurement._sensorsMulti[0].fGetMultiData()[1] + "";
-                labelMotionAccZ.Text = measurement._sensorsMulti[0].fGetMultiData()[2] + "";
+                labelMotionAccX.Text = measurement._sensorsMulti[0].fGetMultiData()[3] + "";
+                labelMotionAccY.Text = measurement._sensorsMulti[0].fGetMultiData()[4] + "";
+                labelMotionAccZ.Text = measurement._sensorsMulti[0].fGetMultiData()[5] + "";
 
+                //draw last 5 seconds
+                if (series1.Points.Count > 500)
+                {
+                   series1.Points.RemoveAt(0); // delete oldest if to many
+                }
+
+                series1.Points.AddY(heart.iGetHeartRate()); //wert holen vom Sensor
+                chart1.Invalidate(); // Redraw the chart
             }));
         }
 

@@ -1,4 +1,4 @@
-﻿//using System.Windows.Forms.DataVisualization.Charting;
+﻿using System.Windows.Forms.DataVisualization.Charting;
 using System.Windows.Forms;
 
 namespace UserInterface
@@ -33,7 +33,7 @@ namespace UserInterface
         {
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.buttonStart = new System.Windows.Forms.Button();
             this.labelBPM = new System.Windows.Forms.Label();
             this.labelBodyTemp = new System.Windows.Forms.Label();
@@ -152,6 +152,9 @@ namespace UserInterface
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
             series1.Name = "Series1";
+            chart1.ChartAreas[0].AxisY.Minimum = 690; // Set the minimum y-axis value
+            chart1.ChartAreas[0].AxisY.Maximum = 730; // Set the maximum y-axis value
+            series1.ChartType = SeriesChartType.Line;
             this.chart1.Series.Add(series1);
             this.chart1.Size = new System.Drawing.Size(844, 468);
             this.chart1.TabIndex = 10;
@@ -192,6 +195,7 @@ namespace UserInterface
         private Label labelMotionAccZ;
         private Button buttonStop;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.DataVisualization.Charting.Series series1;
     }
 }
 

@@ -27,7 +27,7 @@ namespace BackendCS.Measurement
 
         public float fGetSingleData()
         {
-            vCalcBPM();
+            //vCalcBPM();
             return (float)_bpm;
         }
 
