@@ -33,7 +33,13 @@ namespace UserInterface
         {
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.buttonStart = new System.Windows.Forms.Button();
             this.labelBPM = new System.Windows.Forms.Label();
             this.labelBodyTemp = new System.Windows.Forms.Label();
@@ -45,7 +51,11 @@ namespace UserInterface
             this.labelMotionAccZ = new System.Windows.Forms.Label();
             this.buttonStop = new System.Windows.Forms.Button();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chartHeight = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chartDistance = new System.Windows.Forms.DataVisualization.Charting.Chart();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartHeight)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartDistance)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonStart
@@ -147,22 +157,54 @@ namespace UserInterface
             this.chart1.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(446, 42);
+            this.chart1.Location = new System.Drawing.Point(346, 42);
             this.chart1.Name = "chart1";
             series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             series1.Legend = "Legend1";
             series1.Name = "Series1";
-            chart1.ChartAreas[0].AxisY.Minimum = 690; // Set the minimum y-axis value
-            chart1.ChartAreas[0].AxisY.Maximum = 730; // Set the maximum y-axis value
-            series1.ChartType = SeriesChartType.Line;
             this.chart1.Series.Add(series1);
             this.chart1.Size = new System.Drawing.Size(844, 468);
             this.chart1.TabIndex = 10;
-            this.chart1.Text = "chart1";
+            this.chart1.Text = "chartHeartRate";
+            // 
+            // chartHeight
+            // 
+            chartArea2.Name = "ChartArea1";
+            this.chartHeight.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chartHeight.Legends.Add(legend2);
+            this.chartHeight.Location = new System.Drawing.Point(1225, 42);
+            this.chartHeight.Name = "chartHeight";
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chartHeight.Series.Add(series2);
+            this.chartHeight.Size = new System.Drawing.Size(571, 355);
+            this.chartHeight.TabIndex = 11;
+            this.chartHeight.Text = "chartHeight";
+            // 
+            // chartDistance
+            // 
+            chartArea3.Name = "ChartArea1";
+            this.chartDistance.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.chartDistance.Legends.Add(legend3);
+            this.chartDistance.Location = new System.Drawing.Point(1225, 450);
+            this.chartDistance.Name = "chartDistance";
+            series3.ChartArea = "ChartArea1";
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            this.chartDistance.Series.Add(series3);
+            this.chartDistance.Size = new System.Drawing.Size(571, 337);
+            this.chartDistance.TabIndex = 12;
+            this.chartDistance.Text = "chartDistance";
             // 
             // Form1
             // 
-            this.ClientSize = new System.Drawing.Size(1338, 623);
+            this.ClientSize = new System.Drawing.Size(2056, 835);
+            this.Controls.Add(this.chartDistance);
+            this.Controls.Add(this.chartHeight);
             this.Controls.Add(this.chart1);
             this.Controls.Add(this.buttonStop);
             this.Controls.Add(this.labelMotionAccZ);
@@ -176,6 +218,8 @@ namespace UserInterface
             this.Controls.Add(this.buttonStart);
             this.Name = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartHeight)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartDistance)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -196,6 +240,8 @@ namespace UserInterface
         private Button buttonStop;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.DataVisualization.Charting.Series series1;
+        private Chart chartHeight;
+        private Chart chartDistance;
     }
 }
 
