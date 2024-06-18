@@ -36,7 +36,7 @@ namespace UserInterface
 
         private void LogInScreen_OnFormClosing(object sender, FormClosingEventArgs e)
         {
-            var splashScreen = new SplashScreen_Form();
+            var splashScreen = new SplashScreen_Form(false);
             splashScreen.Show();
             splashScreen.VisibleChanged += SplashScreen_OnFormHiding;
         }

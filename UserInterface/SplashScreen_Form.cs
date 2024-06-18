@@ -26,18 +26,19 @@ namespace UserInterface
             int nHeightEllipse
             );
 
-
-
-
         private Random _randNumbGen;
 
-        public SplashScreen_Form()
-        {
-            InitializeComponent();
-            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0,0, Width, Height, 32, 32));
+        private bool _closeIfDone;
 
-            circProgressBar.Value = 0;
+        public SplashScreen_Form(bool closeIfDone)
+        {
             _randNumbGen = new Random();
+            _closeIfDone = closeIfDone;
+
+            InitializeComponent();
+            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 32, 32));
+            circProgressBar.Value = 0;
+            
         }
 
         private void SplashScreen_Form_Load(object sender, EventArgs e)
@@ -61,7 +62,15 @@ namespace UserInterface
             {
                 timer1.Enabled = false;
 
-                //this.Hide();                
+                if(_closeIfDone)
+                {
+                    this.Close();
+                }
+                else
+                {
+                    this.Hide();
+                }
+                             
             }
         }
 
