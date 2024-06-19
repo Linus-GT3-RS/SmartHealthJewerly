@@ -101,25 +101,14 @@ namespace UserInterface
                      labelMotionAccX.Text = measurement._sensorsMulti[0].fGetMultiData()[6] + "";
                      labelMotionAccY.Text = measurement._sensorsMulti[0].fGetMultiData()[7] + "";
                      labelMotionAccZ.Text = measurement._sensorsMulti[0].fGetMultiData()[2] + "";
-                     Series series1 = chartHeartbeat.Series["Series1"];
-                     //draw last 5 seconds
-                     if (series1.Points.Count() > 500)
-                     {
-                        series1.Points.RemoveAt(0); // delete oldest if to many
-                     }
 
-                     series1.Points.AddY(heart.iGetHeartRate()); //wert holen vom Sensor
-                     chartHeartbeat.Invalidate(); // Redraw the chart
 
-                     Series seriesHeigth = chartHeight.Series["Series1"];
-                     //draw last 5 seconds
-                     if (seriesHeigth.Points.Count() > 500)
-                     {
-                        seriesHeigth.Points.RemoveAt(0); // delete oldest if to many
-                     }
+                     //fillSeries
+                     fillSeries();
 
-                     seriesHeigth.Points.AddY(_currentHeight); //wert holen vom Sensor
-                     chartHeartbeat.Invalidate(); // Redraw the chart
+                     //redraw charts
+                     redrawCharts();
+                    
                      }));
          }
         }
@@ -193,5 +182,84 @@ namespace UserInterface
                 chartDistance.Series["SeriesZGyro"].Enabled = false;
             }
         }
-    }
+
+
+
+      private void fillSeries()
+      {
+         Series heartBeat = chartHeartbeat.Series["Series1"];
+         if (heartBeat.Points.Count > 500)
+         {
+            heartBeat.Points.RemoveAt(0); // Keep the number of points reasonable
+         }
+
+         heartBeat.Points.AddY(heart.iGetHeartRate());
+
+         fillXAxis();
+         fillYAxis();
+         fillZAxis();
+      }
+
+      private void fillXAxis()
+      {
+         motion = (Motion)measurement._sensorsMulti[0];
+         float[] motionValues = motion.fGetMultiData();
+         Series XAcc = chartHeight.Series["SeriesXAcc"];
+         if (XAcc.Points.Count > 500)
+         {
+            XAcc.Points.RemoveAt(0); // Keep the number of points reasonable
+         }
+         XAcc.Points.AddY(motionValues[0]);
+
+
+         Series XGyro = chartDistance.Series["SeriesXGyro"];
+         if (XGyro.Points.Count > 500)
+         {
+            XGyro.Points.RemoveAt(0); // Keep the number of points reasonable
+         }
+         XGyro.Points.AddY(motionValues[6]);
+      }
+      private void fillYAxis()
+      {
+         Series YAcc = chartHeight.Series["SeriesYAcc"];
+         if (YAcc.Points.Count > 500)
+         {
+            YAcc.Points.RemoveAt(0); // Keep the number of points reasonable
+         }
+         YAcc.Points.AddY(20);
+
+
+         Series YGyro = chartDistance.Series["SeriesYGyro"];
+         if (YGyro.Points.Count > 500)
+         {
+            YGyro.Points.RemoveAt(0); // Keep the number of points reasonable
+         }
+         YGyro.Points.AddY(200);
+      }
+      private void fillZAxis()
+      {
+         Series ZAcc = chartHeight.Series["SeriesZAcc"];
+         if (ZAcc.Points.Count > 500)
+         {
+            ZAcc.Points.RemoveAt(0); // Keep the number of points reasonable
+         }
+         ZAcc.Points.AddY(30);
+
+
+         Series ZGyro = chartDistance.Series["SeriesZGyro"];
+         if (ZGyro.Points.Count > 500)
+         {
+            ZGyro.Points.RemoveAt(0); // Keep the number of points reasonable
+         }
+         ZGyro.Points.AddY(300);
+      }
+
+
+      private void redrawCharts()
+      {
+         chartHeartbeat.Invalidate();
+         chartHeight.Invalidate();
+         chartDistance.Invalidate();
+      }
+   }
 }
