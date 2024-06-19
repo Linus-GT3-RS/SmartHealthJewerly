@@ -31,15 +31,15 @@ namespace UserInterface
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.buttonStart = new System.Windows.Forms.Button();
             this.labelBPM = new System.Windows.Forms.Label();
             this.labelBodyTemp = new System.Windows.Forms.Label();
@@ -53,9 +53,14 @@ namespace UserInterface
             this.chartHeartbeat = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chartHeight = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chartDistance = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.radioButtonX = new System.Windows.Forms.RadioButton();
+            this.radioButtonY = new System.Windows.Forms.RadioButton();
+            this.radioButtonZ = new System.Windows.Forms.RadioButton();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.chartHeartbeat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartHeight)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartDistance)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonStart
@@ -151,60 +156,106 @@ namespace UserInterface
             this.buttonStop.UseVisualStyleBackColor = true;
             this.buttonStop.Click += new System.EventHandler(this.buttonStop_Click);
             // 
-            // chart1
+            // chartHeartbeat
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chartHeartbeat.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chartHeartbeat.Legends.Add(legend1);
+            chartArea4.Name = "ChartArea1";
+            this.chartHeartbeat.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.chartHeartbeat.Legends.Add(legend4);
             this.chartHeartbeat.Location = new System.Drawing.Point(399, 11);
-            this.chartHeartbeat.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chartHeartbeat.Series.Add(series1);
+            this.chartHeartbeat.Name = "chartHeartbeat";
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series4.Legend = "Legend1";
+            series4.Name = "Series1";
+            this.chartHeartbeat.Series.Add(series4);
             this.chartHeartbeat.Size = new System.Drawing.Size(840, 355);
             this.chartHeartbeat.TabIndex = 10;
             this.chartHeartbeat.Text = "chartHeartRate";
             // 
             // chartHeight
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chartHeight.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chartHeight.Legends.Add(legend2);
+            chartArea5.Name = "ChartArea1";
+            this.chartHeight.ChartAreas.Add(chartArea5);
+            legend5.Name = "Legend1";
+            this.chartHeight.Legends.Add(legend5);
             this.chartHeight.Location = new System.Drawing.Point(399, 378);
             this.chartHeight.Name = "chartHeight";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chartHeight.Series.Add(series2);
+            series5.ChartArea = "ChartArea1";
+            series5.Legend = "Legend1";
+            series5.Name = "Series1";
+            this.chartHeight.Series.Add(series5);
             this.chartHeight.Size = new System.Drawing.Size(417, 326);
-         chartHeight.ChartAreas[0].AxisY.Minimum = -185; // Set the minimum y-axis value
-         chartHeight.ChartAreas[0].AxisY.Maximum = 185;  // Set the maximum y-axis value
             this.chartHeight.TabIndex = 11;
             this.chartHeight.Text = "chartHeight";
             // 
             // chartDistance
             // 
-            chartArea3.Name = "ChartArea1";
-            this.chartDistance.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.chartDistance.Legends.Add(legend3);
+            chartArea6.Name = "ChartArea1";
+            this.chartDistance.ChartAreas.Add(chartArea6);
+            legend6.Name = "Legend1";
+            this.chartDistance.Legends.Add(legend6);
             this.chartDistance.Location = new System.Drawing.Point(822, 378);
             this.chartDistance.Name = "chartDistance";
-            series3.ChartArea = "ChartArea1";
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            this.chartDistance.Series.Add(series3);
+            series6.ChartArea = "ChartArea1";
+            series6.Legend = "Legend1";
+            series6.Name = "Series1";
+            this.chartDistance.Series.Add(series6);
             this.chartDistance.Size = new System.Drawing.Size(417, 326);
             this.chartDistance.TabIndex = 12;
             this.chartDistance.Text = "chartDistance";
             // 
+            // radioButtonX
+            // 
+            this.radioButtonX.AutoSize = true;
+            this.radioButtonX.Checked = true;
+            this.radioButtonX.Location = new System.Drawing.Point(3, 3);
+            this.radioButtonX.Name = "radioButtonX";
+            this.radioButtonX.Size = new System.Drawing.Size(105, 29);
+            this.radioButtonX.TabIndex = 13;
+            this.radioButtonX.TabStop = true;
+            this.radioButtonX.Text = "X-Axis";
+            this.radioButtonX.UseVisualStyleBackColor = true;
+            this.radioButtonX.CheckedChanged += new System.EventHandler(this.radioButtonX_CheckedChanged);
+            // 
+            // radioButtonY
+            // 
+            this.radioButtonY.AutoSize = true;
+            this.radioButtonY.Location = new System.Drawing.Point(183, 3);
+            this.radioButtonY.Name = "radioButtonY";
+            this.radioButtonY.Size = new System.Drawing.Size(106, 29);
+            this.radioButtonY.TabIndex = 14;
+            this.radioButtonY.TabStop = true;
+            this.radioButtonY.Text = "Y-Axis";
+            this.radioButtonY.UseVisualStyleBackColor = true;
+            this.radioButtonY.CheckedChanged += new System.EventHandler(this.radioButtonY_CheckedChanged);
+            // 
+            // radioButtonZ
+            // 
+            this.radioButtonZ.AutoSize = true;
+            this.radioButtonZ.Location = new System.Drawing.Point(343, 3);
+            this.radioButtonZ.Name = "radioButtonZ";
+            this.radioButtonZ.Size = new System.Drawing.Size(104, 29);
+            this.radioButtonZ.TabIndex = 15;
+            this.radioButtonZ.TabStop = true;
+            this.radioButtonZ.Text = "Z-Axis";
+            this.radioButtonZ.UseVisualStyleBackColor = true;
+            this.radioButtonZ.CheckedChanged += new System.EventHandler(this.radioButtonZ_CheckedChanged);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.radioButtonX);
+            this.panel1.Controls.Add(this.radioButtonZ);
+            this.panel1.Controls.Add(this.radioButtonY);
+            this.panel1.Location = new System.Drawing.Point(589, 710);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(486, 40);
+            this.panel1.TabIndex = 16;
+            // 
             // Form1
             // 
             this.ClientSize = new System.Drawing.Size(1353, 835);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.chartDistance);
             this.Controls.Add(this.chartHeight);
             this.Controls.Add(this.chartHeartbeat);
@@ -222,6 +273,8 @@ namespace UserInterface
             ((System.ComponentModel.ISupportInitialize)(this.chartHeartbeat)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartHeight)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartDistance)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -244,6 +297,10 @@ namespace UserInterface
         private Chart chartHeartbeat;
         private Chart chartHeight;
         private Chart chartDistance;
+        private RadioButton radioButtonX;
+        private RadioButton radioButtonY;
+        private RadioButton radioButtonZ;
+        private Panel panel1;
     }
 }
 

@@ -150,5 +150,41 @@ namespace UserInterface
             // Setzen der Hintergrundfarbe des Panels (oder des Formulars)
             this.BackColor = backgroundColor;
         }
+
+        private void radioButtonX_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButtonX.Checked)
+            {
+                Series.enabled = true;
+            }
+            else
+            {
+                Series.enabled = false;
+            }
+        }
+
+        private void radioButtonY_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButtonY.Checked)
+            {
+                Series.enabled = true;
+            }
+            else
+            {
+                Series.enabled = false;
+            }
+        }
+
+        private void radioButtonZ_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButtonZ.Checked)
+            {
+                Series.enabled = true;
+            }
+            else
+            {
+                Series.enabled = false;
+            }
+        }
     }
 }
