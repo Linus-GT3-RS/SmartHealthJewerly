@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using BackendCS.Measurement;
 using BackendCS.Event;
 using System.Drawing.Printing;
+using System.Windows.Forms.DataVisualization.Charting;
 
 
 namespace UserInterface
@@ -21,8 +22,11 @@ namespace UserInterface
         bool bStop = false;
         System.Timers.Timer timer;
         HeartRate heart;
+        Motion motion;
+        float _currentHeight;
+      private static readonly object _lock = new object();
 
-        public Form1()
+      public Form1()
         {
             InitializeComponent();
             this.Load += new EventHandler(FurtherInitialization); //form fertig geladen, dann weiter initialisieren
@@ -64,6 +68,8 @@ namespace UserInterface
         //func gets only called, when measurement is finished receiving data
         private void vPrintMeasurements(PrintDataEventArgs printDataEventArgs)
         {
+         lock (_lock)
+         {
             //nicht in invoke ausführen, da der GUI Thread das berechnen sonst übernimmt
             float brightnessValue = measurement._sensorsSingle[4].fGetSingleData();
             float BrightnessPercentage = (float)Math.Round(BackendCS.Converter.BrightnessConverter.convert(brightnessValue) * 100, 1);
@@ -71,30 +77,51 @@ namespace UserInterface
             float environmentHumidity = measurement._sensorsSingle[2].fGetSingleData();
             float bodyTemperature = measurement._sensorsSingle[3].fGetSingleData();
             heart = (HeartRate)measurement._sensorsSingle[0];
-            
+            motion = (Motion)measurement._sensorsMulti[0];
+            float[] motionValues = motion.fGetMultiData();
+            //if (motionValues[7] < 0)
+            //{
+            //   _currentHeight -= motionValues[6];
+            //}
+            //else
+            //{
+            //   _currentHeight += motionValues[6];
+            //}
+            _currentHeight = motionValues[6];
             BeginInvoke((Action)(() => //switch back to main thread
-            {
-                labelBPM.Text = "Beats per minute: " + heart.fGetSingleData();
-                labelEnvTemp.Text = "Environment Temperature: " + environmentTemperature.ToString("F1") + " Grad";
-                labelHumidity.Text = "Environment humidity: " + environmentHumidity.ToString("F1") + "% Luftfeuchte";
-                labelBodyTemp.Text = "Body temperature: " + bodyTemperature.ToString("F1") + " Grad";
-                labelBrightness.Text = "Brightness: " + brightnessValue.ToString() + " => " + BrightnessPercentage + "% dunkel";
+                  {
+                     labelBPM.Text = "Beats per minute: " + heart.fGetSingleData();
+                     labelEnvTemp.Text = "Environment Temperature: " + environmentTemperature.ToString("F1") + " Grad";
+                     labelHumidity.Text = "Environment humidity: " + environmentHumidity.ToString("F1") + "% Luftfeuchte";
+                     labelBodyTemp.Text = "Body temperature: " + bodyTemperature.ToString("F1") + " Grad";
+                     labelBrightness.Text = "Brightness: " + brightnessValue.ToString() + " => " + BrightnessPercentage + "% dunkel";
 
 
-                //motion
-                labelMotionAccX.Text = measurement._sensorsMulti[0].fGetMultiData()[3] + "";
-                labelMotionAccY.Text = measurement._sensorsMulti[0].fGetMultiData()[4] + "";
-                labelMotionAccZ.Text = measurement._sensorsMulti[0].fGetMultiData()[5] + "";
+                     //motion
+                     labelMotionAccX.Text = measurement._sensorsMulti[0].fGetMultiData()[6] + "";
+                     labelMotionAccY.Text = measurement._sensorsMulti[0].fGetMultiData()[7] + "";
+                     labelMotionAccZ.Text = measurement._sensorsMulti[0].fGetMultiData()[2] + "";
+                     Series series1 = chartHeartbeat.Series["Series1"];
+                     //draw last 5 seconds
+                     if (series1.Points.Count() > 500)
+                     {
+                        series1.Points.RemoveAt(0); // delete oldest if to many
+                     }
 
-                //draw last 5 seconds
-                if (series1.Points.Count > 500)
-                {
-                   series1.Points.RemoveAt(0); // delete oldest if to many
-                }
+                     series1.Points.AddY(heart.iGetHeartRate()); //wert holen vom Sensor
+                     chartHeartbeat.Invalidate(); // Redraw the chart
 
-                series1.Points.AddY(heart.iGetHeartRate()); //wert holen vom Sensor
-                chart1.Invalidate(); // Redraw the chart
-            }));
+                     Series seriesHeigth = chartHeight.Series["Series1"];
+                     //draw last 5 seconds
+                     if (seriesHeigth.Points.Count() > 500)
+                     {
+                        seriesHeigth.Points.RemoveAt(0); // delete oldest if to many
+                     }
+
+                     seriesHeigth.Points.AddY(_currentHeight); //wert holen vom Sensor
+                     chartHeartbeat.Invalidate(); // Redraw the chart
+                     }));
+         }
         }
 
 

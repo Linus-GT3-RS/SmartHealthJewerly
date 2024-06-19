@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Globalization;
+using Microsoft.Win32;
 
 namespace BackendCS.Measurement
 {
@@ -12,12 +13,20 @@ namespace BackendCS.Measurement
         //acceleration of the axis
         private float _accX;
         private float _accY;
+        private float[] _last100accY = new float[100];
+        private int idxAccY;
+        private float _avgAccY;
         private float _accZ;
 
         //gyroscope of the axis
         private float _gyroX;
         private float _gyroY;
-        private float _gyroZ;
+         private float[] _last100gyroY = new float[100];
+         private int idxGyroY;
+         private float _avgGyroY;
+      private float _gyroZ;
+
+        private float _lastVal;
 
 
 
@@ -36,7 +45,9 @@ namespace BackendCS.Measurement
                             break;
                         case 6:
                             _accY = result;
-                            break;
+                            _last100accY[idxAccY++] = result;
+                            idxAccY = (idxAccY > 99) ? 0 : idxAccY;
+                        break;
                         case 7:
                             _accZ = result;
                             break;
@@ -45,7 +56,9 @@ namespace BackendCS.Measurement
                             break;
                         case 9:
                             _gyroY = result;
-                            break;
+                            _last100gyroY[idxGyroY++] = result;
+                            idxGyroY = (idxGyroY > 99) ? 0 : idxGyroY;
+                     break;
                         case 10:
                             _gyroZ = result;
                             break;
@@ -57,7 +70,23 @@ namespace BackendCS.Measurement
 
         public float[] fGetMultiData()
         {
-            return new float[] { _accX, _accY, _accZ, _gyroX, _gyroY, _gyroZ };
+         vCalculateAcc();
+         return new float[] { _accX, _accY, _accZ, _gyroX, _gyroY, _gyroZ, _avgAccY, _avgGyroY };
         }
+
+
+         private void vCalculateAcc()
+         {
+            _avgAccY = 0;
+            _avgGyroY = 0;
+            for(int i = 0; i < _last100accY.Length; i++)
+            {
+               _avgAccY += _last100accY[i];
+               _avgGyroY += _last100gyroY[i];
+            }
+            _avgAccY /= 100;
+            _avgGyroY /= 100;
+            //if (_avgAccY < 0.0001) _avgAccY = 0;
+         }
     }
 }

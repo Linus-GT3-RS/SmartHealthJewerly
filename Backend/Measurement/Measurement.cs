@@ -81,7 +81,6 @@ namespace BackendCS.Measurement
         */
         private void DataReceivedHandler(object sender, SerialDataReceivedEventArgs e)
         {
-
             lock (_lock)
             {
                 Thread workerThread = new Thread(() =>

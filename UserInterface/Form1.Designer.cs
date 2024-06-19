@@ -50,10 +50,10 @@ namespace UserInterface
             this.labelMotionAccY = new System.Windows.Forms.Label();
             this.labelMotionAccZ = new System.Windows.Forms.Label();
             this.buttonStop = new System.Windows.Forms.Button();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chartHeartbeat = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chartHeight = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chartDistance = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartHeartbeat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartHeight)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartDistance)).BeginInit();
             this.SuspendLayout();
@@ -154,19 +154,19 @@ namespace UserInterface
             // chart1
             // 
             chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
+            this.chartHeartbeat.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(399, 11);
-            this.chart1.Name = "chart1";
+            this.chartHeartbeat.Legends.Add(legend1);
+            this.chartHeartbeat.Location = new System.Drawing.Point(399, 11);
+            this.chartHeartbeat.Name = "chart1";
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             series1.Legend = "Legend1";
             series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(840, 355);
-            this.chart1.TabIndex = 10;
-            this.chart1.Text = "chartHeartRate";
+            this.chartHeartbeat.Series.Add(series1);
+            this.chartHeartbeat.Size = new System.Drawing.Size(840, 355);
+            this.chartHeartbeat.TabIndex = 10;
+            this.chartHeartbeat.Text = "chartHeartRate";
             // 
             // chartHeight
             // 
@@ -181,6 +181,8 @@ namespace UserInterface
             series2.Name = "Series1";
             this.chartHeight.Series.Add(series2);
             this.chartHeight.Size = new System.Drawing.Size(417, 326);
+         chartHeight.ChartAreas[0].AxisY.Minimum = -185; // Set the minimum y-axis value
+         chartHeight.ChartAreas[0].AxisY.Maximum = 185;  // Set the maximum y-axis value
             this.chartHeight.TabIndex = 11;
             this.chartHeight.Text = "chartHeight";
             // 
@@ -205,7 +207,7 @@ namespace UserInterface
             this.ClientSize = new System.Drawing.Size(1353, 835);
             this.Controls.Add(this.chartDistance);
             this.Controls.Add(this.chartHeight);
-            this.Controls.Add(this.chart1);
+            this.Controls.Add(this.chartHeartbeat);
             this.Controls.Add(this.buttonStop);
             this.Controls.Add(this.labelMotionAccZ);
             this.Controls.Add(this.labelMotionAccY);
@@ -217,7 +219,7 @@ namespace UserInterface
             this.Controls.Add(this.labelBPM);
             this.Controls.Add(this.buttonStart);
             this.Name = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartHeartbeat)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartHeight)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartDistance)).EndInit();
             this.ResumeLayout(false);
@@ -238,8 +240,8 @@ namespace UserInterface
         private Label labelMotionAccY;
         private Label labelMotionAccZ;
         private Button buttonStop;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
-        private System.Windows.Forms.DataVisualization.Charting.Series series1;
+        private Series series1;
+        private Chart chartHeartbeat;
         private Chart chartHeight;
         private Chart chartDistance;
     }
