@@ -166,14 +166,14 @@ namespace UserInterface
             this.chartHeartbeat.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chartHeartbeat.Legends.Add(legend1);
-            this.chartHeartbeat.Location = new System.Drawing.Point(399, 11);
+            this.chartHeartbeat.Location = new System.Drawing.Point(399, 4);
             this.chartHeartbeat.Name = "chartHeartbeat";
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             this.chartHeartbeat.Series.Add(series1);
-            this.chartHeartbeat.Size = new System.Drawing.Size(840, 355);
+            this.chartHeartbeat.Size = new System.Drawing.Size(840, 323);
             this.chartHeartbeat.TabIndex = 10;
             this.chartHeartbeat.Text = "chartHeartRate";
             // 
@@ -183,7 +183,7 @@ namespace UserInterface
             this.chartHeight.ChartAreas.Add(chartArea2);
             legend2.Name = "Legend1";
             this.chartHeight.Legends.Add(legend2);
-            this.chartHeight.Location = new System.Drawing.Point(399, 378);
+            this.chartHeight.Location = new System.Drawing.Point(399, 333);
             this.chartHeight.Name = "chartHeight";
             series2.ChartArea = "ChartArea1";
             series2.Legend = "Legend1";
@@ -209,7 +209,7 @@ namespace UserInterface
             this.chartDistance.ChartAreas.Add(chartArea3);
             legend3.Name = "Legend1";
             this.chartDistance.Legends.Add(legend3);
-            this.chartDistance.Location = new System.Drawing.Point(822, 378);
+            this.chartDistance.Location = new System.Drawing.Point(822, 333);
             this.chartDistance.Name = "chartDistance";
             series5.ChartArea = "ChartArea1";
             series5.Legend = "Legend1";
@@ -271,7 +271,7 @@ namespace UserInterface
             this.panel1.Controls.Add(this.radioButtonX);
             this.panel1.Controls.Add(this.radioButtonZ);
             this.panel1.Controls.Add(this.radioButtonY);
-            this.panel1.Location = new System.Drawing.Point(589, 710);
+            this.panel1.Location = new System.Drawing.Point(589, 665);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(486, 40);
             this.panel1.TabIndex = 16;
