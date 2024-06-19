@@ -153,13 +153,16 @@ namespace UserInterface
 
         private void radioButtonX_CheckedChanged(object sender, EventArgs e)
         {
+            
             if (radioButtonX.Checked)
             {
-                Series.enabled = true;
+                chartHeight.Series["SeriesXAcc"].Enabled = true;
+                chartDistance.Series["SeriesXGyro"].Enabled = true;
             }
             else
             {
-                Series.enabled = false;
+                chartHeight.Series["SeriesXAcc"].Enabled = false;
+                chartDistance.Series["SeriesXGyro"].Enabled = false;
             }
         }
 
@@ -167,11 +170,13 @@ namespace UserInterface
         {
             if (radioButtonY.Checked)
             {
-                Series.enabled = true;
+                chartHeight.Series["SeriesYAcc"].Enabled = true;
+                chartDistance.Series["SeriesYGyro"].Enabled = true;
             }
             else
             {
-                Series.enabled = false;
+                chartHeight.Series["SeriesYAcc"].Enabled = false;
+                chartDistance.Series["SeriesYGyro"].Enabled = false;
             }
         }
 
@@ -179,11 +184,13 @@ namespace UserInterface
         {
             if (radioButtonZ.Checked)
             {
-                Series.enabled = true;
+                chartHeight.Series["SeriesZAcc"].Enabled = true;
+                chartDistance.Series["SeriesZGyro"].Enabled = true;
             }
             else
             {
-                Series.enabled = false;
+                chartHeight.Series["SeriesZAcc"].Enabled = false;
+                chartDistance.Series["SeriesZGyro"].Enabled = false;
             }
         }
     }
