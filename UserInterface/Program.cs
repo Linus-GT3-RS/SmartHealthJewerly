@@ -9,15 +9,17 @@ namespace UserInterface
     enum RunSettings
     {
         Normal = 0,
-        SplashScreen_Only,
-        LogIn_Only,
-        Home_Only
+        SplashScreen_Only, LogIn_Only, Home_Only, HealthData_Only,
+        Skip2Home       // todo
     };
 
     internal static class Program
     {
-        // configure FREE TO USE
-        static RunSettings CurRunSettings = RunSettings.Home_Only;
+        // ---------------------------------- Start CONFIG : Free to use ----------------------------------
+
+        static RunSettings CurRunSettings = RunSettings.HealthData_Only;
+
+        // ---------------------------------- END CONFIG -----------------------------------------------------
 
 
         /// <summary>
@@ -46,11 +48,15 @@ namespace UserInterface
                     break;
 
                 case RunSettings.Home_Only:
-                    StartForm = new Home_Form();
+                    StartForm = new Home_Form(false);
+                    break;
+
+                case RunSettings.HealthData_Only:
+                    StartForm = new HealthData_Form(false);
                     break;
 
                 default:
-                    throw new Exception("error");
+                    throw new Exception("error: this shouldnt happen");
             }
 
             Application.Run(StartForm);
