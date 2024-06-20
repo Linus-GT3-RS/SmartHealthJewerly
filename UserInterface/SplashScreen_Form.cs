@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using System.Drawing.Drawing2D;
 
 namespace UserInterface
 {
@@ -36,9 +37,8 @@ namespace UserInterface
             _closeIfDone = closeIfDone;
 
             InitializeComponent();
-            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 32, 32));
+            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 15, 15));
             circProgressBar.Value = 0;
-            
         }
 
         private void SplashScreen_Form_Load(object sender, EventArgs e)
@@ -77,6 +77,32 @@ namespace UserInterface
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        
+        // idk what this does but it prevents the form corners / edges from bugging out weirdly
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            Graphics g = e.Graphics;
+            g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+            using (Brush brush = new SolidBrush(this.BackColor))
+            {
+                g.FillRectangle(brush, this.ClientRectangle);
+            }
+
+            using (GraphicsPath path = new GraphicsPath())
+            {
+                int radius = 32;
+                path.AddArc(0, 0, radius, radius, 180, 90);
+                path.AddArc(this.Width - radius, 0, radius, radius, 270, 90);
+                path.AddArc(this.Width - radius, this.Height - radius, radius, radius, 0, 90);
+                path.AddArc(0, this.Height - radius, radius, radius, 90, 90);
+                path.CloseAllFigures();
+
+                this.Region = new Region(path);
+            }
+
+            base.OnPaint(e);
         }
     }
 }
