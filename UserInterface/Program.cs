@@ -17,7 +17,7 @@ namespace UserInterface
     internal static class Program
     {
         // configure FREE TO USE
-        static RunSettings CurRunSettings = RunSettings.Normal;
+        static RunSettings CurRunSettings = RunSettings.SplashScreen_Only;
 
 
         /// <summary>

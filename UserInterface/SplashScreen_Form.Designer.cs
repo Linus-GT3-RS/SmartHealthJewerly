@@ -16,7 +16,6 @@ namespace UserInterface
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
-            // circProgressBar.Dispose();
             timer1.Dispose();
 
             if (disposing && (components != null))
@@ -46,7 +45,7 @@ namespace UserInterface
             // circProgressBar
             // 
             this.circProgressBar.AnimationFunction = ((WinFormAnimation.AnimationFunctions.Function)(resources.GetObject("circProgressBar.AnimationFunction")));
-            this.circProgressBar.AnimationSpeed = 100;
+            this.circProgressBar.AnimationSpeed = 22;
             this.circProgressBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
             this.circProgressBar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 40.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.circProgressBar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(213)))), ((int)(((byte)(219)))));
@@ -55,7 +54,7 @@ namespace UserInterface
             this.circProgressBar.InnerWidth = -1;
             this.circProgressBar.Location = new System.Drawing.Point(78, 169);
             this.circProgressBar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.circProgressBar.MarqueeAnimationSpeed = 2000;
+            this.circProgressBar.MarqueeAnimationSpeed = 250;
             this.circProgressBar.Name = "circProgressBar";
             this.circProgressBar.OuterColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(26)))), ((int)(((byte)(43)))));
             this.circProgressBar.OuterMargin = -25;
