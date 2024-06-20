@@ -3,7 +3,7 @@ using System.Windows.Forms;
 
 namespace UserInterface
 {
-    partial class Form1
+    partial class Home_Form
     {
         /// <summary>
         /// Required designer variable.
@@ -83,7 +83,7 @@ namespace UserInterface
             this.labelBPM.AutoSize = true;
             this.labelBPM.Location = new System.Drawing.Point(32, 272);
             this.labelBPM.Name = "labelBPM";
-            this.labelBPM.Size = new System.Drawing.Size(186, 25);
+            this.labelBPM.Size = new System.Drawing.Size(113, 16);
             this.labelBPM.TabIndex = 1;
             this.labelBPM.Text = "Beats per minute: ";
             // 
@@ -92,7 +92,7 @@ namespace UserInterface
             this.labelBodyTemp.AutoSize = true;
             this.labelBodyTemp.Location = new System.Drawing.Point(32, 457);
             this.labelBodyTemp.Name = "labelBodyTemp";
-            this.labelBodyTemp.Size = new System.Drawing.Size(194, 25);
+            this.labelBodyTemp.Size = new System.Drawing.Size(120, 16);
             this.labelBodyTemp.TabIndex = 2;
             this.labelBodyTemp.Text = "Body temperature: ";
             // 
@@ -101,7 +101,7 @@ namespace UserInterface
             this.labelEnvTemp.AutoSize = true;
             this.labelEnvTemp.Location = new System.Drawing.Point(32, 314);
             this.labelEnvTemp.Name = "labelEnvTemp";
-            this.labelEnvTemp.Size = new System.Drawing.Size(265, 25);
+            this.labelEnvTemp.Size = new System.Drawing.Size(162, 16);
             this.labelEnvTemp.TabIndex = 3;
             this.labelEnvTemp.Text = "Environment temperature: ";
             // 
@@ -110,7 +110,7 @@ namespace UserInterface
             this.labelHumidity.AutoSize = true;
             this.labelHumidity.Location = new System.Drawing.Point(32, 358);
             this.labelHumidity.Name = "labelHumidity";
-            this.labelHumidity.Size = new System.Drawing.Size(230, 25);
+            this.labelHumidity.Size = new System.Drawing.Size(139, 16);
             this.labelHumidity.TabIndex = 4;
             this.labelHumidity.Text = "Environment humidity: ";
             // 
@@ -119,7 +119,7 @@ namespace UserInterface
             this.labelBrightness.AutoSize = true;
             this.labelBrightness.Location = new System.Drawing.Point(32, 408);
             this.labelBrightness.Name = "labelBrightness";
-            this.labelBrightness.Size = new System.Drawing.Size(126, 25);
+            this.labelBrightness.Size = new System.Drawing.Size(76, 16);
             this.labelBrightness.TabIndex = 5;
             this.labelBrightness.Text = "Brightness: ";
             // 
@@ -128,7 +128,7 @@ namespace UserInterface
             this.labelMotionAccX.AutoSize = true;
             this.labelMotionAccX.Location = new System.Drawing.Point(32, 500);
             this.labelMotionAccX.Name = "labelMotionAccX";
-            this.labelMotionAccX.Size = new System.Drawing.Size(139, 25);
+            this.labelMotionAccX.Size = new System.Drawing.Size(84, 16);
             this.labelMotionAccX.TabIndex = 6;
             this.labelMotionAccX.Text = "MotionAccX: ";
             // 
@@ -137,7 +137,7 @@ namespace UserInterface
             this.labelMotionAccY.AutoSize = true;
             this.labelMotionAccY.Location = new System.Drawing.Point(32, 547);
             this.labelMotionAccY.Name = "labelMotionAccY";
-            this.labelMotionAccY.Size = new System.Drawing.Size(140, 25);
+            this.labelMotionAccY.Size = new System.Drawing.Size(85, 16);
             this.labelMotionAccY.TabIndex = 7;
             this.labelMotionAccY.Text = "MotionAccY: ";
             // 
@@ -146,7 +146,7 @@ namespace UserInterface
             this.labelMotionAccZ.AutoSize = true;
             this.labelMotionAccZ.Location = new System.Drawing.Point(32, 596);
             this.labelMotionAccZ.Name = "labelMotionAccZ";
-            this.labelMotionAccZ.Size = new System.Drawing.Size(138, 25);
+            this.labelMotionAccZ.Size = new System.Drawing.Size(84, 16);
             this.labelMotionAccZ.TabIndex = 8;
             this.labelMotionAccZ.Text = "MotionAccZ: ";
             // 
@@ -235,7 +235,7 @@ namespace UserInterface
             this.radioButtonX.Checked = true;
             this.radioButtonX.Location = new System.Drawing.Point(3, 3);
             this.radioButtonX.Name = "radioButtonX";
-            this.radioButtonX.Size = new System.Drawing.Size(105, 29);
+            this.radioButtonX.Size = new System.Drawing.Size(65, 20);
             this.radioButtonX.TabIndex = 13;
             this.radioButtonX.TabStop = true;
             this.radioButtonX.Text = "X-Axis";
@@ -247,7 +247,7 @@ namespace UserInterface
             this.radioButtonY.AutoSize = true;
             this.radioButtonY.Location = new System.Drawing.Point(183, 3);
             this.radioButtonY.Name = "radioButtonY";
-            this.radioButtonY.Size = new System.Drawing.Size(106, 29);
+            this.radioButtonY.Size = new System.Drawing.Size(66, 20);
             this.radioButtonY.TabIndex = 14;
             this.radioButtonY.TabStop = true;
             this.radioButtonY.Text = "Y-Axis";
@@ -259,7 +259,7 @@ namespace UserInterface
             this.radioButtonZ.AutoSize = true;
             this.radioButtonZ.Location = new System.Drawing.Point(343, 3);
             this.radioButtonZ.Name = "radioButtonZ";
-            this.radioButtonZ.Size = new System.Drawing.Size(104, 29);
+            this.radioButtonZ.Size = new System.Drawing.Size(65, 20);
             this.radioButtonZ.TabIndex = 15;
             this.radioButtonZ.TabStop = true;
             this.radioButtonZ.Text = "Z-Axis";
@@ -276,7 +276,7 @@ namespace UserInterface
             this.panel1.Size = new System.Drawing.Size(486, 40);
             this.panel1.TabIndex = 16;
             // 
-            // Form1
+            // Home_Form
             // 
             this.ClientSize = new System.Drawing.Size(1271, 733);
             this.Controls.Add(this.panel1);
@@ -293,7 +293,8 @@ namespace UserInterface
             this.Controls.Add(this.labelBodyTemp);
             this.Controls.Add(this.labelBPM);
             this.Controls.Add(this.buttonStart);
-            this.Name = "Form1";
+            this.Name = "Home_Form";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             ((System.ComponentModel.ISupportInitialize)(this.chartHeartbeat)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartHeight)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartDistance)).EndInit();
@@ -327,4 +328,3 @@ namespace UserInterface
         private Panel panel1;
     }
 }
-

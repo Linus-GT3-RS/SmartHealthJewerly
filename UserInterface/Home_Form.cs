@@ -16,7 +16,7 @@ using System.Windows.Forms.DataVisualization.Charting;
 
 namespace UserInterface
 {
-    public partial class Form1 : Form
+    public partial class Home_Form : Form
     {
         private Measurement measurement;
         bool bStop = false;
@@ -26,7 +26,7 @@ namespace UserInterface
         float _currentHeight;
       private static readonly object _lock = new object();
 
-      public Form1()
+      public Home_Form()
         {
             InitializeComponent();
             this.Load += new EventHandler(FurtherInitialization); //form fertig geladen, dann weiter initialisieren
