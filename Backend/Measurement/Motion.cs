@@ -10,23 +10,33 @@ namespace BackendCS.Measurement
 {
     public class Motion : ISensorMulti
     {
+        const int ciSize = 100;
+
         //acceleration of the axis
-        private float _accX;
-        private float _accY;
-        private float[] _last100accY = new float[100];
+        private float[] _last100accX = new float[ciSize];
+        private int idxAccX;
+        private float _avgAccX;
+
+        private float[] _last100accY = new float[ciSize];
         private int idxAccY;
         private float _avgAccY;
-        private float _accZ;
+
+        private float[] _last100accZ = new float[ciSize];
+        private int idxAccZ;
+        private float _avgAccZ;
 
         //gyroscope of the axis
-        private float _gyroX;
-        private float _gyroY;
-         private float[] _last100gyroY = new float[100];
-         private int idxGyroY;
-         private float _avgGyroY;
-      private float _gyroZ;
+        private float[] _last100gyroX = new float[ciSize];
+        private int idxGyroX;
+        private float _avgGyroX;
 
-        private float _lastVal;
+        private float[] _last100gyroY = new float[ciSize];
+        private int idxGyroY;
+        private float _avgGyroY;
+
+        private float[] _last100gyroZ = new float[ciSize];
+        private int idxGyroZ;
+        private float _avgGyroZ;
 
 
 
@@ -41,27 +51,30 @@ namespace BackendCS.Measurement
                     switch (index)
                     {
                         case 5:
-                            _accX = result;
+                            _last100accX[idxAccX++] = result;
+                            idxAccX = (idxAccX > 99) ? 0 : idxAccX;
                             break;
                         case 6:
-                            _accY = result;
                             _last100accY[idxAccY++] = result;
                             idxAccY = (idxAccY > 99) ? 0 : idxAccY;
-                        break;
+                            break;
                         case 7:
-                            _accZ = result;
+                            _last100accZ[idxAccZ++] = result;
+                            idxAccZ = (idxAccZ > 99) ? 0 : idxAccZ;
                             break;
                         case 8:
-                            _gyroX = result;
+                            _last100gyroX[idxGyroX++] = result;
+                            idxGyroX = (idxGyroX > 99) ? 0 : idxGyroX;
                             break;
                         case 9:
-                            _gyroY = result;
                             _last100gyroY[idxGyroY++] = result;
                             idxGyroY = (idxGyroY > 99) ? 0 : idxGyroY;
-                     break;
-                        case 10:
-                            _gyroZ = result;
                             break;
+                        case 10:
+                            _last100gyroZ[idxGyroZ++] = result;
+                            idxGyroZ = (idxGyroZ > 99) ? 0 : idxGyroZ;
+                            break;
+                        default: break;
                     }
                 }
             }
@@ -70,23 +83,38 @@ namespace BackendCS.Measurement
 
         public float[] fGetMultiData()
         {
-         vCalculateAcc();
-         return new float[] { _accX, _accY, _accZ, _gyroX, _gyroY, _gyroZ, _avgAccY, _avgGyroY };
+            vCalculateAcc();
+            return new float[] 
+            { _avgAccX, _avgAccY, _avgAccZ, _avgGyroX, _avgGyroY, _avgGyroZ, };
         }
 
 
          private void vCalculateAcc()
          {
+            _avgAccX = 0;
             _avgAccY = 0;
+            _avgAccZ = 0;
+            _avgGyroX = 0;
             _avgGyroY = 0;
+            _avgGyroZ = 0;
+
             for(int i = 0; i < _last100accY.Length; i++)
             {
-               _avgAccY += _last100accY[i];
-               _avgGyroY += _last100gyroY[i];
+                _avgAccX += _last100accX[i];
+                _avgAccY += _last100accY[i];
+                _avgAccZ += _last100accZ[i];
+
+                _avgGyroX += _last100gyroX[i];
+                _avgGyroY += _last100gyroY[i];
+                _avgGyroZ += _last100gyroZ[i];
             }
+            _avgAccX /= 100;
             _avgAccY /= 100;
+            _avgAccZ /= 100;
+
+            _avgGyroX /= 100;
             _avgGyroY /= 100;
-            //if (_avgAccY < 0.0001) _avgAccY = 0;
+            _avgGyroZ /= 100;
          }
     }
 }
