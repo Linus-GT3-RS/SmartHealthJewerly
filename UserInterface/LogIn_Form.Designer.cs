@@ -149,13 +149,13 @@ namespace UserInterface
 
         }
 
-      #endregion
+        #endregion
 
-      private System.Windows.Forms.Button LoginButton;
-      private System.Windows.Forms.TextBox emailTextBox;
-      private System.Windows.Forms.TextBox PasswordTextBox;
-      private System.Windows.Forms.Label label1;
-      private Label labelSignIn;
+        private System.Windows.Forms.Button LoginButton;
+        private System.Windows.Forms.TextBox emailTextBox;
+        private System.Windows.Forms.TextBox PasswordTextBox;
+        private System.Windows.Forms.Label label1;
+        private Label labelSignIn;
         private CheckBox checkBox1;
         private Label label2;
     }

@@ -6,17 +6,32 @@ using System.Threading.Tasks;
 
 namespace BackendCS
 {
-   public static class ProfileChangements
+   public class ProfileChangements
    {
-      public static bool LogIn(string email, string password)
+      private List<Profile> _profiles = new List<Profile>();
+
+      public bool LogIn(string email, string password)
       {
-         return true;
+            foreach (var profiles in _profiles)
+            {
+                if (profiles.sGetLoginname() == email && profiles.sGetPassword() == password)
+                {
+                    return true;
+                }
+            }
+            return false;
       }
 
-
-
-      public static bool SignUp(string email, string password)
+      public bool SignUp(string email, string password)
       {
+         foreach(var profiles in _profiles)
+         {
+            if(profiles.sGetLoginname() == email)
+            {
+                return false;
+            }
+         }
+         _profiles.Add(new Profile(email, password, new List<Patient>()));
          return true;
       }
    }
