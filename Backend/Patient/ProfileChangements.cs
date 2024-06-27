@@ -11,20 +11,24 @@ namespace BackendCS
 {
    public class ProfileChangements
    {
-      private List<Profile> _profiles = new List<Profile>();
 
-      public bool LogIn(string email, string password)
+
+      public int LogIn(string email, string password)
       {
          if (emailAlreadyExisting(email))
          {
-            return correctPassword(email, password);
+            if (correctPassword(email, password))
+            {
+               setProfile(email, password);
+               return 0;
+            }
+            return 1;
          }
-         return false;
+         return 2;
       }
 
-      public bool SignUp(string email, string password)
+      public bool SignIn(string email, string password)
       {
-         _profiles.Add(new Profile(email, password, new List<Patient>()));
          if (emailAlreadyExisting(email))
          {
             return false;
@@ -33,8 +37,19 @@ namespace BackendCS
          Dictionary<string, string> users = getUsers();
          users.Add(email, password);
          saveNewUsers(users);
+
+         setProfile(email, password);
+
          return true;
       }
+
+
+      private void setProfile(string email, string password)
+      {
+         Profile.sSetPassword(password);
+         Profile.sSetLoginname(email);
+      }
+
 
 
       private static bool emailAlreadyExisting(string email)

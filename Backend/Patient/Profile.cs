@@ -7,32 +7,30 @@ using System.Threading.Tasks;
 
 namespace BackendCS
 {
-    internal class Profile
+    public static class Profile
     {
-        private string _loginname;
-        private string _password;
-        private List<Patient> _patients;
+        private static string _loginname;
+        private static string _password;
 
-        public Profile(string loginname, string password, List<Patient> patients)
-        {
-            _loginname = loginname;
-            _password = password;
-            _patients = patients;
-        }
 
-        public void AddProfile(Patient patient)
-        {
-            _patients.Add(patient);
-        }
-
-        public string sGetLoginname()
+        public static string sGetLoginname()
         {
             return _loginname;
         }
 
-        public string sGetPassword()
+        public static string sGetPassword()
         {
             return _password;
         }
-    }
+
+        public static void sSetLoginname(string email)
+        {
+           _loginname = email;
+       }
+
+         public static void sSetPassword(string password)
+         {
+           _password = password;
+         }
+   }
 }
