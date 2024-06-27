@@ -18,13 +18,16 @@ namespace BackendCS.Measurement
 
         public void vProcessSingleData(string data)
         {
-            _heartRate = int.Parse(data);
+            if (int.TryParse(data, out int result)) //format checken
+            {
+                _heartRate = int.Parse(data);
+            }
         }
 
 
         public float fGetSingleData()
         {
-            vCalcBPM();
+            //vCalcBPM();
             return (float)_bpm;
         }
 

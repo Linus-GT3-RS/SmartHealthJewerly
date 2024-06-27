@@ -5,6 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
+using System.Threading;
+using BackendCS.Event;
 
 namespace BackendCS.Measurement
 {
@@ -20,6 +22,14 @@ namespace BackendCS.Measurement
         float[] fGetMultiData();
     }
 
+    public class PrintDataEventArgs
+    {
+        public string Message { get; private set; }
+
+        public PrintDataEventArgs()
+        {
+        }
+    }
 
     public class Measurement
     {
@@ -29,6 +39,8 @@ namespace BackendCS.Measurement
         public readonly List<ISensorSingle> _sensorsSingle;
         public readonly List<ISensorMulti> _sensorsMulti;
 
+        public delegate void PrintDataHandler(PrintDataEventArgs e);
+        public event PrintDataHandler PrintData;
 
         /*
         * Constructor overgive the port
@@ -71,16 +83,28 @@ namespace BackendCS.Measurement
         {
             lock (_lock)
             {
-                SerialPort serialPort = (SerialPort)sender;
+                Thread workerThread = new Thread(() =>
+                {
+                    SerialPort serialPort = (SerialPort)sender;
+                    if (serialPort.IsOpen)
+                    {
+                        //read Datas into string
+                        string data = serialPort.ReadLine().Trim();
 
-                //read Datas into string
-                string data = serialPort.ReadLine().Trim();
+                        //seperate values
+                        string[] aData = data.Split(',');
 
-                //seperate values
-                string[] aData = data.Split(',');
+                        vOrganizeSingleData(aData);
+                        vOrganizeMultiData(aData);
+                    }
+                });
+                workerThread.Start();
+                workerThread.Join();
+            }
 
-                vOrganizeSingleData(aData);
-                vOrganizeMultiData(aData);
+            if (PrintData != null) //check if UI is subscribed
+            {
+                PrintData(new PrintDataEventArgs()); //Throw new event so the GUI nows that it needs to update
             }
         }
         
@@ -92,7 +116,7 @@ namespace BackendCS.Measurement
         {
             for(int i = 0; i < _sensorsSingle.Count; i++)
             {
-                if(!bCheckNAN(data[i]))
+                if(i < data.Length && !bCheckNAN(data[i]) && data[i] != "")
                 {
                     _sensorsSingle[i].vProcessSingleData(data[i]);
                 }
