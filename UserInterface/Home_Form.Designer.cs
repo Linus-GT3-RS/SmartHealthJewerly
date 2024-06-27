@@ -1,4 +1,7 @@
-﻿namespace UserInterface
+﻿using System.Windows.Forms;
+using System.Drawing;
+
+namespace UserInterface
 {
     partial class Home_Form
     {
@@ -28,6 +31,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.BackgroundImage = Image.FromFile("C:\\Users\\dennisapelt\\source\\repos\\SmartHealthJewerly\\UserInterface\\hintergrund.jpeg"); // Pfad zum Bild angeben
+            this.BackgroundImageLayout = ImageLayout.Stretch;
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
