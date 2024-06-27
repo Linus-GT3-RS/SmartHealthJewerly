@@ -31,5 +31,5 @@ namespace UserInterface
          string password = PasswordTextBox.Text;
          ProfileChangements.SignUp(email, password);
       }
-   }
+    }
 }

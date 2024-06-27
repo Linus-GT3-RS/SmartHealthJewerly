@@ -129,5 +129,9 @@
       <Name>BackendCS</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="hintergrund.jpeg" />
+    <Content Include="hintergrund.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
