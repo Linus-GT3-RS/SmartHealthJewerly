@@ -9,9 +9,11 @@ using Newtonsoft.Json;
 
 namespace BackendCS
 {
-   public static class ProfileChangements
+   public class ProfileChangements
    {
-      public static bool LogIn(string email, string password)
+      private List<Profile> _profiles = new List<Profile>();
+
+      public bool LogIn(string email, string password)
       {
          if (emailAlreadyExisting(email))
          {
@@ -20,10 +22,9 @@ namespace BackendCS
          return false;
       }
 
-
-
-      public static bool SignUp(string email, string password)
+      public bool SignUp(string email, string password)
       {
+         _profiles.Add(new Profile(email, password, new List<Patient>()));
          if (emailAlreadyExisting(email))
          {
             return false;
