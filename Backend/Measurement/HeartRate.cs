@@ -8,7 +8,10 @@ namespace BackendCS.Measurement
 {
     public class HeartRate : ISensorSingle
     {
-        private int _heartRate;
+        private int[] _last10heartRate = new int[10];
+        private int _avgHeartRate;
+        private int _idx;
+
         private int _bpm;
 
         const int delayMsec = 60;
@@ -20,35 +23,48 @@ namespace BackendCS.Measurement
         {
             if (int.TryParse(data, out int result)) //format checken
             {
-                _heartRate = int.Parse(data);
+                _last10heartRate[_idx] = int.Parse(data);
+                _idx = (_idx > 9) ? 0 : _idx;
             }
         }
 
 
         public float fGetSingleData()
         {
-            //vCalcBPM();
+            vCalcBPM();
             return (float)_bpm;
         }
 
 
         public int iGetHeartRate()
         {
-            return _heartRate;
+            vCalcAverage();
+            return _avgHeartRate;
+        }
+
+
+        private void vCalcAverage()
+        {
+            _avgHeartRate = 0;
+            for(int i = 0; i < 10; i++)
+            {
+                _avgHeartRate += _last10heartRate[_idx];
+            }
+            _avgHeartRate /= 10;
         }
 
 
         private void vCalcBPM()
         {
-            if (bHeartbeatDetected(delayMsec, _heartRate))
+            if (bHeartbeatDetected(delayMsec, _avgHeartRate))
             {
-                if (_heartRate != 0)
+                if (_avgHeartRate != 0)
                 {
-                    _bpm = 60000 / _heartRate;
+                    _bpm = 60000 / _avgHeartRate;
                 }
-                _heartRate = 0;
+                _avgHeartRate = 0;
             }
-            _heartRate += delayMsec;
+            _avgHeartRate += delayMsec;
         }
 
 

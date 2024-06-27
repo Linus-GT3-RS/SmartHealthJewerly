@@ -13,21 +13,26 @@ namespace BackendCS
         private string _password;
         private List<Patient> _patients;
 
-        private Profile(string loginname, string password, List<Patient> patients)
+        public Profile(string loginname, string password, List<Patient> patients)
         {
             _loginname = loginname;
             _password = password;
             _patients = patients;
         }
 
-        public static Profile CreateProfile(string loginname, string password, List<Patient> patients)
-        {
-            return new Profile(loginname,password,patients);
-        }
-
         public void AddProfile(Patient patient)
         {
             _patients.Add(patient);
+        }
+
+        public string sGetLoginname()
+        {
+            return _loginname;
+        }
+
+        public string sGetPassword()
+        {
+            return _password;
         }
     }
 }
