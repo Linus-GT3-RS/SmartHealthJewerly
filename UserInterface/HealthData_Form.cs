@@ -83,15 +83,8 @@ namespace UserInterface
             heart = (HeartRate)measurement._sensorsSingle[0];
             motion = (Motion)measurement._sensorsMulti[0];
             float[] motionValues = motion.fGetMultiData();
-            //if (motionValues[7] < 0)
-            //{
-            //   _currentHeight -= motionValues[6];
-            //}
-            //else
-            //{
-            //   _currentHeight += motionValues[6];
-            //}
-          
+
+
             BeginInvoke((Action)(() => //switch back to main thread
                   {
                      labelBPM.Text = "Beats per minute: " + heart.fGetSingleData();
@@ -100,20 +93,11 @@ namespace UserInterface
                      labelBodyTemp.Text = "Body temperature: " + bodyTemperature.ToString("F1") + " Grad";
                      labelBrightness.Text = "Brightness: " + brightnessValue.ToString() + " => " + BrightnessPercentage + "% dunkel";
 
-
-                     //motion
-                     labelMotionAccX.Text = measurement._sensorsMulti[0].fGetMultiData()[0] + "";
-                     labelMotionAccY.Text = measurement._sensorsMulti[0].fGetMultiData()[1] + "";
-                     labelMotionAccZ.Text = measurement._sensorsMulti[0].fGetMultiData()[2] + "";
-                     
-
                      //fillSeries
                      fillSeries();
-
                      //redraw charts
                      redrawCharts();
-                    
-                     }));
+                  }));
          }
         }
 
@@ -194,7 +178,7 @@ namespace UserInterface
             Series heartBeat = chartHeartbeat.Series["Series1"];
             if (heartBeat.Points.Count > 500)
             {
-            heartBeat.Points.RemoveAt(0); // Keep the number of points reasonable
+               heartBeat.Points.RemoveAt(0); // Keep the number of points reasonable
             }
 
             heartBeat.Points.AddY(heart.iGetHeartRate());
