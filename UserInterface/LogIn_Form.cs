@@ -8,12 +8,14 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BackendCS;
 
 namespace UserInterface
 {
     public partial class LogIn_Form : Form
     {
         private Form s;
+        
 
         public LogIn_Form()
         {
@@ -25,7 +27,9 @@ namespace UserInterface
             var username = username_textbox.Text;
             var password = password_textbox.Text;
 
-            if(username == "Admin" && password == "admin")
+            
+
+            if (Backend.Login(username, password))
             {
                 s = new SplashScreen_Form(true);
                 s.FormClosed += justTests;
@@ -44,6 +48,11 @@ namespace UserInterface
         private void justTests(object sender, EventArgs e)
         {
             this.Close();            
+        }
+
+        private void username_textbox_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

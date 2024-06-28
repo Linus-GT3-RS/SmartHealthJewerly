@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BackendCS
 {
-    internal class Patient
+    public class Patient
     {
         private string _firstname;
         private string _lastname;

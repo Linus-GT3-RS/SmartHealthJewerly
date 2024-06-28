@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace BackendCS
 {
-    internal class Profile
+    public class Profile
     {
-        private string _loginname;
+        private string _loginname { get; }
         private string _password;
         private List<Patient> _patients;
 
@@ -25,9 +25,25 @@ namespace BackendCS
             return new Profile(loginname,password,patients);
         }
 
-        public void AddProfile(Patient patient)
+        public static Profile CreateProfile(string loginname, string password)
+        {
+            return new Profile(loginname, password, new List<Patient>());
+        }
+
+        public void AddPatient(Patient patient)
         {
             _patients.Add(patient);
         }
+
+        public bool check(string loginname, string password)
+        {
+            if (_loginname.Equals(loginname) && _password.Equals(password))
+            {
+                return true;
+            }
+            return false;
+        }
+
+
     }
 }

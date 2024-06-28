@@ -82,5 +82,9 @@ namespace UserInterface
             this.Close();
         }
 
+        private void Manager_Form_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

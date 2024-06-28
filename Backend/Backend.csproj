@@ -44,9 +44,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
-	<Compile Include="Converter\Converter.cs" />
-	<Compile Include="Converter\BrightnessConverter.cs" />
+    <Compile Include="Backend.cs" />
+    <Compile Include="Converter\Converter.cs" />
+    <Compile Include="Converter\BrightnessConverter.cs" />
     <Compile Include="Measurement\BodyTemperature.cs" />
     <Compile Include="Measurement\Brightness.cs" />
     <Compile Include="Measurement\Hardware.cs" />

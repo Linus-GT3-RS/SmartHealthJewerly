@@ -13,6 +13,8 @@ namespace UserInterface
         Skip2Home       // todo
     };
 
+    
+
     internal static class Program
     {
         // ---------------------------------- Start CONFIG : Free to use ----------------------------------
@@ -60,6 +62,7 @@ namespace UserInterface
             }
 
             Application.Run(StartForm);
+            
 
         }
 

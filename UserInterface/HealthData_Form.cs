@@ -24,8 +24,7 @@ namespace UserInterface
         HeartRate heart;
         Motion motion;
         float _currentHeight;
-        private static readonly object _lock = new object();
-
+        private static readonly object _lock = new object(); 
         private bool _normalRun;
         
         public HealthData_Form(bool normalRun)
@@ -34,6 +33,7 @@ namespace UserInterface
 
             InitializeComponent();
             this.Load += new EventHandler(FurtherInitialization); //form fertig geladen, dann weiter initialisieren
+
         }
 
 
@@ -45,9 +45,9 @@ namespace UserInterface
         //Rest der (Backend)-Initialisation
         private void FurtherInitialization(object sender, EventArgs e)
         {
-            measurement = new Measurement();                
-            measurement.PrintData += vPrintMeasurements;    //event hinterlegen
-            buttonStart.Enabled = true;                     //ab jetzt kann gemessen werden
+            measurement = new Measurement();                            
+            measurement.PrintData += vPrintMeasurements;                    //event hinterlegen
+            buttonStart.Enabled = true;                                     //ab jetzt kann gemessen werden
 
 
             //timer wird genutzt um Helligkeit der GUI alle 10s zuupdaten
