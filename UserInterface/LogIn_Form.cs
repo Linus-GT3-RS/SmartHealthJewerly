@@ -87,11 +87,11 @@ namespace UserInterface
             string email = emailTextBox.Text;
             string password = PasswordTextBox.Text;
             //sign in erfolgreich?
-           if (_profileChangements.SignIn(email, password))
-           {
-               //sign in erfolgreich
-               this.Close(); //form schließen
-           }
+           if (_profileChangements.SignIn(email, password))     //sign in erfolgreich
+            {
+                    OnLoginSucces?.Invoke(this, EventArgs.Empty);
+        
+            }
            else
            {
                //email wird schon genutzt
