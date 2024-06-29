@@ -11,8 +11,6 @@ namespace BackendCS
 {
    public class ProfileChangements
    {
-
-
       public int LogIn(string email, string password)
       {
          if (emailAlreadyExisting(email))

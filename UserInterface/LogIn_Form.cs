@@ -15,6 +15,9 @@ namespace UserInterface
     public partial class LogIn_Form : Form
     {
         ProfileChangements _profileChangements;
+
+        public event EventHandler OnLoginSucces;
+
         public LogIn_Form()
         {
             InitializeComponent(); 
@@ -49,26 +52,26 @@ namespace UserInterface
       {
          if (checkTextBoxes())
          {
-            //get strings
             string email = emailTextBox.Text;
             string password = PasswordTextBox.Text;
-            //log in erfolgreich?
+            
             int erfolgreich = _profileChangements.LogIn(email, password);
-            if (erfolgreich == 0)
-            {
-               //log in erfolgreich
-               this.Close(); //form schließen
+
+            if (erfolgreich == 0)   // log in erfolgreich
+            {               
+               if(OnLoginSucces != null)
+               {
+                   OnLoginSucces(this, EventArgs.Empty);
+               }
             }
-            else if (erfolgreich == 1)
-            {
-               //password falsch
+            else if (erfolgreich == 1)      //password falsch
+            {               
                PasswordTextBox.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold);
                PasswordTextBox.ForeColor = System.Drawing.Color.Red;
                PasswordTextBox.Text = "wrong password";
             }
-            else
-            {
-               //email nicht vorhanden
+            else       //email nicht vorhanden
+            {               
                emailTextBox.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold);
                emailTextBox.ForeColor = System.Drawing.Color.Red;
                emailTextBox.Text = "no user with this e-mail";
@@ -84,11 +87,11 @@ namespace UserInterface
             string email = emailTextBox.Text;
             string password = PasswordTextBox.Text;
             //sign in erfolgreich?
-           if (_profileChangements.SignIn(email, password))
-           {
-               //sign in erfolgreich
-               this.Close(); //form schließen
-           }
+           if (_profileChangements.SignIn(email, password))     //sign in erfolgreich
+            {
+                    OnLoginSucces?.Invoke(this, EventArgs.Empty);
+        
+            }
            else
            {
                //email wird schon genutzt
