@@ -83,15 +83,8 @@ namespace UserInterface
             heart = (HeartRate)measurement._sensorsSingle[0];
             motion = (Motion)measurement._sensorsMulti[0];
             float[] motionValues = motion.fGetMultiData();
-            //if (motionValues[7] < 0)
-            //{
-            //   _currentHeight -= motionValues[6];
-            //}
-            //else
-            //{
-            //   _currentHeight += motionValues[6];
-            //}
-            _currentHeight = motionValues[6];
+
+
             BeginInvoke((Action)(() => //switch back to main thread
                   {
                      labelBPM.Text = "Beats per minute: " + heart.fGetSingleData();
@@ -100,20 +93,11 @@ namespace UserInterface
                      labelBodyTemp.Text = "Body temperature: " + bodyTemperature.ToString("F1") + " Grad";
                      labelBrightness.Text = "Brightness: " + brightnessValue.ToString() + " => " + BrightnessPercentage + "% dunkel";
 
-
-                     //motion
-                     labelMotionAccX.Text = measurement._sensorsMulti[0].fGetMultiData()[6] + "";
-                     labelMotionAccY.Text = measurement._sensorsMulti[0].fGetMultiData()[7] + "";
-                     labelMotionAccZ.Text = measurement._sensorsMulti[0].fGetMultiData()[2] + "";
-
-
                      //fillSeries
                      fillSeries();
-
                      //redraw charts
                      redrawCharts();
-                    
-                     }));
+                  }));
          }
         }
 
@@ -194,7 +178,7 @@ namespace UserInterface
             Series heartBeat = chartHeartbeat.Series["Series1"];
             if (heartBeat.Points.Count > 500)
             {
-            heartBeat.Points.RemoveAt(0); // Keep the number of points reasonable
+               heartBeat.Points.RemoveAt(0); // Keep the number of points reasonable
             }
 
             heartBeat.Points.AddY(heart.iGetHeartRate());
@@ -221,16 +205,18 @@ namespace UserInterface
             {
             XGyro.Points.RemoveAt(0); // Keep the number of points reasonable
             }
-            XGyro.Points.AddY(motionValues[6]);
+            XGyro.Points.AddY(motionValues[3]);
         }
         private void fillYAxis()
         {
+            motion = (Motion)measurement._sensorsMulti[0];
+            float[] motionValues = motion.fGetMultiData();
             Series YAcc = chartHeight.Series["SeriesYAcc"];
             if (YAcc.Points.Count > 500)
             {
             YAcc.Points.RemoveAt(0); // Keep the number of points reasonable
             }
-            YAcc.Points.AddY(20);
+            YAcc.Points.AddY(motionValues[1]);
 
 
             Series YGyro = chartDistance.Series["SeriesYGyro"];
@@ -238,16 +224,18 @@ namespace UserInterface
             {
             YGyro.Points.RemoveAt(0); // Keep the number of points reasonable
             }
-            YGyro.Points.AddY(200);
+            YGyro.Points.AddY(motionValues[4]);
         }
         private void fillZAxis()
         {
+               motion = (Motion)measurement._sensorsMulti[0];
+            float[] motionValues = motion.fGetMultiData();
             Series ZAcc = chartHeight.Series["SeriesZAcc"];
             if (ZAcc.Points.Count > 500)
             {
             ZAcc.Points.RemoveAt(0); // Keep the number of points reasonable
             }
-            ZAcc.Points.AddY(30);
+            ZAcc.Points.AddY(motionValues[2]);
 
 
             Series ZGyro = chartDistance.Series["SeriesZGyro"];
@@ -255,7 +243,7 @@ namespace UserInterface
             {
             ZGyro.Points.RemoveAt(0); // Keep the number of points reasonable
             }
-            ZGyro.Points.AddY(300);
+            ZGyro.Points.AddY(motionValues[5]);
         }
 
 

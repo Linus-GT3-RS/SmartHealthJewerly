@@ -8,11 +8,13 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing.Text;
 
 namespace UserInterface
 {
     public partial class Manager_Form : Form
     {
+        private LogIn_Form _loginForm;
         private Home_Form _homeForm;
         private HealthData_Form _healthDataForm;
 
@@ -27,9 +29,10 @@ namespace UserInterface
             InitializeComponent();
 
             // start Log-In
-            var logInScreen = new LogIn_Form();            
-            logInScreen.FormClosing += LogInScreen_OnFormClosing;
-            logInScreen.Show();
+            _loginForm = new LogIn_Form();
+            _loginForm.OnLoginSucces += LoginScreen_OnLoginSuccess;
+            _loginForm.FormClosed += LoginScreen_OnFormClosed;
+            _loginForm.Show();
 
             // create Home- and HealthData-Form in background
             _homeForm = new Home_Form(true);
@@ -39,11 +42,24 @@ namespace UserInterface
             _healthDataForm = new HealthData_Form(true);
             _healthDataForm.VisibleChanged += HealthDataForm_OnVisibleChanged;
             _healthDataForm.FormClosed += HealthDataForm_OnFormClosed;
+
+            var pfc = new PrivateFontCollection();
+            pfc.AddFontFile(@"Fonts\Red_Hat_Display\RedHatDisplay-VariableFont_wght.ttf");
+            foreach (Control c in this.Controls)
+            {
+                c.Font = new Font(pfc.Families[0], 15, FontStyle.Regular);
+            }
         }
 
-        private void LogInScreen_OnFormClosing(object sender, FormClosingEventArgs e)
+        private void LoginScreen_OnFormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void LoginScreen_OnLoginSuccess(object sender, EventArgs e)
         {
             var splashScreen = new SplashScreen_Form(false);
+            _loginForm.Hide();
             splashScreen.Show();
             splashScreen.VisibleChanged += SplashScreen_OnFormHiding;
         }
