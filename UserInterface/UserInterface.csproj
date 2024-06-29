@@ -132,6 +132,17 @@
   <ItemGroup>
     <Content Include="hintergrund.jpeg" />
     <Content Include="hintergrund.png" />
+    <Content Include="Images\Logo\8-ACN09NAKswNNpM6.png" />
+    <Content Include="Images\Logo\8-bKHUJqZxDOiXTfY.png" />
+    <Content Include="Images\Logo\8-LwAHYnc41Z7sV7y.png" />
+    <Content Include="Images\Logo\8-M0oHIvxKcREW75x %281%29.png" />
+    <Content Include="Images\Logo\8-M0oHIvxKcREW75x.png" />
+    <Content Include="Images\Logo\8-MchFtvUIzjWElaS.png" />
+    <Content Include="Images\Logo\8-PLMKo9rw3gyAE4H - Kopie.ico" />
+    <Content Include="Images\Logo\8-PLMKo9rw3gyAE4H.png" />
+    <Content Include="Images\Logo\8-vyDL1KSdQoJXBiF.png" />
+    <Content Include="Images\Logo\8-YPCj73ElaPWz19B.png" />
+    <Content Include="Images\Logo\8-Z26ZLK6z8voxJob.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

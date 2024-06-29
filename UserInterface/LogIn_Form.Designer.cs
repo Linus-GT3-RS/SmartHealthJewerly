@@ -49,7 +49,7 @@ namespace UserInterface
             this.LoginButton.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.LoginButton.ForeColor = System.Drawing.Color.Black;
             this.LoginButton.Location = new System.Drawing.Point(264, 298);
-            this.LoginButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.LoginButton.Margin = new System.Windows.Forms.Padding(4);
             this.LoginButton.Name = "LoginButton";
             this.LoginButton.Size = new System.Drawing.Size(251, 46);
             this.LoginButton.TabIndex = 2;
@@ -63,7 +63,7 @@ namespace UserInterface
             this.emailTextBox.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Italic);
             this.emailTextBox.ForeColor = System.Drawing.Color.LightGray;
             this.emailTextBox.Location = new System.Drawing.Point(151, 138);
-            this.emailTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.emailTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.emailTextBox.Name = "emailTextBox";
             this.emailTextBox.Size = new System.Drawing.Size(500, 35);
             this.emailTextBox.TabIndex = 0;
@@ -77,7 +77,7 @@ namespace UserInterface
             this.PasswordTextBox.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Italic);
             this.PasswordTextBox.ForeColor = System.Drawing.Color.LightGray;
             this.PasswordTextBox.Location = new System.Drawing.Point(151, 202);
-            this.PasswordTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PasswordTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.PasswordTextBox.Name = "PasswordTextBox";
             this.PasswordTextBox.Size = new System.Drawing.Size(500, 35);
             this.PasswordTextBox.TabIndex = 1;
@@ -87,6 +87,7 @@ namespace UserInterface
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.Black;
@@ -164,6 +165,8 @@ namespace UserInterface
             this.Controls.Add(this.emailTextBox);
             this.Controls.Add(this.LoginButton);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaximumSize = new System.Drawing.Size(818, 497);
+            this.MinimumSize = new System.Drawing.Size(818, 497);
             this.Name = "LogIn_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LogInScreen_Form";
