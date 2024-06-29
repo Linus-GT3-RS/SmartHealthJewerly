@@ -27,9 +27,9 @@ namespace UserInterface
             int nHeightEllipse
             );
 
-        private Random _randNumbGen;
+        protected Random _randNumbGen;
 
-        private bool _closeIfDone;
+        protected bool _closeIfDone;
 
         public SplashScreen_Form(bool closeIfDone)
         {
@@ -46,7 +46,7 @@ namespace UserInterface
 
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        protected virtual void timer1_Tick(object sender, EventArgs e)
         {
             int nextVal = circProgressBar.Value + _randNumbGen.Next(2, 10);
 
@@ -104,5 +104,31 @@ namespace UserInterface
 
             base.OnPaint(e);
         }
+    }
+
+
+
+    public class TestSplashScreen_Form : SplashScreen_Form
+    {
+        public TestSplashScreen_Form(bool closeIfDone) : base(closeIfDone)
+        {
+        }
+
+        protected override void timer1_Tick(object sender, EventArgs e)
+        {
+            int nextVal = circProgressBar.Value + _randNumbGen.Next(2, 10);
+
+            circProgressBar.Value = nextVal;
+            circProgressBar.Text = circProgressBar.Value.ToString() + "%";
+
+            if (circProgressBar.Value > 30)
+            {
+                timer1.Enabled = false;
+            }
+
+        }
+
+
+
     }
 }
