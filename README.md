@@ -19,4 +19,4 @@ Feel free to add useful stuff / information yourself
 
 
 ### Logo
-Logo was created using [hotpot ai generator](hotpot.ai/art-generator)
+Logo was created using [hotpot.ai/art-generator](https://hotpot.ai/ai-image-generator/create)
