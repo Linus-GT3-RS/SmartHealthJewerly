@@ -16,3 +16,7 @@
 [Call Pythoncode in C#](https://www.youtube.com/watch?v=1sOTTXlIhZo)
 
 Feel free to add useful stuff / information yourself
+
+
+### Logo
+Logo was created using [hotpot ai generator](hotpot.ai/art-generator)
