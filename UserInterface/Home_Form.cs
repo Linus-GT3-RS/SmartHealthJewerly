@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BackendCS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -28,5 +29,10 @@ namespace UserInterface
             }            
 
         }
-    }
+
+      private void Home_Form_Shown(object sender, EventArgs e)
+      {
+         label1.Text = "Hello " + Profile.sGetLoginname();
+      }
+   }
 }
