@@ -47,7 +47,7 @@ namespace UserInterface
             this.circProgressBar.AnimationFunction = ((WinFormAnimation.AnimationFunctions.Function)(resources.GetObject("circProgressBar.AnimationFunction")));
             this.circProgressBar.AnimationSpeed = 22;
             this.circProgressBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(27)))));
-            this.circProgressBar.Font = new System.Drawing.Font("Red Hat Display SemiBold", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.circProgressBar.Font = new System.Drawing.Font("Red Hat Display SemiBold", 33F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.circProgressBar.ForeColor = System.Drawing.Color.White;
             this.circProgressBar.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(27)))), ((int)(((byte)(49)))));
             this.circProgressBar.InnerMargin = 0;
@@ -72,7 +72,8 @@ namespace UserInterface
             this.circProgressBar.SuperscriptMargin = new System.Windows.Forms.Padding(10, 35, 0, 0);
             this.circProgressBar.SuperscriptText = "";
             this.circProgressBar.TabIndex = 0;
-            this.circProgressBar.TextMargin = new System.Windows.Forms.Padding(8, 8, 0, 0);
+            this.circProgressBar.Text = "dwad";
+            this.circProgressBar.TextMargin = new System.Windows.Forms.Padding(2, 4, 0, 0);
             this.circProgressBar.Value = 68;
             // 
             // timer1
@@ -83,11 +84,11 @@ namespace UserInterface
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Red Hat Display SemiBold", 22.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Red Hat Display SemiBold", 21F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(46, 53);
+            this.label1.Location = new System.Drawing.Point(71, 49);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(276, 52);
+            this.label1.Size = new System.Drawing.Size(250, 47);
             this.label1.TabIndex = 1;
             this.label1.Text = "Smarth Health";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -95,11 +96,11 @@ namespace UserInterface
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Red Hat Display SemiBold", 22.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Red Hat Display SemiBold", 21F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(106, 109);
+            this.label2.Location = new System.Drawing.Point(115, 104);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(170, 52);
+            this.label2.Size = new System.Drawing.Size(153, 47);
             this.label2.TabIndex = 1;
             this.label2.Text = "Desktop";
             this.label2.Click += new System.EventHandler(this.label1_Click);
@@ -107,9 +108,9 @@ namespace UserInterface
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Red Hat Display SemiBold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Red Hat Display SemiBold", 17.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(118, 475);
+            this.label3.Location = new System.Drawing.Point(118, 470);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(128, 40);
             this.label3.TabIndex = 1;
