@@ -17,6 +17,9 @@
 
 Feel free to add useful stuff / information yourself
 
+### Quality
+[Drastically improve quality of text and images in MCVS executable](https://www.youtube.com/watch?v=oIxpqXHdZAQ)
+
 
 ### Links to used images / icons
 Logo was created using [hotpot.ai/art-generator](https://hotpot.ai/ai-image-generator/create)
