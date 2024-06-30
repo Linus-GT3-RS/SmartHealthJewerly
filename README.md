@@ -18,10 +18,9 @@
 Feel free to add useful stuff / information yourself
 
 
-### Logo
+### Links to used images / icons
 Logo was created using [hotpot.ai/art-generator](https://hotpot.ai/ai-image-generator/create)
 
-### Icons
 <a target="_blank" href="https://icons8.com/icon/ckaioC1qqwCu/male-user">User</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
 
 <a target="_blank" href="https://icons8.com/icon/2985/secure">Password</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
