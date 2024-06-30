@@ -20,3 +20,6 @@ Feel free to add useful stuff / information yourself
 
 ### Logo
 Logo was created using [hotpot.ai/art-generator](https://hotpot.ai/ai-image-generator/create)
+
+### Icons
+<a target="_blank" href="https://icons8.com/icon/15263/male-user">Male User</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
