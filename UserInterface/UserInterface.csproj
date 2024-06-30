@@ -91,12 +91,6 @@
     <Compile Include="test.Designer.cs">
       <DependentUpon>test.cs</DependentUpon>
     </Compile>
-    <Compile Include="testLogin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="testLogin.Designer.cs">
-      <DependentUpon>testLogin.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="HealthData_Form.resx">
       <DependentUpon>HealthData_Form.cs</DependentUpon>
     </EmbeddedResource>
@@ -125,9 +119,6 @@
     <EmbeddedResource Include="test.resx">
       <DependentUpon>test.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="testLogin.resx">
-      <DependentUpon>testLogin.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -151,10 +142,21 @@
   <ItemGroup>
     <Content Include="hintergrund.jpeg" />
     <Content Include="hintergrund.png" />
+    <Content Include="Images\Logo\8-ACN09NAKswNNpM6.png" />
+    <Content Include="Images\Logo\8-bKHUJqZxDOiXTfY.png" />
+    <Content Include="Images\Logo\8-LwAHYnc41Z7sV7y.png" />
+    <Content Include="Images\Logo\8-M0oHIvxKcREW75x %281%29.png" />
+    <Content Include="Images\Logo\8-M0oHIvxKcREW75x.png" />
+    <Content Include="Images\Logo\8-MchFtvUIzjWElaS.png" />
+    <Content Include="Images\Logo\8-PLMKo9rw3gyAE4H - Kopie.ico" />
+    <Content Include="Images\Logo\8-PLMKo9rw3gyAE4H.png" />
+    <Content Include="Images\Logo\8-vyDL1KSdQoJXBiF.png" />
+    <Content Include="Images\Logo\8-YPCj73ElaPWz19B.png" />
+    <Content Include="Images\Logo\8-Z26ZLK6z8voxJob.png" />
+    <None Include="Resources\image.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Fonts\" />
-    <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
