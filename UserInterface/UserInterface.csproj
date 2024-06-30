@@ -88,12 +88,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="test.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="test.Designer.cs">
-      <DependentUpon>test.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Utils.cs" />
     <EmbeddedResource Include="HealthData_Form.resx">
       <DependentUpon>HealthData_Form.cs</DependentUpon>
     </EmbeddedResource>
@@ -119,9 +114,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="test.resx">
-      <DependentUpon>test.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="app.manifest" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -157,6 +149,8 @@
     <Content Include="Images\Logo\8-vyDL1KSdQoJXBiF.png" />
     <Content Include="Images\Logo\8-YPCj73ElaPWz19B.png" />
     <Content Include="Images\Logo\8-Z26ZLK6z8voxJob.png" />
+    <None Include="Resources\Login_Template - LoginButton.png" />
+    <None Include="Resources\Login_Template - Background.png" />
     <None Include="Resources\Design Login2.png" />
   </ItemGroup>
   <ItemGroup>

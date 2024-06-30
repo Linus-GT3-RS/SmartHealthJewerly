@@ -19,7 +19,7 @@ namespace UserInterface
     {
         // ---------------------------------- Start CONFIG : Free to use ----------------------------------
 
-        static RunSettings CurRunSettings = RunSettings.test;
+        static RunSettings CurRunSettings = RunSettings.LogIn_Only;
 
         // ---------------------------------- END CONFIG -----------------------------------------------------
 
@@ -62,8 +62,7 @@ namespace UserInterface
                     break;
 
                 case RunSettings.test:
-                    StartForm = new test();
-                    break;
+                    throw new Exception("not implemented");
 
                 default:
                     throw new Exception("error: this shouldnt happen");
