@@ -19,7 +19,7 @@ namespace UserInterface
     {
         // ---------------------------------- Start CONFIG : Free to use ----------------------------------
 
-        static RunSettings CurRunSettings = RunSettings.SplashScreen_OnlyDesign;
+        static RunSettings CurRunSettings = RunSettings.test;
 
         // ---------------------------------- END CONFIG -----------------------------------------------------
 
