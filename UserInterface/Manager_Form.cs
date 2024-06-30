@@ -43,12 +43,14 @@ namespace UserInterface
             _healthDataForm.VisibleChanged += HealthDataForm_OnVisibleChanged;
             _healthDataForm.FormClosed += HealthDataForm_OnFormClosed;
 
+            /*
             var pfc = new PrivateFontCollection();
             pfc.AddFontFile(@"Fonts\Red_Hat_Display\RedHatDisplay-VariableFont_wght.ttf");
             foreach (Control c in this.Controls)
             {
                 c.Font = new Font(pfc.Families[0], 15, FontStyle.Regular);
             }
+            */
         }
 
         private void LoginScreen_OnFormClosed(object sender, FormClosedEventArgs e)
