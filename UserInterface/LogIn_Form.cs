@@ -50,10 +50,10 @@ namespace UserInterface
          bool isFine = true;
 
          //"email" == empty
-         if (emailTextBox.Text == "e-mail" || emailTextBox.Text == "" || emailTextBox.Text == "fill field" || emailTextBox.Text == "e-mail already used" || emailTextBox.Text == "no user with this e-mail")
+         if (loginnameTextBox.Text == "e-mail" || loginnameTextBox.Text == "" || loginnameTextBox.Text == "fill field" || loginnameTextBox.Text == "e-mail already used" || loginnameTextBox.Text == "no user with this e-mail")
          {
-            emailTextBox.ForeColor = DesignColors.Error;
-            emailTextBox.Text = "fill field";
+            loginnameTextBox.ForeColor = DesignColors.Error;
+            loginnameTextBox.Text = "fill field";
             isFine = false;
          }
 
@@ -71,7 +71,7 @@ namespace UserInterface
       {
          if (checkTextBoxes())
          {
-            string email = emailTextBox.Text;
+            string email = loginnameTextBox.Text;
             string password = PasswordTextBox.Text;
             
             int erfolgreich = _profileChangements.LogIn(email, password);
@@ -90,8 +90,8 @@ namespace UserInterface
             }
             else       //email nicht vorhanden
             {  
-               emailTextBox.ForeColor = DesignColors.Error;
-               emailTextBox.Text = "no user with this e-mail";
+               loginnameTextBox.ForeColor = DesignColors.Error;
+               loginnameTextBox.Text = "no user with this e-mail";
             }
          }
       }
@@ -100,17 +100,17 @@ namespace UserInterface
       {
          if (checkTextBoxes())
          {
-            string email = emailTextBox.Text;
+            string loginname = loginnameTextBox.Text;
             string password = PasswordTextBox.Text;
             
-            if (_profileChangements.SignIn(email, password))     //sign in erfolgreich
+            if (_profileChangements.SignIn(loginname, password))     //sign in erfolgreich
             {
                     OnLoginSucces?.Invoke(this, EventArgs.Empty);        
             }
             else     //email wird schon genutzt
             {                
                 PasswordTextBox.ForeColor = DesignColors.Error;
-                emailTextBox.Text = "e-mail already used";
+                loginnameTextBox.Text = "e-mail already used";
             }
          }
       }
@@ -126,16 +126,16 @@ namespace UserInterface
 
       private void emailTextBox_MouseClick(object sender, MouseEventArgs e)
       {
-         emailTextBox.ForeColor = DesignColors.Text;
-         emailTextBox.Text = "";
+         loginnameTextBox.ForeColor = DesignColors.Text;
+         loginnameTextBox.Text = "";
       }
 
       private void emailTextBox_Leave(object sender, EventArgs e)
       {
-         if (emailTextBox.Text == "")
+         if (loginnameTextBox.Text == "")
          {
-            emailTextBox.ForeColor = DesignColors.Text;
-            emailTextBox.Text = "e-mail";
+            loginnameTextBox.ForeColor = DesignColors.Text;
+            loginnameTextBox.Text = "loginname";
          }
       }
 
@@ -148,5 +148,9 @@ namespace UserInterface
          }
       }
 
-   }
+        private void emailTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+    }
 }

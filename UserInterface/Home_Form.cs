@@ -32,7 +32,7 @@ namespace UserInterface
 
       private void Home_Form_Shown(object sender, EventArgs e)
       {
-         label1.Text = "Hello " + Profile.sGetLoginname();
+         label1.Text = "Hello " + Backend.Instance().GetProfile().sGetLoginname();
       }
    }
 }
