@@ -7,30 +7,47 @@ using System.Threading.Tasks;
 
 namespace BackendCS
 {
-    public static class Profile
+    public class Profile
     {
-        private static string _loginname;
-        private static string _password;
+        private string _loginname;
+        private string _password;
+        private Patient[] _patients;
+        private int _Index;                         //current Patient
+
+        public Profile()
+        {
+            _patients = new Patient[1];
 
 
-        public static string sGetLoginname()
+            // Initialsierung von Patienten
+            _patients[0] = new Patient("Elisabeth", "Maier", 79);
+            _patients[0].setContactPerson(new ContactPerson("Eduard","Wegele","+14917630548044","ewegele@stud.hs-offenburg.de", new Email()));
+        }
+
+
+        public string sGetLoginname()
         {
             return _loginname;
         }
 
-        public static string sGetPassword()
+        public string sGetPassword()
         {
             return _password;
         }
 
-        public static void sSetLoginname(string email)
+        public void sSetLoginname(string email)
         {
            _loginname = email;
        }
 
-         public static void sSetPassword(string password)
+         public void sSetPassword(string password)
          {
            _password = password;
+         }
+
+         public Patient GetPatient()
+         {
+             return _patients[_Index];
          }
    }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BackendCS
 {
-    internal class ContactPerson
+    public class ContactPerson
     {
         private String _firstname;
         private String _lastname;
@@ -15,7 +15,7 @@ namespace BackendCS
         private NotificationMethod _notificationMethod;
 
 
-        ContactPerson(string firstname, string lastname, string phonenumber, string email, NotificationMethod notificationMethod)
+        public ContactPerson(string firstname, string lastname, string phonenumber, string email, NotificationMethod notificationMethod )
         {
             _firstname = firstname;
             _lastname = lastname;

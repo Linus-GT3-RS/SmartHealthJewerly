@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BackendCS.Event;
 
 namespace BackendCS.Measurement
 {
@@ -11,13 +12,15 @@ namespace BackendCS.Measurement
         private int[] _last10heartRate = new int[10];
         private int _avgHeartRate;
         private int _idx;
-
+        
         private int _bpm;
 
         const int delayMsec = 60;
         static int maxValue = 0;
         static bool isPeak = false;
 
+        // Heartrate Event
+        private CriticalHeartRateEvent criticalHeartRate = new CriticalHeartRateEvent();
 
         public void vProcessSingleData(string data)
         {
@@ -39,9 +42,9 @@ namespace BackendCS.Measurement
         public int iGetHeartRate()
         {
             vCalcAverage();
+
             return _avgHeartRate;
         }
-
 
         private void vCalcAverage()
         {

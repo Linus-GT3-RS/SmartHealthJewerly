@@ -52,7 +52,7 @@ namespace UserInterface
             this.emailTextBox.Location = new System.Drawing.Point(94, 269);
             this.emailTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.emailTextBox.Name = "emailTextBox";
-            this.emailTextBox.Size = new System.Drawing.Size(295, 31);
+            this.emailTextBox.Size = new System.Drawing.Size(295, 49);
             this.emailTextBox.TabIndex = 0;
             this.emailTextBox.TabStop = false;
             this.emailTextBox.Text = "e-mail";
@@ -68,7 +68,7 @@ namespace UserInterface
             this.PasswordTextBox.Location = new System.Drawing.Point(94, 361);
             this.PasswordTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.PasswordTextBox.Name = "PasswordTextBox";
-            this.PasswordTextBox.Size = new System.Drawing.Size(295, 31);
+            this.PasswordTextBox.Size = new System.Drawing.Size(295, 49);
             this.PasswordTextBox.TabIndex = 1;
             this.PasswordTextBox.TabStop = false;
             this.PasswordTextBox.Text = "password";
@@ -97,7 +97,7 @@ namespace UserInterface
             this.checkBox1.Location = new System.Drawing.Point(65, 425);
             this.checkBox1.Margin = new System.Windows.Forms.Padding(2);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(164, 30);
+            this.checkBox1.Size = new System.Drawing.Size(261, 47);
             this.checkBox1.TabIndex = 6;
             this.checkBox1.TabStop = false;
             this.checkBox1.Text = "Remember me";
@@ -112,7 +112,7 @@ namespace UserInterface
             this.label2.Location = new System.Drawing.Point(309, 425);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(160, 26);
+            this.label2.Size = new System.Drawing.Size(260, 43);
             this.label2.TabIndex = 7;
             this.label2.Text = "Forgot password?";
             // 
@@ -168,7 +168,7 @@ namespace UserInterface
             // 
             // LogIn_Form
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 27F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(45)))), ((int)(((byte)(105)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
