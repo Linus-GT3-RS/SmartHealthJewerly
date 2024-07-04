@@ -29,3 +29,15 @@ Logo was created using [hotpot.ai/art-generator](https://hotpot.ai/ai-image-gene
 <a target="_blank" href="https://icons8.com/icon/2985/secure">Password</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
 
 <a target="_blank" href="https://icons8.com/icon/82769/done">Correct</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+
+<a target="_blank" href="https://icons8.com/icon/35583/heart-with-pulse">Health</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+
+<a target="_blank" href="https://icons8.com/icon/9gm62PetZNcu/calendar-1">Calendar 1</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+
+<a target="_blank" href="https://icons8.com/icon/44834/resume">Resume</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+
+<a target="_blank" href="https://icons8.com/icon/43605/combo-chart">Combo Chart</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>  
+
+<a target="_blank" href="https://icons8.com/icon/47294/heart-with-pulse">Heart with Pulse</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+
+<a target="_blank" href="https://icons8.com/icon/44830/overview">Overview</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
