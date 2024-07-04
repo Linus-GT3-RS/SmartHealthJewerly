@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing.Text;
 
 namespace UserInterface
 {
@@ -41,6 +42,15 @@ namespace UserInterface
             _healthDataForm = new HealthData_Form(true);
             _healthDataForm.VisibleChanged += HealthDataForm_OnVisibleChanged;
             _healthDataForm.FormClosed += HealthDataForm_OnFormClosed;
+
+            /*
+            var pfc = new PrivateFontCollection();
+            pfc.AddFontFile(@"Fonts\Red_Hat_Display\RedHatDisplay-VariableFont_wght.ttf");
+            foreach (Control c in this.Controls)
+            {
+                c.Font = new Font(pfc.Families[0], 15, FontStyle.Regular);
+            }
+            */
         }
 
         private void LoginScreen_OnFormClosed(object sender, FormClosedEventArgs e)

@@ -9,7 +9,9 @@ namespace UserInterface
     enum RunSettings
     {
         Normal = 0,
-        SplashScreen_Only, LogIn_Only, Home_Only, HealthData_Only,
+        SplashScreen_Only, SplashScreen_OnlyDesign,
+        LogIn_Only, Home_Only, HealthData_Only,
+        test,
         Skip2Home       // todo
     };
 
@@ -43,6 +45,10 @@ namespace UserInterface
                     StartForm = new SplashScreen_Form(true);
                     break;
 
+                case RunSettings.SplashScreen_OnlyDesign:
+                    StartForm = new TestSplashScreen_Form(true);
+                    break;
+
                 case RunSettings.LogIn_Only:
                     StartForm = new LogIn_Form();
                     break;
@@ -54,6 +60,9 @@ namespace UserInterface
                 case RunSettings.HealthData_Only:
                     StartForm = new HealthData_Form(false);
                     break;
+
+                case RunSettings.test:
+                    throw new Exception("not implemented");
 
                 default:
                     throw new Exception("error: this shouldnt happen");

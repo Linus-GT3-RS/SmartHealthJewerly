@@ -9,7 +9,7 @@ using System.Xml.Linq;
 
 namespace BackendCS
 {
-    interface NotificationMethod
+    public interface NotificationMethod
     {
 
     }

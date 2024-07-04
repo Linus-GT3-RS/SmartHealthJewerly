@@ -76,7 +76,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Patient\ProfileChangements.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Backend.cs" />
     <Compile Include="Converter\Converter.cs" />
     <Compile Include="Converter\BrightnessConverter.cs" />
     <Compile Include="Measurement\BodyTemperature.cs" />
@@ -85,7 +85,6 @@
     <Compile Include="Patient\ContactPerson.cs" />
     <Compile Include="Patient\Disease.cs" />
     <Compile Include="Event\CriticalHeartRateEvent.cs" />
-    <Compile Include="Event\NewHeartRateEvent.cs" />
     <Compile Include="Patient\HealthData.cs" />
     <Compile Include="Measurement\HeartRate.cs" />
     <Compile Include="Measurement\Humidity.cs" />

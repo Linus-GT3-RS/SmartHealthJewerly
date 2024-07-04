@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BackendCS;
@@ -14,13 +17,29 @@ namespace UserInterface
 {
     public partial class LogIn_Form : Form
     {
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+
+        private static extern IntPtr CreateRoundRectRgn
+            (
+            int nLeftRect,
+            int nTopRect,
+            int RightRect,
+            int nBottomRect,
+            int nWidthEllipse,
+            int nHeightEllipse
+            );
+
         ProfileChangements _profileChangements;
 
         public event EventHandler OnLoginSucces;
 
+
+
         public LogIn_Form()
         {
-            InitializeComponent(); 
+            InitializeComponent();
+            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 40, 40));
+
             _profileChangements = new ProfileChangements();
         }
 
@@ -29,19 +48,19 @@ namespace UserInterface
       private bool checkTextBoxes()
       {
          bool isFine = true;
+
          //"email" == empty
-         if (emailTextBox.Text == "e-mail" || emailTextBox.Text == "" || emailTextBox.Text == "fill field" || emailTextBox.Text == "e-mail already used" || emailTextBox.Text == "no user with this e-mail")
+         if (loginnameTextBox.Text == "e-mail" || loginnameTextBox.Text == "" || loginnameTextBox.Text == "fill field" || loginnameTextBox.Text == "e-mail already used" || loginnameTextBox.Text == "no user with this e-mail")
          {
-            emailTextBox.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold);
-            emailTextBox.ForeColor = System.Drawing.Color.Red;
-            emailTextBox.Text = "fill field";
+            loginnameTextBox.ForeColor = DesignColors.Error;
+            loginnameTextBox.Text = "fill field";
             isFine = false;
          }
+
          //"password" == empty
          if (PasswordTextBox.Text == "password" || PasswordTextBox.Text == "" || PasswordTextBox.Text == "fill field" || PasswordTextBox.Text == "wrong password")
          {
-            PasswordTextBox.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold);
-            PasswordTextBox.ForeColor = System.Drawing.Color.Red;
+            PasswordTextBox.ForeColor = DesignColors.Error;
             PasswordTextBox.Text = "fill field";
             isFine = false;
          }
@@ -52,7 +71,7 @@ namespace UserInterface
       {
          if (checkTextBoxes())
          {
-            string email = emailTextBox.Text;
+            string email = loginnameTextBox.Text;
             string password = PasswordTextBox.Text;
             
             int erfolgreich = _profileChangements.LogIn(email, password);
@@ -65,16 +84,14 @@ namespace UserInterface
                }
             }
             else if (erfolgreich == 1)      //password falsch
-            {               
-               PasswordTextBox.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold);
-               PasswordTextBox.ForeColor = System.Drawing.Color.Red;
+            {
+               PasswordTextBox.ForeColor = DesignColors.Error;
                PasswordTextBox.Text = "wrong password";
             }
             else       //email nicht vorhanden
-            {               
-               emailTextBox.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold);
-               emailTextBox.ForeColor = System.Drawing.Color.Red;
-               emailTextBox.Text = "no user with this e-mail";
+            {  
+               loginnameTextBox.ForeColor = DesignColors.Error;
+               loginnameTextBox.Text = "no user with this e-mail";
             }
          }
       }
@@ -83,22 +100,18 @@ namespace UserInterface
       {
          if (checkTextBoxes())
          {
-            //get strings
-            string email = emailTextBox.Text;
+            string loginname = loginnameTextBox.Text;
             string password = PasswordTextBox.Text;
-            //sign in erfolgreich?
-           if (_profileChangements.SignIn(email, password))     //sign in erfolgreich
+            
+            if (_profileChangements.SignIn(loginname, password))     //sign in erfolgreich
             {
-                    OnLoginSucces?.Invoke(this, EventArgs.Empty);
-        
+                    OnLoginSucces?.Invoke(this, EventArgs.Empty);        
             }
-           else
-           {
-               //email wird schon genutzt
-               emailTextBox.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold);
-               emailTextBox.ForeColor = System.Drawing.Color.Red;
-               emailTextBox.Text = "e-mail already used";
-           }
+            else     //email wird schon genutzt
+            {                
+                PasswordTextBox.ForeColor = DesignColors.Error;
+                loginnameTextBox.Text = "e-mail already used";
+            }
          }
       }
 
@@ -107,25 +120,22 @@ namespace UserInterface
       //events
       private void PasswordTextBox_MouseClick(object sender, MouseEventArgs e)
       {
-         PasswordTextBox.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular);
-         PasswordTextBox.ForeColor = System.Drawing.Color.Black;
+         PasswordTextBox.ForeColor = DesignColors.Text;
          PasswordTextBox.Text = "";
       }
 
       private void emailTextBox_MouseClick(object sender, MouseEventArgs e)
       {
-         emailTextBox.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular);
-         emailTextBox.ForeColor = System.Drawing.Color.Black;
-         emailTextBox.Text = "";
+         loginnameTextBox.ForeColor = DesignColors.Text;
+         loginnameTextBox.Text = "";
       }
 
       private void emailTextBox_Leave(object sender, EventArgs e)
       {
-         if (emailTextBox.Text == "")
+         if (loginnameTextBox.Text == "")
          {
-            emailTextBox.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Italic);
-            emailTextBox.ForeColor = System.Drawing.Color.LightGray;
-            emailTextBox.Text = "e-mail";
+            loginnameTextBox.ForeColor = DesignColors.Text;
+            loginnameTextBox.Text = "loginname";
          }
       }
 
@@ -133,11 +143,14 @@ namespace UserInterface
       {
          if (PasswordTextBox.Text == "")
          {
-            PasswordTextBox.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Italic);
-            PasswordTextBox.ForeColor = System.Drawing.Color.LightGray;
+            PasswordTextBox.ForeColor = DesignColors.Text;
             PasswordTextBox.Text = "password";
          }
       }
 
-   }
+        private void emailTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+    }
 }

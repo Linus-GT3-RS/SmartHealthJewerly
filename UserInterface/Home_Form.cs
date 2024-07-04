@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BackendCS.Event;
 
 namespace UserInterface
 {
@@ -32,7 +33,12 @@ namespace UserInterface
 
       private void Home_Form_Shown(object sender, EventArgs e)
       {
-         label1.Text = "Hello " + Profile.sGetLoginname();
+         label1.Text = "Hello " + Backend.Instance().GetProfile().sGetLoginname();
       }
-   }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            CriticalHeartRateEvent.Instance().Check(200);
+        }
+    }
 }
