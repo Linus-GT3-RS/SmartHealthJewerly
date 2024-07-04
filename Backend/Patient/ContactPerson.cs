@@ -24,6 +24,11 @@ namespace BackendCS
             _notificationMethod = notificationMethod;
         }
 
+        public override string ToString()
+        {
+            return _firstname + " " + _lastname;
+        }
+
         public void SetNotificationMethod(NotificationMethod notificationMethod)
         {
             _notificationMethod = notificationMethod;

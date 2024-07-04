@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
+using BackendCS.Event;
 
 namespace BackendCS
 {
@@ -27,6 +28,10 @@ namespace BackendCS
         public void setContactPerson(ContactPerson contact)
         {
             _contacts.Add(contact);
+
+            
+            // For Testing
+            //NotifyContacts("New Contact " + contact.ToString() + " added to contact list from " + _firstname + " " + _lastname);
         }
 
         public void NotifyContacts(string message)

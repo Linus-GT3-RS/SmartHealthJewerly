@@ -20,7 +20,7 @@ namespace BackendCS.Measurement
         static bool isPeak = false;
 
         // Heartrate Event
-        private CriticalHeartRateEvent criticalHeartRate = new CriticalHeartRateEvent();
+        private CriticalHeartRateEvent criticalHeartRate = CriticalHeartRateEvent.Instance();
 
         public void vProcessSingleData(string data)
         {

@@ -7,27 +7,40 @@ using Newtonsoft.Json.Bson;
 
 namespace BackendCS.Event
 {
-    class CriticalHeartRateEvent
+    public class CriticalHeartRateEvent
     {
+        private static CriticalHeartRateEvent _Instance;
+
         public delegate void CriticalHeartRateHandler(CriticalHeartRateEventArgs e);
 
         public event CriticalHeartRateHandler CriticialHeartRate; // callback Function
 
-        public CriticalHeartRateEvent()
+        private CriticalHeartRateEvent()
         {
-            CriticialHeartRate += CriticialHeartRate;
+            CriticialHeartRate += CriticalHeartHandler;
+        }
+
+
+        public static CriticalHeartRateEvent Instance()
+        {
+            if (_Instance == null)
+            {
+                _Instance = new CriticalHeartRateEvent();
+            }
+
+            return _Instance;
         }
 
         //check heartrate wheter is critical
         // good rates are between 60 and 120
-        void Check(int heartrate)
+        public void Check(int heartrate)
         {
 
             if (heartrate <= 60 || heartrate >= 120)
             {
                 if (CriticialHeartRate != null)
                 {
-                    CriticialHeartRate(new CriticalHeartRateEventArgs("Kritischer Wert wurde überschritten:"));
+                    CriticialHeartRate(new CriticalHeartRateEventArgs("Achtung! Kritischer Herzschlagwert von " + heartrate + "  wurde gemessen. Bitte umgehend Patienten kontaktieren!"));
                 }
             }
 
@@ -35,14 +48,14 @@ namespace BackendCS.Event
 
 
         // Eventhandler, send a notification to all contactperson of a patient
-        void CriticalHeartHandler(object sender, CriticalHeartRateEventArgs e)
+        void CriticalHeartHandler(CriticalHeartRateEventArgs e)
         {
             Console.WriteLine("Event fired");
-            Backend.Instance().GetProfile().GetPatient().NotifyContacts(e.ToString());
+            Backend.Instance().GetProfile().GetPatient().NotifyContacts(e.Message);
         }
     }
 
-    public class CriticalHeartRateEventArgs : EventArgs
+    public class CriticalHeartRateEventArgs 
     {
         public string Message { get; private set; }
 
