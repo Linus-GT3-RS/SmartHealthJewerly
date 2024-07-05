@@ -27,7 +27,7 @@ namespace UserInterface
 
         private void button2_Click(object sender, EventArgs e)
         {
-            // TODO WOHIN?
+            // TODO WOHIN? was ist das
             CriticalHeartRateEvent.Instance().Check(200);
         }
 
@@ -43,7 +43,10 @@ namespace UserInterface
 
         private void btnViewMotionData_Click(object sender, EventArgs e)
         {
-            // TODO
+            if (_normalRun)
+            {
+                this.Hide();
+            }
         }
 
         private void btnRealTimeMonitoring_Click(object sender, EventArgs e)
