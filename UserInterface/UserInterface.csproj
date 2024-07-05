@@ -56,6 +56,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EnvironmentData_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EnvironmentData_Form.Designer.cs">
+      <DependentUpon>EnvironmentData_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HeartRate_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HeartRate_Form.Designer.cs">
+      <DependentUpon>HeartRate_Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Home_Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,11 +80,11 @@
     <Compile Include="LogIn_Form.Designer.cs">
       <DependentUpon>LogIn_Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="HealthData_Form.cs">
+    <Compile Include="MotionData_Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HealthData_Form.Designer.cs">
-      <DependentUpon>HealthData_Form.cs</DependentUpon>
+    <Compile Include="MotionData_Form.Designer.cs">
+      <DependentUpon>MotionData_Form.cs</DependentUpon>
     </Compile>
     <Compile Include="Manager_Form.cs">
       <SubType>Form</SubType>
@@ -89,8 +101,14 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utils.cs" />
-    <EmbeddedResource Include="HealthData_Form.resx">
-      <DependentUpon>HealthData_Form.cs</DependentUpon>
+    <EmbeddedResource Include="EnvironmentData_Form.resx">
+      <DependentUpon>EnvironmentData_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MotionData_Form.resx">
+      <DependentUpon>MotionData_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HeartRate_Form.resx">
+      <DependentUpon>HeartRate_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Home_Form.resx">
       <DependentUpon>Home_Form.cs</DependentUpon>

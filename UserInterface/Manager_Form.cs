@@ -9,96 +9,178 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Text;
+using BackendCS.Measurement;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace UserInterface
 {
-    public partial class Manager_Form : Form
-    {
-        private LogIn_Form _loginForm;
-        private Home_Form _homeForm;
-        private HealthData_Form _healthDataForm;
+   public partial class Manager_Form : Form
+   {
+      private static readonly object _lock = new object();
+
+      private Measurement measurement;
+      private LogIn_Form _loginForm;
+      private Home_Form _homeForm;
+      private MotionData_Form _motionDataForm;
+      private HeartRate_Form _heartrateDataForm;
+      private EnvironmentData_Form _environmentDataForm;
+
+      private WindowState _windowState;
+      public Manager_Form()
+      {
+         // start invisible manager form
+         WindowState = FormWindowState.Minimized;
+         FormBorderStyle = FormBorderStyle.SizableToolWindow;
+         ShowInTaskbar = false;
+         Visible = false;
+         InitializeComponent();
+
+         // start Log-In
+         _loginForm = new LogIn_Form();
+         _loginForm.OnLoginSucces += LoginScreen_OnLoginSuccess;
+         _loginForm.Show();
+
+         // create Home- and HealthData-Form in background
+         _homeForm = new Home_Form(true);
+         _homeForm.button1.Click += show_MotionDataForm;
+         _homeForm.button3.Click += show_HeartDataForm;
+         _homeForm.button4.Click += show_EnvironementDataForm;
 
 
-        public Manager_Form()
-        {
-            // start invisible manager form
-            WindowState = FormWindowState.Minimized;
-            FormBorderStyle = FormBorderStyle.SizableToolWindow;
-            ShowInTaskbar = false;
-            Visible = false;            
-            InitializeComponent();
+         _windowState = HomeWindow.getHomeWindow();
 
-            // start Log-In
-            _loginForm = new LogIn_Form();
-            _loginForm.OnLoginSucces += LoginScreen_OnLoginSuccess;
-            _loginForm.FormClosed += LoginScreen_OnFormClosed;
-            _loginForm.Show();
+         measurement = GlobalMeasurement.measurement;
+         measurement.vStartMeasurement();
+         measurement.PrintData += vPrintMeasurements;    //event hinterlegen
 
-            // create Home- and HealthData-Form in background
-            _homeForm = new Home_Form(true);
-            _homeForm.VisibleChanged += HomeForm_OnVisibleChanged;
-            _homeForm.FormClosed += HomeForm_OnFormClosed;
 
-            _healthDataForm = new HealthData_Form(true);
-            _healthDataForm.VisibleChanged += HealthDataForm_OnVisibleChanged;
-            _healthDataForm.FormClosed += HealthDataForm_OnFormClosed;
+         //komplette App schließen
+         _homeForm.FormClosed += HomeForm_OnFormClosed;
 
-            /*
-            var pfc = new PrivateFontCollection();
-            pfc.AddFontFile(@"Fonts\Red_Hat_Display\RedHatDisplay-VariableFont_wght.ttf");
-            foreach (Control c in this.Controls)
-            {
-                c.Font = new Font(pfc.Families[0], 15, FontStyle.Regular);
+
+
+         _motionDataForm = new MotionData_Form(true);
+         _motionDataForm.button1.Click += hideHeartRateDataForm;
+
+
+         _heartrateDataForm = new HeartRate_Form();
+         _heartrateDataForm.button1.Click += hideHeartRateDataForm;
+
+
+         _environmentDataForm = new EnvironmentData_Form();
+         _environmentDataForm.button1.Click += hideEnvironementDataForm;
+         /*
+         var pfc = new PrivateFontCollection();
+         pfc.AddFontFile(@"Fonts\Red_Hat_Display\RedHatDisplay-VariableFont_wght.ttf");
+         foreach (Control c in this.Controls)
+         {
+             c.Font = new Font(pfc.Families[0], 15, FontStyle.Regular);
+         }
+         */
+      }
+
+      private void vPrintMeasurements(PrintDataEventArgs printDataEventArgs)
+      {
+         lock (_lock)
+         {
+            if (_windowState is MotionWindow) {
+               _motionDataForm.vPrintMeasurements();
             }
-            */
-        }
+            if (_windowState is EnvironmentWindow)
+            {
+               _environmentDataForm.vPrintMeasurements();
+            }
+            if (_windowState is HeartWindow)
+            {
+               _heartrateDataForm.vPrintMeasurements();
+            }
+         }
+      }
 
-        private void LoginScreen_OnFormClosed(object sender, FormClosedEventArgs e)
-        {
-            this.Close();
-        }
 
-        private void LoginScreen_OnLoginSuccess(object sender, EventArgs e)
-        {
-            var splashScreen = new SplashScreen_Form(false);
-            _loginForm.Hide();
-            splashScreen.Show();
-            splashScreen.VisibleChanged += SplashScreen_OnFormHiding;
-        }
+      private void LoginScreen_OnLoginSuccess(object sender, EventArgs e)
+      {
+         var splashScreen = new SplashScreen_Form(false);
+         _loginForm.Hide();
+         splashScreen.Show();
+         splashScreen.VisibleChanged += SplashScreen_OnFormHiding;
 
-        private void SplashScreen_OnFormHiding(object sender, EventArgs e)
-        {
-            _homeForm.Show();
-        }
+      }
 
-        private void HomeForm_OnVisibleChanged(object sender, EventArgs e)
-        {
+      private void SplashScreen_OnFormHiding(object sender, EventArgs e)
+      {
+         _homeForm.Show();
+         _loginForm.Close();
+      }
+
+      private void show_MotionDataForm(object sender, EventArgs e)
+      {
+         _windowState = MotionWindow.getMotionWindow();
+         _motionDataForm.Show();    
+      }
+
+      private void hideMotionDataForm(object sender, EventArgs e)
+      {
+         _motionDataForm.Hide();
+         showHomeForm(sender, e);
+      }
+
+      private void show_HeartDataForm(object sender, EventArgs e)
+      {
+         lock (_lock)
+         {
+            _windowState = HeartWindow.getHeartWindow();
+            _heartrateDataForm.Show();
+         }
+      }
+
+      private void hideHeartRateDataForm(object sender, EventArgs e)
+      {
+         _heartrateDataForm.Hide();
+         showHomeForm(sender, e);
+      }
+
+
+      private void show_EnvironementDataForm(object sender, EventArgs e)
+      {
+         lock (_lock)
+         {
+            _windowState = EnvironmentWindow.getEnvironmentWindow();
+            _environmentDataForm.Show();
+         }
+      }
+
+      private void hideEnvironementDataForm(object sender, EventArgs e)
+      {
+         _environmentDataForm.Hide();
+         showHomeForm(sender, e);
+      }
+
+      // is needed because SplashScreen is still open  ---- maybe fixxed later
+      private void showHomeForm(object sender, EventArgs e)
+      {
+         lock (_lock)
+         {
             if (!_homeForm.Visible)
             {
-                Thread.Sleep(150);
-                _healthDataForm.Show();                
+               _homeForm.Show();
+               _windowState = HomeWindow.getHomeWindow();
             }
-        }
+         }
+      }
 
-        private void HealthDataForm_OnVisibleChanged(object sender, EventArgs e)
-        {
-            if(!_healthDataForm.Visible)
-            {
-                _homeForm.Show();
-            }
-        }
+      // is needed because SplashScreen is still open   ---- maybe fixxed later
+      private void HomeForm_OnFormClosed(object sender, FormClosedEventArgs e)
+      {
+         _motionDataForm.Close();
+         _heartrateDataForm.Close();
+         _environmentDataForm.Close();
+         this.Close();
+      }
 
-        // is needed because SplashScreen is still open  ---- maybe fixxed later
-        private void HealthDataForm_OnFormClosed(object sender, FormClosedEventArgs e)
-        {
-            this.Close();
-        }
+      private void Manager_Form_Load(object sender, EventArgs e)
+      {
 
-        // is needed because SplashScreen is still open   ---- maybe fixxed later
-        private void HomeForm_OnFormClosed(object sender, FormClosedEventArgs e)
-        {
-            this.Close();
-        }
-
-    }
+      }
+   }
 }

@@ -15,20 +15,10 @@ namespace UserInterface
     public partial class Home_Form : Form
     {
         private bool _normalRun;
-
         public Home_Form(bool normalRun)
         {
             InitializeComponent();
             _normalRun = normalRun;
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if(_normalRun)
-            {
-                this.Hide();
-            }            
-
         }
 
       private void Home_Form_Shown(object sender, EventArgs e)
@@ -40,5 +30,20 @@ namespace UserInterface
         {
             CriticalHeartRateEvent.Instance().Check(200);
         }
-    }
+
+      private void button1_Click(object sender, EventArgs e)
+      {
+         this.Hide();
+      }
+
+      private void button3_Click(object sender, EventArgs e)
+      {
+         this.Hide();
+      }
+
+      private void button4_Click(object sender, EventArgs e)
+      {
+         this.Hide();
+      }
+   }
 }

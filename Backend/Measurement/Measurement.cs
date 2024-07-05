@@ -33,6 +33,7 @@ namespace BackendCS.Measurement
 
     public class Measurement
     {
+
         private IPort _port;
         private static readonly object _lock = new object();
 
@@ -88,14 +89,14 @@ namespace BackendCS.Measurement
                     SerialPort serialPort = (SerialPort)sender;
                     if (serialPort.IsOpen)
                     {
-                        //read Datas into string
-                        string data = serialPort.ReadLine().Trim();
+                         //read Datas into string
+                         string data = serialPort.ReadLine().Trim();
 
-                        //seperate values
-                        string[] aData = data.Split(',');
+                         //seperate values
+                         string[] aData = data.Split(',');
 
-                        vOrganizeSingleData(aData);
-                        vOrganizeMultiData(aData);
+                         vOrganizeSingleData(aData);
+                         vOrganizeMultiData(aData);
                     }
                 });
                 workerThread.Start();

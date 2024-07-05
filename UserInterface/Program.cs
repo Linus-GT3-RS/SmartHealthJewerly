@@ -58,7 +58,7 @@ namespace UserInterface
                     break;
 
                 case RunSettings.HealthData_Only:
-                    StartForm = new HealthData_Form(false);
+                    StartForm = new MotionData_Form(false);
                     break;
 
                 case RunSettings.test:

@@ -75,6 +75,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Measurement\WindowState.cs" />
+    <Compile Include="Measurement\GlobalMeasurement.cs" />
     <Compile Include="Patient\ProfileChangements.cs" />
     <Compile Include="Backend.cs" />
     <Compile Include="Converter\Converter.cs" />

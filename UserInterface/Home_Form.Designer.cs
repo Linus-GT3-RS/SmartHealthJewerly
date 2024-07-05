@@ -32,66 +32,94 @@ namespace UserInterface
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.SuspendLayout();
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(905, 600);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(267, 72);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Go to health data";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(523, 106);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 25);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Hello ";
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(64, 348);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(267, 72);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Trigger HeartRateEvent";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // Home_Form
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1200, 702);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "Home_Form";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Home_Forms";
-            this.Shown += new System.EventHandler(this.Home_Form_Shown);
-            this.ResumeLayout(false);
-            this.PerformLayout();
+         this.button1 = new System.Windows.Forms.Button();
+         this.label1 = new System.Windows.Forms.Label();
+         this.button2 = new System.Windows.Forms.Button();
+         this.button3 = new System.Windows.Forms.Button();
+         this.button4 = new System.Windows.Forms.Button();
+         this.SuspendLayout();
+         // 
+         // button1
+         // 
+         this.button1.Location = new System.Drawing.Point(30, 398);
+         this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+         this.button1.Name = "button1";
+         this.button1.Size = new System.Drawing.Size(200, 58);
+         this.button1.TabIndex = 0;
+         this.button1.Text = "Go to motion data";
+         this.button1.UseVisualStyleBackColor = true;
+         this.button1.Click += new System.EventHandler(this.button1_Click);
+         // 
+         // label1
+         // 
+         this.label1.AutoSize = true;
+         this.label1.Location = new System.Drawing.Point(392, 85);
+         this.label1.Name = "label1";
+         this.label1.Size = new System.Drawing.Size(49, 20);
+         this.label1.TabIndex = 1;
+         this.label1.Text = "Hello ";
+         // 
+         // button2
+         // 
+         this.button2.Location = new System.Drawing.Point(688, 13);
+         this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+         this.button2.Name = "button2";
+         this.button2.Size = new System.Drawing.Size(200, 58);
+         this.button2.TabIndex = 2;
+         this.button2.Text = "Trigger HeartRateEvent";
+         this.button2.UseVisualStyleBackColor = true;
+         this.button2.Click += new System.EventHandler(this.button2_Click);
+         // 
+         // button3
+         // 
+         this.button3.Location = new System.Drawing.Point(313, 398);
+         this.button3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+         this.button3.Name = "button3";
+         this.button3.Size = new System.Drawing.Size(200, 58);
+         this.button3.TabIndex = 3;
+         this.button3.Text = "Go to Heart data";
+         this.button3.UseVisualStyleBackColor = true;
+         this.button3.Click += new System.EventHandler(this.button3_Click);
+         // 
+         // button4
+         // 
+         this.button4.Location = new System.Drawing.Point(609, 398);
+         this.button4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+         this.button4.Name = "button4";
+         this.button4.Size = new System.Drawing.Size(200, 58);
+         this.button4.TabIndex = 4;
+         this.button4.Text = "Go to other data";
+         this.button4.UseVisualStyleBackColor = true;
+         this.button4.Click += new System.EventHandler(this.button4_Click);
+         // 
+         // Home_Form
+         // 
+         this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+         this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+         this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+         this.ClientSize = new System.Drawing.Size(900, 562);
+         this.Controls.Add(this.button4);
+         this.Controls.Add(this.button3);
+         this.Controls.Add(this.button2);
+         this.Controls.Add(this.label1);
+         this.Controls.Add(this.button1);
+         this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+         this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+         this.Name = "Home_Form";
+         this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+         this.Text = "Home_Forms";
+         this.Shown += new System.EventHandler(this.Home_Form_Shown);
+         this.ResumeLayout(false);
+         this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-      private Label label1;
-        private Button button2;
-    }
+        public System.Windows.Forms.Button button1;
+         private Label label1;
+         private Button button2;
+         public Button button3;
+         public Button button4;
+   }
 }
