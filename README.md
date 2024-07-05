@@ -41,3 +41,5 @@ Logo was created using [hotpot.ai/art-generator](https://hotpot.ai/ai-image-gene
 <a target="_blank" href="https://icons8.com/icon/47294/heart-with-pulse">Heart with Pulse</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
 
 <a target="_blank" href="https://icons8.com/icon/44830/overview">Overview</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+
+<a target="_blank" href="https://icons8.com/icon/46/close">Close</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
