@@ -117,44 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Login_Template - LoginButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Login_Template - LoginButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Design Login" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Design Login2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="8-MchFtvUIzjWElaS" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\Logo\8-MchFtvUIzjWElaS.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Feinentwurf Home V2 (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Feinentwurf Home V2 (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Design_SelectPatient Screen" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Design_SelectPatient Screen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Home_Design" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Home_Design.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Feinentwurf Home V2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Feinentwurf Home V2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Home_Design1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Home_Design1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Login_Template - Background" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Login_Template - Background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Design_EMail" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Design_EMail.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Login_Template - Background1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Login_Template - Background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Feinentwurf Home V2 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Feinentwurf Home V2 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Design_SelectPatient Screen1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Design_SelectPatient Screen1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
 </root>

@@ -32,7 +32,8 @@ namespace UserInterface
 
         private void btnSelectDiffPatient_Click(object sender, EventArgs e)
         {
-            // TODO
+            var formSelectDiffPatient = new SelectDiffPatient_Form();
+            formSelectDiffPatient.ShowDialog();
         }
 
         private void btnViewMotionData_Click(object sender, EventArgs e)
