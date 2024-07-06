@@ -12,6 +12,7 @@ namespace UserInterface
         SplashScreen_Only, SplashScreen_OnlyDesign,
         LogIn_Only, Home_Only, HealthData_Only,
         test,
+        SendMail_Only,
         Skip2Home       // todo
     };
 
@@ -19,7 +20,7 @@ namespace UserInterface
     {
         // ---------------------------------- Start CONFIG : Free to use ----------------------------------
 
-        static RunSettings CurRunSettings = RunSettings.Normal;
+        static RunSettings CurRunSettings = RunSettings.SendMail_Only;
 
         // ---------------------------------- END CONFIG -----------------------------------------------------
 
@@ -59,6 +60,10 @@ namespace UserInterface
 
                 case RunSettings.HealthData_Only:
                     StartForm = new MotionData_Form(false);
+                    break;
+
+                case RunSettings.SendMail_Only:
+                    StartForm = new SendMail_Form();
                     break;
 
                 case RunSettings.test:
