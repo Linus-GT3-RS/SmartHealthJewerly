@@ -49,5 +49,10 @@ namespace BackendCS
          {
              return _patients[_Index];
          }
-   }
+
+        public override string ToString()
+        {
+            return _loginname;
+        }
+    }
 }

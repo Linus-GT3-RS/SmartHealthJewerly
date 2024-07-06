@@ -46,5 +46,10 @@ namespace BackendCS
         {
             throw new NotImplementedException("eaduuaaard");
         }
+
+        public override string ToString()
+        {
+            return _firstname + " " + _lastname;
+        }
     }
 }
