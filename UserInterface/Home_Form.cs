@@ -26,7 +26,8 @@ namespace UserInterface
 
         private void btnMssgAllContacts_Click(object sender, EventArgs e)
         {
-            // TODO
+            var formSendMail = new SendMail_Form();
+            formSendMail.ShowDialog();
         }
 
         private void btnSelectDiffPatient_Click(object sender, EventArgs e)

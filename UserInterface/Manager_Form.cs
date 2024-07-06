@@ -48,11 +48,11 @@ namespace UserInterface
 
             _windowState = HomeWindow.getHomeWindow();
 
-            
+            /*
          measurement = GlobalMeasurement.measurement;
          measurement.vStartMeasurement();
          measurement.PrintData += vPrintMeasurements;    //event hinterlegen
-            
+            */
 
          //komplette App schließen
          _homeForm.FormClosed += HomeForm_OnFormClosed;

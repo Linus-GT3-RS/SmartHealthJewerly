@@ -20,7 +20,7 @@ namespace UserInterface
     {
         // ---------------------------------- Start CONFIG : Free to use ----------------------------------
 
-        static RunSettings CurRunSettings = RunSettings.SendMail_Only;
+        static RunSettings CurRunSettings = RunSettings.Normal;
 
         // ---------------------------------- END CONFIG -----------------------------------------------------
 
