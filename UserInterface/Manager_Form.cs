@@ -100,7 +100,10 @@ namespace UserInterface
 
       private void LoginScreen_OnLoginSuccess(object sender, EventArgs e)
       {
-         var splashScreen = new SplashScreen_Form(false);
+            _homeForm.Update_lblLoggingName();
+            _homeForm.Update_lblCurPatientName();
+
+            var splashScreen = new SplashScreen_Form(false);
          _loginForm.Hide();
          splashScreen.Show();
          splashScreen.VisibleChanged += SplashScreen_OnFormHiding;
@@ -108,7 +111,7 @@ namespace UserInterface
       }
 
       private void SplashScreen_OnFormHiding(object sender, EventArgs e)
-      {
+      {                    
          _homeForm.Show();
          _loginForm.Close();
       }

@@ -17,9 +17,7 @@ namespace UserInterface
         private bool _normalRun;
         public Home_Form(bool normalRun)
         {
-            InitializeComponent();
-            lblLoginName.Text = "You are logged in as " + "LOGINNAME_TODO";
-            lblCurPatientName.Text = "PATIENTNAME_TODO" + "'s Health Data";
+            InitializeComponent();            
 
             _normalRun = normalRun;
         }
@@ -55,6 +53,16 @@ namespace UserInterface
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        public void Update_lblLoggingName()
+        {
+            lblLoginName.Text = "You are logged in as " + Backend.Instance().GetProfile();
+        }
+
+        public void Update_lblCurPatientName()
+        {
+            lblCurPatientName.Text = Backend.Instance().GetProfile().GetPatient() + "'s Health Data";
         }
     }
 }
