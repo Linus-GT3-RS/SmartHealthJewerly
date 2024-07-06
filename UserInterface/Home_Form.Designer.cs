@@ -32,94 +32,177 @@ namespace UserInterface
         /// </summary>
         private void InitializeComponent()
         {
-         this.button1 = new System.Windows.Forms.Button();
-         this.label1 = new System.Windows.Forms.Label();
-         this.button2 = new System.Windows.Forms.Button();
-         this.button3 = new System.Windows.Forms.Button();
-         this.button4 = new System.Windows.Forms.Button();
-         this.SuspendLayout();
-         // 
-         // button1
-         // 
-         this.button1.Location = new System.Drawing.Point(30, 398);
-         this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-         this.button1.Name = "button1";
-         this.button1.Size = new System.Drawing.Size(200, 58);
-         this.button1.TabIndex = 0;
-         this.button1.Text = "Go to motion data";
-         this.button1.UseVisualStyleBackColor = true;
-         this.button1.Click += new System.EventHandler(this.button1_Click);
-         // 
-         // label1
-         // 
-         this.label1.AutoSize = true;
-         this.label1.Location = new System.Drawing.Point(392, 85);
-         this.label1.Name = "label1";
-         this.label1.Size = new System.Drawing.Size(49, 20);
-         this.label1.TabIndex = 1;
-         this.label1.Text = "Hello ";
-         // 
-         // button2
-         // 
-         this.button2.Location = new System.Drawing.Point(688, 13);
-         this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-         this.button2.Name = "button2";
-         this.button2.Size = new System.Drawing.Size(200, 58);
-         this.button2.TabIndex = 2;
-         this.button2.Text = "Trigger HeartRateEvent";
-         this.button2.UseVisualStyleBackColor = true;
-         this.button2.Click += new System.EventHandler(this.button2_Click);
-         // 
-         // button3
-         // 
-         this.button3.Location = new System.Drawing.Point(313, 398);
-         this.button3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-         this.button3.Name = "button3";
-         this.button3.Size = new System.Drawing.Size(200, 58);
-         this.button3.TabIndex = 3;
-         this.button3.Text = "Go to Heart data";
-         this.button3.UseVisualStyleBackColor = true;
-         this.button3.Click += new System.EventHandler(this.button3_Click);
-         // 
-         // button4
-         // 
-         this.button4.Location = new System.Drawing.Point(609, 398);
-         this.button4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-         this.button4.Name = "button4";
-         this.button4.Size = new System.Drawing.Size(200, 58);
-         this.button4.TabIndex = 4;
-         this.button4.Text = "Go to other data";
-         this.button4.UseVisualStyleBackColor = true;
-         this.button4.Click += new System.EventHandler(this.button4_Click);
-         // 
-         // Home_Form
-         // 
-         this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
-         this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-         this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-         this.ClientSize = new System.Drawing.Size(900, 562);
-         this.Controls.Add(this.button4);
-         this.Controls.Add(this.button3);
-         this.Controls.Add(this.button2);
-         this.Controls.Add(this.label1);
-         this.Controls.Add(this.button1);
-         this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-         this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-         this.Name = "Home_Form";
-         this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-         this.Text = "Home_Forms";
-         this.Shown += new System.EventHandler(this.Home_Form_Shown);
-         this.ResumeLayout(false);
-         this.PerformLayout();
+            this.lblLoginName = new System.Windows.Forms.Label();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.btnRealTimeMonitoring = new System.Windows.Forms.Button();
+            this.btnMssgAllContacts = new System.Windows.Forms.Button();
+            this.btnSelectDiffPatient = new System.Windows.Forms.Button();
+            this.btnViewMotionData = new System.Windows.Forms.Button();
+            this.btnOpenUserSettings = new System.Windows.Forms.Button();
+            this.lblCurPatientName = new System.Windows.Forms.Label();
+            this.SuspendLayout();
+            // 
+            // lblLoginName
+            // 
+            this.lblLoginName.AutoSize = true;
+            this.lblLoginName.Font = new System.Drawing.Font("Red Hat Display", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLoginName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(69)))), ((int)(((byte)(78)))));
+            this.lblLoginName.Location = new System.Drawing.Point(831, 21);
+            this.lblLoginName.Name = "lblLoginName";
+            this.lblLoginName.Size = new System.Drawing.Size(267, 29);
+            this.lblLoginName.TabIndex = 0;
+            this.lblLoginName.Text = "You are logged in as Name";
+            // 
+            // btnClose
+            // 
+            this.btnClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.ForeColor = System.Drawing.Color.Transparent;
+            this.btnClose.Location = new System.Drawing.Point(1857, 12);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(46, 33);
+            this.btnClose.TabIndex = 1;
+            this.btnClose.TabStop = false;
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // btnRealTimeMonitoring
+            // 
+            this.btnRealTimeMonitoring.BackColor = System.Drawing.Color.Transparent;
+            this.btnRealTimeMonitoring.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRealTimeMonitoring.FlatAppearance.BorderSize = 0;
+            this.btnRealTimeMonitoring.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnRealTimeMonitoring.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnRealTimeMonitoring.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRealTimeMonitoring.ForeColor = System.Drawing.Color.Transparent;
+            this.btnRealTimeMonitoring.Location = new System.Drawing.Point(992, 582);
+            this.btnRealTimeMonitoring.Name = "btnRealTimeMonitoring";
+            this.btnRealTimeMonitoring.Size = new System.Drawing.Size(865, 450);
+            this.btnRealTimeMonitoring.TabIndex = 1;
+            this.btnRealTimeMonitoring.TabStop = false;
+            this.btnRealTimeMonitoring.UseVisualStyleBackColor = false;
+            this.btnRealTimeMonitoring.Click += new System.EventHandler(this.btnRealTimeMonitoring_Click);
+            // 
+            // btnMssgAllContacts
+            // 
+            this.btnMssgAllContacts.BackColor = System.Drawing.Color.Transparent;
+            this.btnMssgAllContacts.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMssgAllContacts.FlatAppearance.BorderSize = 0;
+            this.btnMssgAllContacts.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnMssgAllContacts.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnMssgAllContacts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMssgAllContacts.ForeColor = System.Drawing.Color.Transparent;
+            this.btnMssgAllContacts.Location = new System.Drawing.Point(114, 330);
+            this.btnMssgAllContacts.Name = "btnMssgAllContacts";
+            this.btnMssgAllContacts.Size = new System.Drawing.Size(298, 24);
+            this.btnMssgAllContacts.TabIndex = 1;
+            this.btnMssgAllContacts.TabStop = false;
+            this.btnMssgAllContacts.UseVisualStyleBackColor = false;
+            this.btnMssgAllContacts.Click += new System.EventHandler(this.btnMssgAllContacts_Click);
+            // 
+            // btnSelectDiffPatient
+            // 
+            this.btnSelectDiffPatient.BackColor = System.Drawing.Color.Transparent;
+            this.btnSelectDiffPatient.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSelectDiffPatient.FlatAppearance.BorderSize = 0;
+            this.btnSelectDiffPatient.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnSelectDiffPatient.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnSelectDiffPatient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSelectDiffPatient.ForeColor = System.Drawing.Color.Transparent;
+            this.btnSelectDiffPatient.Location = new System.Drawing.Point(114, 369);
+            this.btnSelectDiffPatient.Name = "btnSelectDiffPatient";
+            this.btnSelectDiffPatient.Size = new System.Drawing.Size(320, 22);
+            this.btnSelectDiffPatient.TabIndex = 1;
+            this.btnSelectDiffPatient.TabStop = false;
+            this.btnSelectDiffPatient.UseVisualStyleBackColor = false;
+            this.btnSelectDiffPatient.Click += new System.EventHandler(this.btnSelectDiffPatient_Click);
+            // 
+            // btnViewMotionData
+            // 
+            this.btnViewMotionData.BackColor = System.Drawing.Color.Transparent;
+            this.btnViewMotionData.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnViewMotionData.FlatAppearance.BorderSize = 0;
+            this.btnViewMotionData.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnViewMotionData.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnViewMotionData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnViewMotionData.ForeColor = System.Drawing.Color.Transparent;
+            this.btnViewMotionData.Location = new System.Drawing.Point(114, 399);
+            this.btnViewMotionData.Name = "btnViewMotionData";
+            this.btnViewMotionData.Size = new System.Drawing.Size(320, 24);
+            this.btnViewMotionData.TabIndex = 1;
+            this.btnViewMotionData.TabStop = false;
+            this.btnViewMotionData.UseVisualStyleBackColor = false;
+            this.btnViewMotionData.Click += new System.EventHandler(this.btnViewMotionData_Click);
+            // 
+            // btnOpenUserSettings
+            // 
+            this.btnOpenUserSettings.BackColor = System.Drawing.Color.Transparent;
+            this.btnOpenUserSettings.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnOpenUserSettings.Enabled = false;
+            this.btnOpenUserSettings.FlatAppearance.BorderSize = 0;
+            this.btnOpenUserSettings.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnOpenUserSettings.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnOpenUserSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOpenUserSettings.ForeColor = System.Drawing.Color.Transparent;
+            this.btnOpenUserSettings.Location = new System.Drawing.Point(114, 433);
+            this.btnOpenUserSettings.Name = "btnOpenUserSettings";
+            this.btnOpenUserSettings.Size = new System.Drawing.Size(320, 25);
+            this.btnOpenUserSettings.TabIndex = 1;
+            this.btnOpenUserSettings.TabStop = false;
+            this.btnOpenUserSettings.UseVisualStyleBackColor = false;
+            // 
+            // lblCurPatientName
+            // 
+            this.lblCurPatientName.AutoSize = true;
+            this.lblCurPatientName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(27)))), ((int)(((byte)(49)))));
+            this.lblCurPatientName.Font = new System.Drawing.Font("Red Hat Display SemiBold", 25.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCurPatientName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(223)))), ((int)(((byte)(233)))));
+            this.lblCurPatientName.Location = new System.Drawing.Point(102, 176);
+            this.lblCurPatientName.Name = "lblCurPatientName";
+            this.lblCurPatientName.Size = new System.Drawing.Size(397, 56);
+            this.lblCurPatientName.TabIndex = 0;
+            this.lblCurPatientName.Text = "Name\'s Health Data";
+            // 
+            // Home_Form
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(27)))));
+            this.BackgroundImage = global::UserInterface.Properties.Resources.Home_Design1;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.Controls.Add(this.btnOpenUserSettings);
+            this.Controls.Add(this.btnViewMotionData);
+            this.Controls.Add(this.btnSelectDiffPatient);
+            this.Controls.Add(this.btnMssgAllContacts);
+            this.Controls.Add(this.btnRealTimeMonitoring);
+            this.Controls.Add(this.btnClose);
+            this.Controls.Add(this.lblCurPatientName);
+            this.Controls.Add(this.lblLoginName);
+            this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "Home_Form";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Home - Smart Health Desktop";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        public System.Windows.Forms.Button button1;
-         private Label label1;
-         private Button button2;
-         public Button button3;
-         public Button button4;
-   }
+        private Label lblLoginName;
+        private Button btnClose;
+        private Button btnMssgAllContacts;
+        private Button btnSelectDiffPatient;
+        private Button btnOpenUserSettings;
+        private Label lblCurPatientName;
+        public Button btnViewMotionData;
+        public Button btnRealTimeMonitoring;
+    }
 }

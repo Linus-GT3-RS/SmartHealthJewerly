@@ -18,32 +18,41 @@ namespace UserInterface
         public Home_Form(bool normalRun)
         {
             InitializeComponent();
+            lblLoginName.Text = "You are logged in as " + "LOGINNAME_TODO";
+            lblCurPatientName.Text = "PATIENTNAME_TODO" + "'s Health Data";
+
             _normalRun = normalRun;
         }
 
-      private void Home_Form_Shown(object sender, EventArgs e)
-      {
-         label1.Text = "Hello " + Backend.Instance().GetProfile().sGetLoginname();
-      }
-
-        private void button2_Click(object sender, EventArgs e)
+        private void btnMssgAllContacts_Click(object sender, EventArgs e)
         {
-            CriticalHeartRateEvent.Instance().Check(200);
+            // TODO
         }
 
-      private void button1_Click(object sender, EventArgs e)
-      {
-         this.Hide();
-      }
+        private void btnSelectDiffPatient_Click(object sender, EventArgs e)
+        {
+            // TODO
+        }
 
-      private void button3_Click(object sender, EventArgs e)
-      {
-         this.Hide();
-      }
+        private void btnViewMotionData_Click(object sender, EventArgs e)
+        {
+            if (_normalRun)
+            {
+                this.Hide();
+            }
+        }
 
-      private void button4_Click(object sender, EventArgs e)
-      {
-         this.Hide();
-      }
-   }
+        private void btnRealTimeMonitoring_Click(object sender, EventArgs e)
+        {
+            if (_normalRun)
+            {
+                this.Hide();
+            }
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+    }
 }

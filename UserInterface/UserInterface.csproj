@@ -167,6 +167,11 @@
     <Content Include="Images\Logo\8-vyDL1KSdQoJXBiF.png" />
     <Content Include="Images\Logo\8-YPCj73ElaPWz19B.png" />
     <Content Include="Images\Logo\8-Z26ZLK6z8voxJob.png" />
+    <None Include="Resources\Home_Design1.png" />
+    <None Include="Resources\Home_Design.png" />
+    <None Include="Resources\Feinentwurf Home V2 %282%29.png" />
+    <None Include="Resources\Feinentwurf Home V2 %281%29.png" />
+    <None Include="Resources\Feinentwurf Home V2.png" />
     <None Include="Resources\Login_Template - LoginButton.png" />
     <None Include="Resources\Login_Template - Background.png" />
     <None Include="Resources\Design Login2.png" />

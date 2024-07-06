@@ -42,17 +42,17 @@ namespace UserInterface
 
          // create Home- and HealthData-Form in background
          _homeForm = new Home_Form(true);
-         _homeForm.button1.Click += show_MotionDataForm;
-         _homeForm.button3.Click += show_HeartDataForm;
-         _homeForm.button4.Click += show_EnvironementDataForm;
+         _homeForm.btnViewMotionData.Click += show_MotionDataForm;
+         _homeForm.btnRealTimeMonitoring.Click += show_HeartDataForm;
 
 
-         _windowState = HomeWindow.getHomeWindow();
+            _windowState = HomeWindow.getHomeWindow();
 
+            
          measurement = GlobalMeasurement.measurement;
          measurement.vStartMeasurement();
          measurement.PrintData += vPrintMeasurements;    //event hinterlegen
-
+            
 
          //komplette App schließen
          _homeForm.FormClosed += HomeForm_OnFormClosed;
