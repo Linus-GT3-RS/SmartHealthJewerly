@@ -32,7 +32,7 @@ namespace UserInterface
         /// </summary>
         private void InitializeComponent()
         {
-            this.loginnameTextBox = new System.Windows.Forms.TextBox();
+            this.usernameTextBox = new System.Windows.Forms.TextBox();
             this.PasswordTextBox = new System.Windows.Forms.TextBox();
             this.labelSignInText = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
@@ -45,20 +45,20 @@ namespace UserInterface
             // 
             // loginnameTextBox
             // 
-            this.loginnameTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(27)))));
-            this.loginnameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.loginnameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginnameTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(223)))), ((int)(((byte)(233)))));
-            this.loginnameTextBox.Location = new System.Drawing.Point(94, 269);
-            this.loginnameTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.loginnameTextBox.Name = "loginnameTextBox";
-            this.loginnameTextBox.Size = new System.Drawing.Size(295, 27);
-            this.loginnameTextBox.TabIndex = 0;
-            this.loginnameTextBox.TabStop = false;
-            this.loginnameTextBox.Text = "e-mail";
-            this.loginnameTextBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.emailTextBox_MouseClick);
-            this.loginnameTextBox.TextChanged += new System.EventHandler(this.emailTextBox_TextChanged);
-            this.loginnameTextBox.Leave += new System.EventHandler(this.emailTextBox_Leave);
+            this.usernameTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(27)))));
+            this.usernameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.usernameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usernameTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(223)))), ((int)(((byte)(233)))));
+            this.usernameTextBox.Location = new System.Drawing.Point(94, 269);
+            this.usernameTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.usernameTextBox.Name = "loginnameTextBox";
+            this.usernameTextBox.Size = new System.Drawing.Size(295, 27);
+            this.usernameTextBox.TabIndex = 0;
+            this.usernameTextBox.TabStop = false;
+            this.usernameTextBox.Text = "Username";
+            this.usernameTextBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.emailTextBox_MouseClick);
+            this.usernameTextBox.TextChanged += new System.EventHandler(this.emailTextBox_TextChanged);
+            this.usernameTextBox.Leave += new System.EventHandler(this.emailTextBox_Leave);
             // 
             // PasswordTextBox
             // 
@@ -72,7 +72,7 @@ namespace UserInterface
             this.PasswordTextBox.Size = new System.Drawing.Size(295, 27);
             this.PasswordTextBox.TabIndex = 1;
             this.PasswordTextBox.TabStop = false;
-            this.PasswordTextBox.Text = "password";
+            this.PasswordTextBox.Text = "Password";
             this.PasswordTextBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PasswordTextBox_MouseClick);
             this.PasswordTextBox.Leave += new System.EventHandler(this.PasswordTextBox_Leave);
             // 
@@ -177,7 +177,7 @@ namespace UserInterface
             this.Controls.Add(this.labelSignInText);
             this.Controls.Add(this.labelSignIn);
             this.Controls.Add(this.btnLogin);
-            this.Controls.Add(this.loginnameTextBox);
+            this.Controls.Add(this.usernameTextBox);
             this.Controls.Add(this.PasswordTextBox);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.label2);
@@ -199,7 +199,7 @@ namespace UserInterface
         #endregion
 
         private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.TextBox loginnameTextBox;
+        private System.Windows.Forms.TextBox usernameTextBox;
         private System.Windows.Forms.TextBox PasswordTextBox;
         private Label labelSignInText;
         private CheckBox checkBox1;

@@ -50,18 +50,25 @@ namespace UserInterface
          bool isFine = true;
 
          //"email" == empty
-         if (loginnameTextBox.Text == "e-mail" || loginnameTextBox.Text == "" || loginnameTextBox.Text == "fill field" || loginnameTextBox.Text == "e-mail already used" || loginnameTextBox.Text == "no user with this e-mail")
+         if (usernameTextBox.Text == "Username" 
+                || usernameTextBox.Text == "" 
+                || usernameTextBox.Text == "Fill Field" 
+                || usernameTextBox.Text == "Username already used" 
+                || usernameTextBox.Text == "No User with this Username")
          {
-            loginnameTextBox.ForeColor = DesignColors.Error;
-            loginnameTextBox.Text = "fill field";
+            usernameTextBox.ForeColor = DesignColors.Error;
+            usernameTextBox.Text = "Fill Field";
             isFine = false;
          }
 
          //"password" == empty
-         if (PasswordTextBox.Text == "password" || PasswordTextBox.Text == "" || PasswordTextBox.Text == "fill field" || PasswordTextBox.Text == "wrong password")
+         if (PasswordTextBox.Text == "Password" 
+                || PasswordTextBox.Text == "" 
+                || PasswordTextBox.Text == "Fill Field" 
+                || PasswordTextBox.Text == "Wrong Password")
          {
             PasswordTextBox.ForeColor = DesignColors.Error;
-            PasswordTextBox.Text = "fill field";
+            PasswordTextBox.Text = "Fill Field";
             isFine = false;
          }
          return isFine;
@@ -71,7 +78,7 @@ namespace UserInterface
       {
          if (checkTextBoxes())
          {
-            string email = loginnameTextBox.Text;
+            string email = usernameTextBox.Text;
             string password = PasswordTextBox.Text;
             
             int erfolgreich = _profileChangements.LogIn(email, password);
@@ -86,12 +93,12 @@ namespace UserInterface
             else if (erfolgreich == 1)      //password falsch
             {
                PasswordTextBox.ForeColor = DesignColors.Error;
-               PasswordTextBox.Text = "wrong password";
+               PasswordTextBox.Text = "Wrong Password";
             }
             else       //email nicht vorhanden
             {  
-               loginnameTextBox.ForeColor = DesignColors.Error;
-               loginnameTextBox.Text = "no user with this e-mail";
+               usernameTextBox.ForeColor = DesignColors.Error;
+               usernameTextBox.Text = "No User with this Username";
             }
          }
       }
@@ -100,7 +107,7 @@ namespace UserInterface
       {
          if (checkTextBoxes())
          {
-            string loginname = loginnameTextBox.Text;
+            string loginname = usernameTextBox.Text;
             string password = PasswordTextBox.Text;
             
             if (_profileChangements.SignIn(loginname, password))     //sign in erfolgreich
@@ -110,7 +117,7 @@ namespace UserInterface
             else     //email wird schon genutzt
             {                
                 PasswordTextBox.ForeColor = DesignColors.Error;
-                loginnameTextBox.Text = "e-mail already used";
+                usernameTextBox.Text = "Username already used";
             }
          }
       }
@@ -126,16 +133,16 @@ namespace UserInterface
 
       private void emailTextBox_MouseClick(object sender, MouseEventArgs e)
       {
-         loginnameTextBox.ForeColor = DesignColors.Text;
-         loginnameTextBox.Text = "";
+         usernameTextBox.ForeColor = DesignColors.Text;
+         usernameTextBox.Text = "";
       }
 
       private void emailTextBox_Leave(object sender, EventArgs e)
       {
-         if (loginnameTextBox.Text == "")
+         if (usernameTextBox.Text == "")
          {
-            loginnameTextBox.ForeColor = DesignColors.Text;
-            loginnameTextBox.Text = "loginname";
+            usernameTextBox.ForeColor = DesignColors.Text;
+            usernameTextBox.Text = "Username";
          }
       }
 
@@ -144,7 +151,7 @@ namespace UserInterface
          if (PasswordTextBox.Text == "")
          {
             PasswordTextBox.ForeColor = DesignColors.Text;
-            PasswordTextBox.Text = "password";
+            PasswordTextBox.Text = "Password";
          }
       }
 
