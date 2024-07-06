@@ -25,12 +25,6 @@ namespace UserInterface
             _normalRun = normalRun;
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            // TODO WOHIN? was ist das
-            CriticalHeartRateEvent.Instance().Check(200);
-        }
-
         private void btnMssgAllContacts_Click(object sender, EventArgs e)
         {
             // TODO
