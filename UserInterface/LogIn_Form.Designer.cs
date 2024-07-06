@@ -40,10 +40,11 @@ namespace UserInterface
             this.labelSignIn = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
             this.pictboxBackground = new System.Windows.Forms.PictureBox();
+            this.btnExit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictboxBackground)).BeginInit();
             this.SuspendLayout();
             // 
-            // loginnameTextBox
+            // usernameTextBox
             // 
             this.usernameTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(27)))));
             this.usernameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -51,7 +52,7 @@ namespace UserInterface
             this.usernameTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(223)))), ((int)(((byte)(233)))));
             this.usernameTextBox.Location = new System.Drawing.Point(94, 269);
             this.usernameTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.usernameTextBox.Name = "loginnameTextBox";
+            this.usernameTextBox.Name = "usernameTextBox";
             this.usernameTextBox.Size = new System.Drawing.Size(295, 27);
             this.usernameTextBox.TabIndex = 0;
             this.usernameTextBox.TabStop = false;
@@ -167,6 +168,27 @@ namespace UserInterface
             this.pictboxBackground.TabIndex = 9;
             this.pictboxBackground.TabStop = false;
             // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(27)))));
+            this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExit.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(27)))));
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(27)))));
+            this.btnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(27)))));
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Font = new System.Drawing.Font("Red Hat Display Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(223)))), ((int)(((byte)(233)))));
+            this.btnExit.Location = new System.Drawing.Point(479, 13);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(4);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(36, 31);
+            this.btnExit.TabIndex = 2;
+            this.btnExit.TabStop = false;
+            this.btnExit.Text = "X";
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
             // LogIn_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
@@ -176,6 +198,7 @@ namespace UserInterface
             this.ClientSize = new System.Drawing.Size(528, 673);
             this.Controls.Add(this.labelSignInText);
             this.Controls.Add(this.labelSignIn);
+            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.usernameTextBox);
             this.Controls.Add(this.PasswordTextBox);
@@ -206,5 +229,6 @@ namespace UserInterface
         private Label label2;
       private Label labelSignIn;
         private PictureBox pictboxBackground;
+        private Button btnExit;
     }
 }

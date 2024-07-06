@@ -44,8 +44,8 @@ namespace UserInterface
         }
 
 
-      //check if textboxes are empty
-      private bool checkTextBoxes()
+        //check if textboxes are empty
+        private bool checkTextBoxes()
       {
          bool isFine = true;
 
@@ -158,6 +158,11 @@ namespace UserInterface
         private void emailTextBox_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
