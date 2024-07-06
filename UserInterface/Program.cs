@@ -13,6 +13,7 @@ namespace UserInterface
         LogIn_Only, Home_Only, HealthData_Only,
         test,
         SendMail_Only,
+        SelectDiffPatient_Only,
         Skip2Home       // todo
     };
 
@@ -20,7 +21,7 @@ namespace UserInterface
     {
         // ---------------------------------- Start CONFIG : Free to use ----------------------------------
 
-        static RunSettings CurRunSettings = RunSettings.Normal;
+        static RunSettings CurRunSettings = RunSettings.Home_Only;
 
         // ---------------------------------- END CONFIG -----------------------------------------------------
 
@@ -64,6 +65,10 @@ namespace UserInterface
 
                 case RunSettings.SendMail_Only:
                     StartForm = new SendMail_Form();
+                    break;
+
+                case RunSettings.SelectDiffPatient_Only:
+                    StartForm = new SelectDiffPatient_Form();
                     break;
 
                 case RunSettings.test:

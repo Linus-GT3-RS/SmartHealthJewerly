@@ -92,6 +92,12 @@
     <Compile Include="Manager_Form.Designer.cs">
       <DependentUpon>Manager_Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="SelectDiffPatient_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectDiffPatient_Form.Designer.cs">
+      <DependentUpon>SelectDiffPatient_Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="SendMail_Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,6 +130,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Manager_Form.resx">
       <DependentUpon>Manager_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectDiffPatient_Form.resx">
+      <DependentUpon>SelectDiffPatient_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SendMail_Form.resx">
       <DependentUpon>SendMail_Form.cs</DependentUpon>
@@ -176,6 +185,8 @@
     <Content Include="Images\Logo\8-vyDL1KSdQoJXBiF.png" />
     <Content Include="Images\Logo\8-YPCj73ElaPWz19B.png" />
     <Content Include="Images\Logo\8-Z26ZLK6z8voxJob.png" />
+    <None Include="Resources\Design_SelectPatient Screen1.png" />
+    <None Include="Resources\Design_SelectPatient Screen.png" />
     <None Include="Resources\Design_EMail.png" />
     <None Include="Resources\Home_Design1.png" />
     <None Include="Resources\Home_Design.png" />
