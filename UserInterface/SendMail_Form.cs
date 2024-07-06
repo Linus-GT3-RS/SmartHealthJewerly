@@ -77,7 +77,10 @@ namespace UserInterface
 
         private void btnSend_Click(object sender, EventArgs e)
         {
-            // TODO
+            string subject = txtboxSubject.Text;
+            string message = txtboxMessage.Text;
+
+            Backend.Instance().GetProfile().GetPatient().NotifyContacts(subject, message);
 
             this.Close();
         }

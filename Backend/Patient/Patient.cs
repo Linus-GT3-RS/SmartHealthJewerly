@@ -41,5 +41,10 @@ namespace BackendCS
                 contact.Notify(message);
             }
         }
+
+        public void NotifyContacts(string subject, string message)
+        {
+            throw new NotImplementedException("eaduuaaard");
+        }
     }
 }
