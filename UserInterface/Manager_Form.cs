@@ -22,7 +22,7 @@ namespace UserInterface
       private LogIn_Form _loginForm;
       private Home_Form _homeForm;
       private MotionData_Form _motionDataForm;
-      private HeartRate_Form _heartrateDataForm;
+      private RealTimeMonitoring_Form _heartrateDataForm;
       private EnvironmentData_Form _environmentDataForm;
 
       private WindowState _windowState;
@@ -63,8 +63,8 @@ namespace UserInterface
          _motionDataForm.btnExit.Click += hideHeartRateDataForm;
 
 
-         _heartrateDataForm = new HeartRate_Form();
-         _heartrateDataForm.button1.Click += hideHeartRateDataForm;
+         _heartrateDataForm = new RealTimeMonitoring_Form(true);
+         _heartrateDataForm.btnExit.Click += hideHeartRateDataForm;
 
 
          _environmentDataForm = new EnvironmentData_Form();

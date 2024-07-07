@@ -73,6 +73,26 @@ namespace UserInterface.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Danger {
+            get {
+                object obj = ResourceManager.GetObject("Danger", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Design___RealTimeMonitoring {
+            get {
+                object obj = ResourceManager.GetObject("Design - RealTimeMonitoring", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Design_EMail {
             get {
                 object obj = ResourceManager.GetObject("Design_EMail", resourceCulture);
@@ -153,6 +173,16 @@ namespace UserInterface.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Good {
+            get {
+                object obj = ResourceManager.GetObject("Good", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Home_Design {
             get {
                 object obj = ResourceManager.GetObject("Home_Design", resourceCulture);
@@ -196,6 +226,26 @@ namespace UserInterface.Properties {
         internal static System.Drawing.Bitmap Login_Template___LoginButton {
             get {
                 object obj = ResourceManager.GetObject("Login_Template - LoginButton", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Ok {
+            get {
+                object obj = ResourceManager.GetObject("Ok", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Ok1 {
+            get {
+                object obj = ResourceManager.GetObject("Ok1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

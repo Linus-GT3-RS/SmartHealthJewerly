@@ -62,11 +62,11 @@
     <Compile Include="EnvironmentData_Form.Designer.cs">
       <DependentUpon>EnvironmentData_Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="HeartRate_Form.cs">
+    <Compile Include="RealTimeMonitoring_Form.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="HeartRate_Form.Designer.cs">
-      <DependentUpon>HeartRate_Form.cs</DependentUpon>
+      <DependentUpon>RealTimeMonitoring_Form.cs</DependentUpon>
     </Compile>
     <Compile Include="Home_Form.cs">
       <SubType>Form</SubType>
@@ -120,7 +120,7 @@
       <DependentUpon>MotionData_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HeartRate_Form.resx">
-      <DependentUpon>HeartRate_Form.cs</DependentUpon>
+      <DependentUpon>RealTimeMonitoring_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Home_Form.resx">
       <DependentUpon>Home_Form.cs</DependentUpon>
@@ -185,6 +185,11 @@
     <Content Include="Images\Logo\8-vyDL1KSdQoJXBiF.png" />
     <Content Include="Images\Logo\8-YPCj73ElaPWz19B.png" />
     <Content Include="Images\Logo\8-Z26ZLK6z8voxJob.png" />
+    <None Include="Resources\Ok1.png" />
+    <None Include="Resources\Danger.png" />
+    <None Include="Resources\Good.png" />
+    <None Include="Resources\Ok.png" />
+    <None Include="Resources\Design - RealTimeMonitoring.png" />
     <None Include="Resources\Design-MotionData.png" />
     <None Include="Resources\Design_SelectPatient Screen1.png" />
     <None Include="Resources\Design_SelectPatient Screen.png" />

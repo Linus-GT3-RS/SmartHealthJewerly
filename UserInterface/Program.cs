@@ -10,7 +10,7 @@ namespace UserInterface
     {
         Normal = 0,
         SplashScreen_Only, SplashScreen_OnlyDesign,
-        LogIn_Only, Home_Only, HealthData_Only,
+        LogIn_Only, Home_Only, MotionData_Only, RealTimeMonitoring_Only,
         test,
         SendMail_Only,
         SelectDiffPatient_Only,
@@ -21,7 +21,7 @@ namespace UserInterface
     {
         // ---------------------------------- Start CONFIG : Free to use ----------------------------------
 
-        static RunSettings CurRunSettings = RunSettings.HealthData_Only;
+        static RunSettings CurRunSettings = RunSettings.RealTimeMonitoring_Only;
 
         // ---------------------------------- END CONFIG -----------------------------------------------------
 
@@ -59,8 +59,12 @@ namespace UserInterface
                     StartForm = new Home_Form(false);
                     break;
 
-                case RunSettings.HealthData_Only:
+                case RunSettings.MotionData_Only:
                     StartForm = new MotionData_Form(false);
+                    break;
+
+                    case RunSettings.RealTimeMonitoring_Only:
+                    StartForm = new RealTimeMonitoring_Form(false);
                     break;
 
                 case RunSettings.SendMail_Only:

@@ -21,6 +21,7 @@ namespace UserInterface
       public EnvironmentData_Form()
       {
          InitializeComponent();
+
          //timer wird genutzt um Helligkeit der GUI alle 10s zuupdaten
          timer = new System.Timers.Timer(10000); // 10 Sekunden in Millisekunden
          timer.Elapsed += AdjustBrightness; // Ereignis, das ausgelöst wird, wenn der Timer abläuft
