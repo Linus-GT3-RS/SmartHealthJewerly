@@ -185,6 +185,7 @@
     <Content Include="Images\Logo\8-vyDL1KSdQoJXBiF.png" />
     <Content Include="Images\Logo\8-YPCj73ElaPWz19B.png" />
     <Content Include="Images\Logo\8-Z26ZLK6z8voxJob.png" />
+    <None Include="Resources\Design-MotionData.png" />
     <None Include="Resources\Design_SelectPatient Screen1.png" />
     <None Include="Resources\Design_SelectPatient Screen.png" />
     <None Include="Resources\Design_EMail.png" />

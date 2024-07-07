@@ -60,7 +60,7 @@ namespace UserInterface
 
 
          _motionDataForm = new MotionData_Form(true);
-         _motionDataForm.button1.Click += hideHeartRateDataForm;
+         _motionDataForm.btnExit.Click += hideHeartRateDataForm;
 
 
          _heartrateDataForm = new HeartRate_Form();

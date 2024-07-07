@@ -93,6 +93,16 @@ namespace UserInterface.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Design_MotionData {
+            get {
+                object obj = ResourceManager.GetObject("Design-MotionData", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Design_SelectPatient_Screen {
             get {
                 object obj = ResourceManager.GetObject("Design_SelectPatient Screen", resourceCulture);

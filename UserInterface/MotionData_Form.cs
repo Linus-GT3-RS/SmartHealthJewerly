@@ -12,13 +12,26 @@ using BackendCS.Measurement;
 using BackendCS.Event;
 using System.Drawing.Printing;
 using System.Windows.Forms.DataVisualization.Charting;
+using System.Runtime.InteropServices;
 
 
 namespace UserInterface
 {
    public partial class MotionData_Form : Form
    {
-      Motion motion;
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+
+        private static extern IntPtr CreateRoundRectRgn
+            (
+            int nLeftRect,
+            int nTopRect,
+            int RightRect,
+            int nBottomRect,
+            int nWidthEllipse,
+            int nHeightEllipse
+            );
+
+        Motion motion;
 
       private bool _normalRun;
 
@@ -27,8 +40,9 @@ namespace UserInterface
          _normalRun = normalRun;
 
          InitializeComponent();
- 
-      }
+            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 40, 40));
+
+        }
 
 
       private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -174,6 +188,7 @@ namespace UserInterface
          {
             this.Hide();
          }
+         else { this.Close(); }
       }
 
       private void chartHeartbeat_Click(object sender, EventArgs e)
