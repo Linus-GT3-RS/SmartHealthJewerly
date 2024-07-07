@@ -43,3 +43,13 @@ Logo was created using [hotpot.ai/art-generator](https://hotpot.ai/ai-image-gene
 <a target="_blank" href="https://icons8.com/icon/44830/overview">Overview</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
 
 <a target="_blank" href="https://icons8.com/icon/46/close">Close</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+
+<a target="_blank" href="https://icons8.com/icon/47294/heart-with-pulse">Heartbeat</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+
+<a target="_blank" href="https://icons8.com/icon/69378/standing-man">Standing Man</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+
+<a target="_blank" href="https://icons8.com/icon/XBJfETMfZHpS/light">Light</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+
+<a target="_blank" href="https://icons8.com/icon/SXMFvTqVKrvq/thermostat">Thermostat</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+
+<a target="_blank" href="https://icons8.com/icon/53010/thermometer">Thermometer</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
