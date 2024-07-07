@@ -32,6 +32,7 @@ namespace UserInterface
         {
             var formSelectDiffPatient = new SelectDiffPatient_Form();
             formSelectDiffPatient.ShowDialog();
+            Update_lblCurPatientName();
         }
 
         private void btnViewMotionData_Click(object sender, EventArgs e)

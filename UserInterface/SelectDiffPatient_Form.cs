@@ -34,28 +34,24 @@ namespace UserInterface
         private void btnPatient1_Click(object sender, EventArgs e)
         {
             Backend.Instance().GetProfile().SetPatient(0);
-
             this.Close();
         }
 
         private void btnPatient2_Click(object sender, EventArgs e)
         {
             Backend.Instance().GetProfile().SetPatient(1);
-
             this.Close();
         }
 
         private void btnPatient3_Click(object sender, EventArgs e)
         {
             Backend.Instance().GetProfile().SetPatient(2);
-
             this.Close();
         }
 
         private void btnPatient4_Click(object sender, EventArgs e)
         {
             Backend.Instance().GetProfile().SetPatient(3);
-
             this.Close();
         }
 
