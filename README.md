@@ -53,3 +53,9 @@ Logo was created using [hotpot.ai/art-generator](https://hotpot.ai/ai-image-gene
 <a target="_blank" href="https://icons8.com/icon/SXMFvTqVKrvq/thermostat">Thermostat</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
 
 <a target="_blank" href="https://icons8.com/icon/53010/thermometer">Thermometer</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+
+<a target="_blank" href="https://icons8.com/icon/48136/approval">Approval</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+
+<a target="_blank" href="https://icons8.com/icon/RQ6wdTPXxFXo/poison">Poison</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+
+<a target="_blank" href="https://icons8.com/icon/44053/star">Star</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
