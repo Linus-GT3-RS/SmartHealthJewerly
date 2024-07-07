@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
@@ -38,29 +39,30 @@ namespace UserInterface
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 40, 40));
         }
 
-      private void button1_Click(object sender, EventArgs e)
-      {
-         
-      }
-
-
       public void vPrintMeasurements()
       {
 
          //nicht in invoke ausführen, da der GUI Thread das berechnen sonst übernimmt
-
          heart = (HeartRate)GlobalMeasurement.measurement._sensorsSingle[0];
+            float brightnessValue = GlobalMeasurement.measurement._sensorsSingle[4].fGetSingleData();
+            float BrightnessPercentage = (float)Math.Round(BackendCS.Converter.BrightnessConverter.convert(brightnessValue) * 100, 1);
+            float environmentTemperature = GlobalMeasurement.measurement._sensorsSingle[1].fGetSingleData();
+            float environmentHumidity = GlobalMeasurement.measurement._sensorsSingle[2].fGetSingleData();
+            float bodyTemperature = GlobalMeasurement.measurement._sensorsSingle[3].fGetSingleData();
 
-
-         BeginInvoke((Action)(() => //switch back to main thread
+            BeginInvoke((Action)(() => //switch back to main thread
          {
             lblBPM.Text = "Beats per minute: " + heart.fGetSingleData();
-            //fillSeries
-            fillSeries();
-            //redraw charts
+             lblEnvTemp.Text = "Environment Temperature: " + environmentTemperature.ToString("F1") + " Grad";
+             lblHumidity.Text = "Environment humidity: " + environmentHumidity.ToString("F1") + "% Luftfeuchte";
+             lblBodyTemp.Text = "Body temperature: " + bodyTemperature.ToString("F1") + " Grad";
+             lblBrightness.Text = "Brightness: " + brightnessValue.ToString() + " => " + BrightnessPercentage + "% dunkel";
+             
+             fillSeries();
             redrawCharts();
          }));
       }
+
       private void fillSeries()
       {
          Series heartBeat = chartHeartbeat.Series["Series1"];

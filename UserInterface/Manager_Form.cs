@@ -23,7 +23,7 @@ namespace UserInterface
       private Home_Form _homeForm;
       private MotionData_Form _motionDataForm;
       private RealTimeMonitoring_Form _heartrateDataForm;
-      private EnvironmentData_Form _environmentDataForm;
+      //private EnvironmentData_Form _environmentDataForm;
 
       private WindowState _windowState;
       public Manager_Form()
@@ -67,8 +67,8 @@ namespace UserInterface
          _heartrateDataForm.btnExit.Click += hideHeartRateDataForm;
 
 
-         _environmentDataForm = new EnvironmentData_Form();
-         _environmentDataForm.button1.Click += hideEnvironementDataForm;
+         //_environmentDataForm = new EnvironmentData_Form();
+         //_environmentDataForm.button1.Click += hideEnvironementDataForm;
          /*
          var pfc = new PrivateFontCollection();
          pfc.AddFontFile(@"Fonts\Red_Hat_Display\RedHatDisplay-VariableFont_wght.ttf");
@@ -88,7 +88,7 @@ namespace UserInterface
             }
             if (_windowState is EnvironmentWindow)
             {
-               _environmentDataForm.vPrintMeasurements();
+               //_environmentDataForm.vPrintMeasurements();
             }
             if (_windowState is HeartWindow)
             {
@@ -144,20 +144,20 @@ namespace UserInterface
       }
 
 
-      private void show_EnvironementDataForm(object sender, EventArgs e)
-      {
-         lock (_lock)
-         {
-            _windowState = EnvironmentWindow.getEnvironmentWindow();
-            _environmentDataForm.Show();
-         }
-      }
+      //private void show_EnvironementDataForm(object sender, EventArgs e)
+      //{
+      //   lock (_lock)
+      //   {
+      //      _windowState = EnvironmentWindow.getEnvironmentWindow();
+      //      _environmentDataForm.Show();
+      //   }
+      //}
 
-      private void hideEnvironementDataForm(object sender, EventArgs e)
-      {
-         _environmentDataForm.Hide();
-         showHomeForm(sender, e);
-      }
+      //private void hideEnvironementDataForm(object sender, EventArgs e)
+      //{
+      //   _environmentDataForm.Hide();
+      //   showHomeForm(sender, e);
+      //}
 
       // is needed because SplashScreen is still open  ---- maybe fixxed later
       private void showHomeForm(object sender, EventArgs e)
@@ -177,7 +177,7 @@ namespace UserInterface
       {
          _motionDataForm.Close();
          _heartrateDataForm.Close();
-         _environmentDataForm.Close();
+         //_environmentDataForm.Close();
          this.Close();
       }
 

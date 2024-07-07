@@ -56,9 +56,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EnvironmentData_Form.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="EnvironmentData_Form.cs" />
     <Compile Include="EnvironmentData_Form.Designer.cs">
       <DependentUpon>EnvironmentData_Form.cs</DependentUpon>
     </Compile>

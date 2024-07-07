@@ -28,9 +28,9 @@
       /// </summary>
       private void InitializeComponent()
       {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.chartHeartbeat = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.lblBPM = new System.Windows.Forms.Label();
             this.lblHumidity = new System.Windows.Forms.Label();
@@ -46,21 +46,21 @@
             // chartHeartbeat
             // 
             this.chartHeartbeat.BackColor = System.Drawing.Color.SteelBlue;
-            chartArea2.AxisY.Maximum = 800D;
-            chartArea2.AxisY.Minimum = 600D;
-            chartArea2.Name = "ChartArea1";
-            this.chartHeartbeat.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chartHeartbeat.Legends.Add(legend2);
-            this.chartHeartbeat.Location = new System.Drawing.Point(13, 138);
+            chartArea1.AxisY.Maximum = 800D;
+            chartArea1.AxisY.Minimum = 600D;
+            chartArea1.Name = "ChartArea1";
+            this.chartHeartbeat.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartHeartbeat.Legends.Add(legend1);
+            this.chartHeartbeat.Location = new System.Drawing.Point(13, 95);
             this.chartHeartbeat.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.chartHeartbeat.Name = "chartHeartbeat";
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chartHeartbeat.Series.Add(series2);
-            this.chartHeartbeat.Size = new System.Drawing.Size(1129, 236);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chartHeartbeat.Series.Add(series1);
+            this.chartHeartbeat.Size = new System.Drawing.Size(1235, 326);
             this.chartHeartbeat.TabIndex = 11;
             this.chartHeartbeat.Text = "chartHeartRate";
             // 
