@@ -42,8 +42,13 @@ namespace BackendCS
             }
             else
             {
-                Email.Send(_email, "Warning", message);
+                Notify("Warning",message);
             }
+        }
+
+        public void Notify(string subject, string message)
+        {
+            Email.Send(_email,subject,message);
         }
     }
 }

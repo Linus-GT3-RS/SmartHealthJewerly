@@ -44,7 +44,10 @@ namespace BackendCS
 
         public void NotifyContacts(string subject, string message)
         {
-            throw new NotImplementedException("eaduuaaard");
+            foreach (var contact in _contacts)
+            {
+                contact.Notify(subject,message);
+            }
         }
 
         public override string ToString()
