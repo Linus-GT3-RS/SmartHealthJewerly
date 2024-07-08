@@ -48,12 +48,12 @@ namespace UserInterface
             // 
             this.usernameTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(27)))));
             this.usernameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.usernameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usernameTextBox.Font = new System.Drawing.Font("Red Hat Display", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usernameTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(223)))), ((int)(((byte)(233)))));
             this.usernameTextBox.Location = new System.Drawing.Point(94, 269);
-            this.usernameTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.usernameTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.usernameTextBox.Name = "usernameTextBox";
-            this.usernameTextBox.Size = new System.Drawing.Size(295, 27);
+            this.usernameTextBox.Size = new System.Drawing.Size(295, 31);
             this.usernameTextBox.TabIndex = 0;
             this.usernameTextBox.TabStop = false;
             this.usernameTextBox.Text = "Username";
@@ -65,12 +65,12 @@ namespace UserInterface
             // 
             this.PasswordTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(27)))));
             this.PasswordTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.PasswordTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PasswordTextBox.Font = new System.Drawing.Font("Red Hat Display", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PasswordTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(223)))), ((int)(((byte)(233)))));
             this.PasswordTextBox.Location = new System.Drawing.Point(94, 361);
-            this.PasswordTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.PasswordTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.PasswordTextBox.Name = "PasswordTextBox";
-            this.PasswordTextBox.Size = new System.Drawing.Size(295, 27);
+            this.PasswordTextBox.Size = new System.Drawing.Size(295, 31);
             this.PasswordTextBox.TabIndex = 1;
             this.PasswordTextBox.TabStop = false;
             this.PasswordTextBox.Text = "Password";
@@ -80,7 +80,7 @@ namespace UserInterface
             // labelSignInText
             // 
             this.labelSignInText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(27)))));
-            this.labelSignInText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSignInText.Font = new System.Drawing.Font("Red Hat Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSignInText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(223)))), ((int)(((byte)(233)))));
             this.labelSignInText.Location = new System.Drawing.Point(100, 573);
             this.labelSignInText.Margin = new System.Windows.Forms.Padding(0);
@@ -94,12 +94,12 @@ namespace UserInterface
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(27)))));
-            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox1.Font = new System.Drawing.Font("Red Hat Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(223)))), ((int)(((byte)(233)))));
             this.checkBox1.Location = new System.Drawing.Point(65, 425);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(161, 29);
+            this.checkBox1.Size = new System.Drawing.Size(164, 30);
             this.checkBox1.TabIndex = 6;
             this.checkBox1.TabStop = false;
             this.checkBox1.Text = "Remember me";
@@ -109,12 +109,12 @@ namespace UserInterface
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(27)))));
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Red Hat Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(223)))), ((int)(((byte)(233)))));
             this.label2.Location = new System.Drawing.Point(309, 425);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(168, 25);
+            this.label2.Size = new System.Drawing.Size(168, 26);
             this.label2.TabIndex = 7;
             this.label2.Text = "Forgot password?";
             // 
@@ -122,12 +122,12 @@ namespace UserInterface
             // 
             this.labelSignIn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(27)))));
             this.labelSignIn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.labelSignIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSignIn.Font = new System.Drawing.Font("Red Hat Display Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSignIn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(223)))), ((int)(((byte)(233)))));
             this.labelSignIn.Location = new System.Drawing.Point(320, 583);
             this.labelSignIn.Margin = new System.Windows.Forms.Padding(0);
             this.labelSignIn.Name = "labelSignIn";
-            this.labelSignIn.Size = new System.Drawing.Size(114, 40);
+            this.labelSignIn.Size = new System.Drawing.Size(96, 40);
             this.labelSignIn.TabIndex = 8;
             this.labelSignIn.Text = "Register";
             this.labelSignIn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -140,15 +140,15 @@ namespace UserInterface
             this.btnLogin.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(27)))));
             this.btnLogin.FlatAppearance.BorderSize = 0;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.Font = new System.Drawing.Font("Red Hat Display", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.Transparent;
             this.btnLogin.Image = global::UserInterface.Properties.Resources.Login_Template___LoginButton;
             this.btnLogin.Location = new System.Drawing.Point(60, 487);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(4);
-            this.btnLogin.MaximumSize = new System.Drawing.Size(409, 69);
-            this.btnLogin.MinimumSize = new System.Drawing.Size(409, 69);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLogin.MaximumSize = new System.Drawing.Size(410, 69);
+            this.btnLogin.MinimumSize = new System.Drawing.Size(410, 69);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(409, 69);
+            this.btnLogin.Size = new System.Drawing.Size(410, 69);
             this.btnLogin.TabIndex = 2;
             this.btnLogin.TabStop = false;
             this.btnLogin.Text = "Login";
@@ -180,7 +180,7 @@ namespace UserInterface
             this.btnExit.Font = new System.Drawing.Font("Red Hat Display Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(223)))), ((int)(((byte)(233)))));
             this.btnExit.Location = new System.Drawing.Point(479, 13);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(4);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(36, 31);
             this.btnExit.TabIndex = 2;
@@ -209,7 +209,7 @@ namespace UserInterface
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximumSize = new System.Drawing.Size(528, 673);
-            this.MinimumSize = new System.Drawing.Size(528, 673);
+            this.MinimumSize = new System.Drawing.Size(528, 663);
             this.Name = "LogIn_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LogInScreen_Form";
