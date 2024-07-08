@@ -119,6 +119,9 @@
     <EmbeddedResource Include="Manager_Form.resx">
       <DependentUpon>Manager_Form.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RealTimeMonitoring_Form.resx">
+      <DependentUpon>RealTimeMonitoring_Form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SelectDiffPatient_Form.resx">
       <DependentUpon>SelectDiffPatient_Form.cs</DependentUpon>
     </EmbeddedResource>

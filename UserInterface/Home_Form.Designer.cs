@@ -169,8 +169,7 @@ namespace UserInterface
             // 
             // Home_Form
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(27)))));
             this.BackgroundImage = global::UserInterface.Properties.Resources.Home_Design1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;

@@ -140,7 +140,7 @@ namespace UserInterface
             this.radioButtonX.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(223)))), ((int)(((byte)(233)))));
             this.radioButtonX.Location = new System.Drawing.Point(3, 3);
             this.radioButtonX.Name = "radioButtonX";
-            this.radioButtonX.Size = new System.Drawing.Size(84, 28);
+            this.radioButtonX.Size = new System.Drawing.Size(103, 33);
             this.radioButtonX.TabIndex = 13;
             this.radioButtonX.TabStop = true;
             this.radioButtonX.Text = "X-Axis";
@@ -154,7 +154,7 @@ namespace UserInterface
             this.radioButtonY.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(223)))), ((int)(((byte)(233)))));
             this.radioButtonY.Location = new System.Drawing.Point(200, 3);
             this.radioButtonY.Name = "radioButtonY";
-            this.radioButtonY.Size = new System.Drawing.Size(82, 28);
+            this.radioButtonY.Size = new System.Drawing.Size(102, 33);
             this.radioButtonY.TabIndex = 14;
             this.radioButtonY.TabStop = true;
             this.radioButtonY.Text = "Y-Axis";
@@ -168,7 +168,7 @@ namespace UserInterface
             this.radioButtonZ.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(223)))), ((int)(((byte)(233)))));
             this.radioButtonZ.Location = new System.Drawing.Point(397, 3);
             this.radioButtonZ.Name = "radioButtonZ";
-            this.radioButtonZ.Size = new System.Drawing.Size(82, 28);
+            this.radioButtonZ.Size = new System.Drawing.Size(100, 33);
             this.radioButtonZ.TabIndex = 15;
             this.radioButtonZ.TabStop = true;
             this.radioButtonZ.Text = "Z-Axis";
@@ -205,6 +205,7 @@ namespace UserInterface
             // 
             // MotionData_Form
             // 
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(45)))), ((int)(((byte)(105)))));
             this.BackgroundImage = global::UserInterface.Properties.Resources.Design_MotionData;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;

@@ -95,8 +95,7 @@
             // 
             // SendMail_Form
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(45)))), ((int)(((byte)(105)))));
             this.BackgroundImage = global::UserInterface.Properties.Resources.Design_EMail;
             this.ClientSize = new System.Drawing.Size(811, 754);
