@@ -62,7 +62,6 @@ namespace UserInterface
             chartArea3.Name = "ChartArea1";
             this.chartHeight.ChartAreas.Add(chartArea3);
             legend3.Name = "Legend1";
-            this.chartHeight.Legends.Add(legend3);
             this.chartHeight.Location = new System.Drawing.Point(628, 102);
             this.chartHeight.Name = "chartHeight";
             series7.ChartArea = "ChartArea1";
@@ -91,7 +90,6 @@ namespace UserInterface
             chartArea4.Name = "ChartArea1";
             this.chartDistance.ChartAreas.Add(chartArea4);
             legend4.Name = "Legend1";
-            this.chartDistance.Legends.Add(legend4);
             this.chartDistance.Location = new System.Drawing.Point(12, 102);
             this.chartDistance.Name = "chartDistance";
             series10.ChartArea = "ChartArea1";

@@ -1,4 +1,7 @@
-﻿namespace UserInterface
+﻿using System.Drawing;
+using System.Windows.Forms.DataVisualization.Charting;
+
+namespace UserInterface
 {
    partial class RealTimeMonitoring_Form
    {
@@ -28,159 +31,166 @@
       /// </summary>
       private void InitializeComponent()
       {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            this.chartHeartbeat = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.lblBPM = new System.Windows.Forms.Label();
-            this.lblHumidity = new System.Windows.Forms.Label();
-            this.lblEnvTemp = new System.Windows.Forms.Label();
-            this.lblBodyTemp = new System.Windows.Forms.Label();
-            this.lblBrightness = new System.Windows.Forms.Label();
-            this.pctboxBrooch = new System.Windows.Forms.PictureBox();
-            this.btnExit = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.chartHeartbeat)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pctboxBrooch)).BeginInit();
-            this.SuspendLayout();
-            // 
-            // chartHeartbeat
-            // 
-            this.chartHeartbeat.BackColor = System.Drawing.Color.SteelBlue;
-            chartArea1.AxisY.Maximum = 800D;
-            chartArea1.AxisY.Minimum = 600D;
-            chartArea1.Name = "ChartArea1";
-            this.chartHeartbeat.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chartHeartbeat.Legends.Add(legend1);
-            this.chartHeartbeat.Location = new System.Drawing.Point(13, 95);
-            this.chartHeartbeat.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.chartHeartbeat.Name = "chartHeartbeat";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chartHeartbeat.Series.Add(series1);
-            this.chartHeartbeat.Size = new System.Drawing.Size(1235, 326);
-            this.chartHeartbeat.TabIndex = 11;
-            this.chartHeartbeat.Text = "chartHeartRate";
-            // 
-            // lblBPM
-            // 
-            this.lblBPM.AutoSize = true;
-            this.lblBPM.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(27)))));
-            this.lblBPM.Font = new System.Drawing.Font("Red Hat Display", 31.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBPM.Location = new System.Drawing.Point(1059, 569);
-            this.lblBPM.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblBPM.Name = "lblBPM";
-            this.lblBPM.Size = new System.Drawing.Size(119, 70);
-            this.lblBPM.TabIndex = 12;
-            this.lblBPM.Text = "322";
-            // 
-            // lblHumidity
-            // 
-            this.lblHumidity.AutoSize = true;
-            this.lblHumidity.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(27)))));
-            this.lblHumidity.Font = new System.Drawing.Font("Red Hat Display", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHumidity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(223)))), ((int)(((byte)(233)))));
-            this.lblHumidity.Location = new System.Drawing.Point(140, 665);
-            this.lblHumidity.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblHumidity.Name = "lblHumidity";
-            this.lblHumidity.Size = new System.Drawing.Size(65, 40);
-            this.lblHumidity.TabIndex = 15;
-            this.lblHumidity.Text = "322";
-            // 
-            // lblEnvTemp
-            // 
-            this.lblEnvTemp.AutoSize = true;
-            this.lblEnvTemp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(27)))));
-            this.lblEnvTemp.Font = new System.Drawing.Font("Red Hat Display", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEnvTemp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(223)))), ((int)(((byte)(233)))));
-            this.lblEnvTemp.Location = new System.Drawing.Point(140, 520);
-            this.lblEnvTemp.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblEnvTemp.Name = "lblEnvTemp";
-            this.lblEnvTemp.Size = new System.Drawing.Size(65, 40);
-            this.lblEnvTemp.TabIndex = 14;
-            this.lblEnvTemp.Text = "322";
-            // 
-            // lblBodyTemp
-            // 
-            this.lblBodyTemp.AutoSize = true;
-            this.lblBodyTemp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(27)))));
-            this.lblBodyTemp.Font = new System.Drawing.Font("Red Hat Display", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBodyTemp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(223)))), ((int)(((byte)(233)))));
-            this.lblBodyTemp.Location = new System.Drawing.Point(343, 520);
-            this.lblBodyTemp.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblBodyTemp.Name = "lblBodyTemp";
-            this.lblBodyTemp.Size = new System.Drawing.Size(65, 40);
-            this.lblBodyTemp.TabIndex = 13;
-            this.lblBodyTemp.Text = "322";
-            // 
-            // lblBrightness
-            // 
-            this.lblBrightness.AutoSize = true;
-            this.lblBrightness.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(27)))));
-            this.lblBrightness.Font = new System.Drawing.Font("Red Hat Display", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBrightness.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(223)))), ((int)(((byte)(233)))));
-            this.lblBrightness.Location = new System.Drawing.Point(343, 665);
-            this.lblBrightness.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblBrightness.Name = "lblBrightness";
-            this.lblBrightness.Size = new System.Drawing.Size(65, 40);
-            this.lblBrightness.TabIndex = 16;
-            this.lblBrightness.Text = "322";
-            // 
-            // pctboxBrooch
-            // 
-            this.pctboxBrooch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(27)))));
-            this.pctboxBrooch.Image = global::UserInterface.Properties.Resources.Ok1;
-            this.pctboxBrooch.Location = new System.Drawing.Point(508, 498);
-            this.pctboxBrooch.Name = "pctboxBrooch";
-            this.pctboxBrooch.Size = new System.Drawing.Size(245, 215);
-            this.pctboxBrooch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pctboxBrooch.TabIndex = 17;
-            this.pctboxBrooch.TabStop = false;
-            // 
-            // btnExit
-            // 
-            this.btnExit.BackColor = System.Drawing.Color.Transparent;
-            this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExit.FlatAppearance.BorderSize = 0;
-            this.btnExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.Location = new System.Drawing.Point(1208, 21);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(40, 37);
-            this.btnExit.TabIndex = 18;
-            this.btnExit.TabStop = false;
-            this.btnExit.UseVisualStyleBackColor = false;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
-            // RealTimeMonitoring_Form
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 26F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(45)))), ((int)(((byte)(105)))));
-            this.BackgroundImage = global::UserInterface.Properties.Resources.Design___RealTimeMonitoring;
-            this.ClientSize = new System.Drawing.Size(1272, 830);
-            this.Controls.Add(this.btnExit);
-            this.Controls.Add(this.pctboxBrooch);
-            this.Controls.Add(this.lblEnvTemp);
-            this.Controls.Add(this.lblBodyTemp);
-            this.Controls.Add(this.lblBrightness);
-            this.Controls.Add(this.lblHumidity);
-            this.Controls.Add(this.lblBPM);
-            this.Controls.Add(this.chartHeartbeat);
-            this.Font = new System.Drawing.Font("Red Hat Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(223)))), ((int)(((byte)(233)))));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.Name = "RealTimeMonitoring_Form";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "HeartRate_Form";
-            ((System.ComponentModel.ISupportInitialize)(this.chartHeartbeat)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pctboxBrooch)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
+         System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+         System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+         this.chartHeartbeat = new System.Windows.Forms.DataVisualization.Charting.Chart();
+         this.lblBPM = new System.Windows.Forms.Label();
+         this.lblHumidity = new System.Windows.Forms.Label();
+         this.lblEnvTemp = new System.Windows.Forms.Label();
+         this.lblBodyTemp = new System.Windows.Forms.Label();
+         this.lblBrightness = new System.Windows.Forms.Label();
+         this.pctboxBrooch = new System.Windows.Forms.PictureBox();
+         this.btnExit = new System.Windows.Forms.Button();
+         ((System.ComponentModel.ISupportInitialize)(this.chartHeartbeat)).BeginInit();
+         ((System.ComponentModel.ISupportInitialize)(this.pctboxBrooch)).BeginInit();
+         this.SuspendLayout();
+         // 
+         // chartHeartbeat
+         // 
+         this.chartHeartbeat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(27)))));
+         this.chartHeartbeat.BackImageWrapMode = System.Windows.Forms.DataVisualization.Charting.ChartImageWrapMode.TileFlipX;
+         this.chartHeartbeat.BorderlineColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(45)))), ((int)(((byte)(105)))));
+         this.chartHeartbeat.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
+         this.chartHeartbeat.BorderlineWidth = 2;
+         chartArea1.AxisX.LabelStyle.ForeColor = System.Drawing.Color.White;
+         chartArea1.AxisY.LabelStyle.ForeColor = System.Drawing.Color.White;
+         chartArea1.AxisY.Maximum = 760D;
+         chartArea1.AxisY.Minimum = 680D;
+         chartArea1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(27)))));
+         chartArea1.BorderColor = System.Drawing.Color.Chocolate;
+         chartArea1.BorderWidth = 0;
+         chartArea1.Name = "ChartArea1";
+         this.chartHeartbeat.ChartAreas.Add(chartArea1);
+         this.chartHeartbeat.Location = new System.Drawing.Point(46, 95);
+         this.chartHeartbeat.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+         this.chartHeartbeat.Name = "chartHeartbeat";
+         series1.ChartArea = "ChartArea1";
+         series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+         series1.Color = System.Drawing.Color.White;
+         series1.Legend = "Legend1";
+         series1.Name = "Series1";
+         this.chartHeartbeat.Series.Add(series1);
+         this.chartHeartbeat.Size = new System.Drawing.Size(1173, 326);
+         this.chartHeartbeat.TabIndex = 11;
+         this.chartHeartbeat.Text = "chartHeartRate";
+         // 
+         // lblBPM
+         // 
+         this.lblBPM.AutoSize = true;
+         this.lblBPM.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(27)))));
+         this.lblBPM.Font = new System.Drawing.Font("Microsoft Sans Serif", 31.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.lblBPM.Location = new System.Drawing.Point(1059, 569);
+         this.lblBPM.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+         this.lblBPM.Name = "lblBPM";
+         this.lblBPM.Size = new System.Drawing.Size(140, 73);
+         this.lblBPM.TabIndex = 12;
+         this.lblBPM.Text = "322";
+         // 
+         // lblHumidity
+         // 
+         this.lblHumidity.AutoSize = true;
+         this.lblHumidity.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(27)))));
+         this.lblHumidity.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.lblHumidity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(223)))), ((int)(((byte)(233)))));
+         this.lblHumidity.Location = new System.Drawing.Point(140, 665);
+         this.lblHumidity.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+         this.lblHumidity.Name = "lblHumidity";
+         this.lblHumidity.Size = new System.Drawing.Size(77, 40);
+         this.lblHumidity.TabIndex = 15;
+         this.lblHumidity.Text = "322";
+         // 
+         // lblEnvTemp
+         // 
+         this.lblEnvTemp.AutoSize = true;
+         this.lblEnvTemp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(27)))));
+         this.lblEnvTemp.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.lblEnvTemp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(223)))), ((int)(((byte)(233)))));
+         this.lblEnvTemp.Location = new System.Drawing.Point(140, 520);
+         this.lblEnvTemp.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+         this.lblEnvTemp.Name = "lblEnvTemp";
+         this.lblEnvTemp.Size = new System.Drawing.Size(77, 40);
+         this.lblEnvTemp.TabIndex = 14;
+         this.lblEnvTemp.Text = "322";
+         // 
+         // lblBodyTemp
+         // 
+         this.lblBodyTemp.AutoSize = true;
+         this.lblBodyTemp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(27)))));
+         this.lblBodyTemp.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.lblBodyTemp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(223)))), ((int)(((byte)(233)))));
+         this.lblBodyTemp.Location = new System.Drawing.Point(343, 520);
+         this.lblBodyTemp.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+         this.lblBodyTemp.Name = "lblBodyTemp";
+         this.lblBodyTemp.Size = new System.Drawing.Size(77, 40);
+         this.lblBodyTemp.TabIndex = 13;
+         this.lblBodyTemp.Text = "322";
+         // 
+         // lblBrightness
+         // 
+         this.lblBrightness.AutoSize = true;
+         this.lblBrightness.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(27)))));
+         this.lblBrightness.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.lblBrightness.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(223)))), ((int)(((byte)(233)))));
+         this.lblBrightness.Location = new System.Drawing.Point(343, 665);
+         this.lblBrightness.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+         this.lblBrightness.Name = "lblBrightness";
+         this.lblBrightness.Size = new System.Drawing.Size(77, 40);
+         this.lblBrightness.TabIndex = 16;
+         this.lblBrightness.Text = "322";
+         // 
+         // pctboxBrooch
+         // 
+         this.pctboxBrooch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(27)))));
+         this.pctboxBrooch.Image = global::UserInterface.Properties.Resources.Ok1;
+         this.pctboxBrooch.Location = new System.Drawing.Point(508, 498);
+         this.pctboxBrooch.Name = "pctboxBrooch";
+         this.pctboxBrooch.Size = new System.Drawing.Size(245, 215);
+         this.pctboxBrooch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+         this.pctboxBrooch.TabIndex = 17;
+         this.pctboxBrooch.TabStop = false;
+         // 
+         // btnExit
+         // 
+         this.btnExit.BackColor = System.Drawing.Color.Transparent;
+         this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
+         this.btnExit.FlatAppearance.BorderSize = 0;
+         this.btnExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+         this.btnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+         this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+         this.btnExit.Location = new System.Drawing.Point(1208, 21);
+         this.btnExit.Name = "btnExit";
+         this.btnExit.Size = new System.Drawing.Size(40, 37);
+         this.btnExit.TabIndex = 18;
+         this.btnExit.TabStop = false;
+         this.btnExit.UseVisualStyleBackColor = false;
+         this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+         // 
+         // RealTimeMonitoring_Form
+         // 
+         this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
+         this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+         this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(45)))), ((int)(((byte)(105)))));
+         this.BackgroundImage = global::UserInterface.Properties.Resources.Design___RealTimeMonitoring;
+         this.ClientSize = new System.Drawing.Size(1272, 830);
+         this.Controls.Add(this.btnExit);
+         this.Controls.Add(this.pctboxBrooch);
+         this.Controls.Add(this.lblEnvTemp);
+         this.Controls.Add(this.lblBodyTemp);
+         this.Controls.Add(this.lblBrightness);
+         this.Controls.Add(this.lblHumidity);
+         this.Controls.Add(this.lblBPM);
+         this.Controls.Add(this.chartHeartbeat);
+         this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(223)))), ((int)(((byte)(233)))));
+         this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+         this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+         this.Name = "RealTimeMonitoring_Form";
+         this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+         this.Text = "HeartRate_Form";
+         ((System.ComponentModel.ISupportInitialize)(this.chartHeartbeat)).EndInit();
+         ((System.ComponentModel.ISupportInitialize)(this.pctboxBrooch)).EndInit();
+         this.ResumeLayout(false);
+         this.PerformLayout();
 
       }
 

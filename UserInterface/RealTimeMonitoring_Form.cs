@@ -35,7 +35,7 @@ namespace UserInterface
       {
             _normalRun = normalRun;
 
-         InitializeComponent();
+            InitializeComponent();
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 40, 40));
         }
 
@@ -52,11 +52,11 @@ namespace UserInterface
 
             BeginInvoke((Action)(() => //switch back to main thread
          {
-            lblBPM.Text = "Beats per minute: " + heart.fGetSingleData();
-             lblEnvTemp.Text = "Environment Temperature: " + environmentTemperature.ToString("F1") + " Grad";
-             lblHumidity.Text = "Environment humidity: " + environmentHumidity.ToString("F1") + "% Luftfeuchte";
-             lblBodyTemp.Text = "Body temperature: " + bodyTemperature.ToString("F1") + " Grad";
-             lblBrightness.Text = "Brightness: " + brightnessValue.ToString() + " => " + BrightnessPercentage + "% dunkel";
+            lblBPM.Text = "" + heart.fGetSingleData();
+             lblEnvTemp.Text = environmentTemperature.ToString("F1") + " °C";
+             lblHumidity.Text = environmentHumidity.ToString("F1") + "%";
+             lblBodyTemp.Text = bodyTemperature.ToString("F1") + " °C";
+             lblBrightness.Text = BrightnessPercentage + "%";
              
              fillSeries();
             redrawCharts();
