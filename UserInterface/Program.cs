@@ -21,7 +21,7 @@ namespace UserInterface
     {
         // ---------------------------------- Start CONFIG : Free to use ----------------------------------
 
-        static RunSettings CurRunSettings = RunSettings.RealTimeMonitoring_Only;
+        static RunSettings CurRunSettings = RunSettings.Home_Only;
 
         // ---------------------------------- END CONFIG -----------------------------------------------------
 
