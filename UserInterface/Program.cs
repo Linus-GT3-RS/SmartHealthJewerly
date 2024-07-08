@@ -21,7 +21,7 @@ namespace UserInterface
     {
         // ---------------------------------- Start CONFIG : Free to use ----------------------------------
 
-        static RunSettings CurRunSettings = RunSettings.Normal;
+        static RunSettings CurRunSettings = RunSettings.Home_Only;
 
         // ---------------------------------- END CONFIG -----------------------------------------------------
 
@@ -34,6 +34,7 @@ namespace UserInterface
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            //Application.SetHighDpiMode(HighDpiMode.PerMonitorV2);
 
             Form StartForm = null;
 

@@ -40,6 +40,8 @@ namespace UserInterface
             this.btnViewMotionData = new System.Windows.Forms.Button();
             this.btnOpenUserSettings = new System.Windows.Forms.Button();
             this.lblCurPatientName = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblLoginName
@@ -157,15 +159,25 @@ namespace UserInterface
             // 
             // lblCurPatientName
             // 
-            this.lblCurPatientName.AutoSize = true;
             this.lblCurPatientName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(27)))), ((int)(((byte)(49)))));
             this.lblCurPatientName.Font = new System.Drawing.Font("Red Hat Display SemiBold", 25.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCurPatientName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(223)))), ((int)(((byte)(233)))));
-            this.lblCurPatientName.Location = new System.Drawing.Point(102, 176);
+            this.lblCurPatientName.Location = new System.Drawing.Point(100, 178);
+            this.lblCurPatientName.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
             this.lblCurPatientName.Name = "lblCurPatientName";
-            this.lblCurPatientName.Size = new System.Drawing.Size(397, 56);
+            this.lblCurPatientName.Size = new System.Drawing.Size(798, 57);
             this.lblCurPatientName.TabIndex = 0;
             this.lblCurPatientName.Text = "Name\'s Health Data";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.lblCurPatientName);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1920, 1080);
+            this.panel1.TabIndex = 2;
             // 
             // Home_Form
             // 
@@ -180,14 +192,15 @@ namespace UserInterface
             this.Controls.Add(this.btnMssgAllContacts);
             this.Controls.Add(this.btnRealTimeMonitoring);
             this.Controls.Add(this.btnClose);
-            this.Controls.Add(this.lblCurPatientName);
             this.Controls.Add(this.lblLoginName);
+            this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Home_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home - Smart Health Desktop";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -203,5 +216,6 @@ namespace UserInterface
         private Label lblCurPatientName;
         public Button btnViewMotionData;
         public Button btnRealTimeMonitoring;
+        private Panel panel1;
     }
 }
