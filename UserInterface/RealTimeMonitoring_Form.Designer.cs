@@ -31,8 +31,8 @@ namespace UserInterface
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.chartHeartbeat = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.lblBPM = new System.Windows.Forms.Label();
             this.lblHumidity = new System.Windows.Forms.Label();
@@ -41,6 +41,7 @@ namespace UserInterface
             this.lblBrightness = new System.Windows.Forms.Label();
             this.pctboxBrooch = new System.Windows.Forms.PictureBox();
             this.btnExit = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.chartHeartbeat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctboxBrooch)).BeginInit();
             this.SuspendLayout();
@@ -52,31 +53,27 @@ namespace UserInterface
             this.chartHeartbeat.BorderlineColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(45)))), ((int)(((byte)(105)))));
             this.chartHeartbeat.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
             this.chartHeartbeat.BorderlineWidth = 2;
-            chartArea1.AxisX.LabelStyle.ForeColor = System.Drawing.Color.White;
-            chartArea1.AxisY.LabelStyle.ForeColor = System.Drawing.Color.White;
-
-            // Set x and y axis colors to white
-            chartArea1.AxisX.LineColor = System.Drawing.Color.White;
-            chartArea1.AxisY.LineColor = System.Drawing.Color.White;
-            chartArea1.AxisX.MajorGrid.Enabled = false;
-            chartArea1.AxisY.MajorGrid.Enabled = false;
-            chartArea1.AxisX.MinorGrid.Enabled = false;
-            chartArea1.AxisY.MinorGrid.Enabled = false;
-            chartArea1.AxisY.Maximum = 760D;
-            chartArea1.AxisY.Minimum = 680D;
-            chartArea1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(27)))));
-            chartArea1.BorderWidth = 0;
-            chartArea1.Name = "ChartArea1";
-            this.chartHeartbeat.ChartAreas.Add(chartArea1);
+            chartArea2.AxisX.LabelStyle.ForeColor = System.Drawing.Color.White;
+            chartArea2.AxisX.LineColor = System.Drawing.Color.White;
+            chartArea2.AxisX.MajorGrid.Enabled = false;
+            chartArea2.AxisY.LabelStyle.ForeColor = System.Drawing.Color.White;
+            chartArea2.AxisY.LineColor = System.Drawing.Color.White;
+            chartArea2.AxisY.MajorGrid.Enabled = false;
+            chartArea2.AxisY.Maximum = 760D;
+            chartArea2.AxisY.Minimum = 680D;
+            chartArea2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(27)))));
+            chartArea2.BorderWidth = 0;
+            chartArea2.Name = "ChartArea1";
+            this.chartHeartbeat.ChartAreas.Add(chartArea2);
             this.chartHeartbeat.Location = new System.Drawing.Point(46, 95);
             this.chartHeartbeat.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.chartHeartbeat.Name = "chartHeartbeat";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series1.Color = System.Drawing.Color.White;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chartHeartbeat.Series.Add(series1);
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series2.Color = System.Drawing.Color.White;
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chartHeartbeat.Series.Add(series2);
             this.chartHeartbeat.Size = new System.Drawing.Size(1173, 326);
             this.chartHeartbeat.TabIndex = 11;
             this.chartHeartbeat.Text = "chartHeartRate";
@@ -89,7 +86,7 @@ namespace UserInterface
             this.lblBPM.Location = new System.Drawing.Point(1059, 569);
             this.lblBPM.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblBPM.Name = "lblBPM";
-            this.lblBPM.Size = new System.Drawing.Size(140, 73);
+            this.lblBPM.Size = new System.Drawing.Size(114, 61);
             this.lblBPM.TabIndex = 12;
             this.lblBPM.Text = "322";
             // 
@@ -102,7 +99,7 @@ namespace UserInterface
             this.lblHumidity.Location = new System.Drawing.Point(140, 665);
             this.lblHumidity.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblHumidity.Name = "lblHumidity";
-            this.lblHumidity.Size = new System.Drawing.Size(77, 40);
+            this.lblHumidity.Size = new System.Drawing.Size(66, 36);
             this.lblHumidity.TabIndex = 15;
             this.lblHumidity.Text = "322";
             // 
@@ -115,7 +112,7 @@ namespace UserInterface
             this.lblEnvTemp.Location = new System.Drawing.Point(140, 520);
             this.lblEnvTemp.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEnvTemp.Name = "lblEnvTemp";
-            this.lblEnvTemp.Size = new System.Drawing.Size(77, 40);
+            this.lblEnvTemp.Size = new System.Drawing.Size(66, 36);
             this.lblEnvTemp.TabIndex = 14;
             this.lblEnvTemp.Text = "322";
             // 
@@ -128,7 +125,7 @@ namespace UserInterface
             this.lblBodyTemp.Location = new System.Drawing.Point(343, 520);
             this.lblBodyTemp.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblBodyTemp.Name = "lblBodyTemp";
-            this.lblBodyTemp.Size = new System.Drawing.Size(77, 40);
+            this.lblBodyTemp.Size = new System.Drawing.Size(66, 36);
             this.lblBodyTemp.TabIndex = 13;
             this.lblBodyTemp.Text = "322";
             // 
@@ -141,7 +138,7 @@ namespace UserInterface
             this.lblBrightness.Location = new System.Drawing.Point(343, 665);
             this.lblBrightness.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblBrightness.Name = "lblBrightness";
-            this.lblBrightness.Size = new System.Drawing.Size(77, 40);
+            this.lblBrightness.Size = new System.Drawing.Size(66, 36);
             this.lblBrightness.TabIndex = 16;
             this.lblBrightness.Text = "322";
             // 
@@ -172,9 +169,17 @@ namespace UserInterface
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(27)))));
+            this.panel1.Location = new System.Drawing.Point(330, 498);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(108, 71);
+            this.panel1.TabIndex = 19;
+            // 
             // RealTimeMonitoring_Form
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(45)))), ((int)(((byte)(105)))));
             this.BackgroundImage = global::UserInterface.Properties.Resources.Design___RealTimeMonitoring;
@@ -187,6 +192,7 @@ namespace UserInterface
             this.Controls.Add(this.lblHumidity);
             this.Controls.Add(this.lblBPM);
             this.Controls.Add(this.chartHeartbeat);
+            this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(223)))), ((int)(((byte)(233)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -210,5 +216,6 @@ namespace UserInterface
         private System.Windows.Forms.Label lblBrightness;
         private System.Windows.Forms.PictureBox pctboxBrooch;
         public System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Panel panel1;
     }
 }
