@@ -72,7 +72,7 @@ namespace UserInterface
             this.circProgressBar.SuperscriptMargin = new System.Windows.Forms.Padding(10, 35, 0, 0);
             this.circProgressBar.SuperscriptText = "";
             this.circProgressBar.TabIndex = 0;
-            this.circProgressBar.Text = "dwad";
+            this.circProgressBar.Text = "77 %";
             this.circProgressBar.TextMargin = new System.Windows.Forms.Padding(2, 4, 0, 0);
             this.circProgressBar.Value = 68;
             // 
@@ -134,7 +134,7 @@ namespace UserInterface
             this.Opacity = 0.88D;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Loading - Smart Health Desktop";
             this.Load += new System.EventHandler(this.SplashScreen_Form_Load);
             this.ResumeLayout(false);
 

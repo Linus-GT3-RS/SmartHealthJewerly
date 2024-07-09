@@ -31,8 +31,8 @@ namespace UserInterface
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.chartHeartbeat = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.lblBPM = new System.Windows.Forms.Label();
             this.lblHumidity = new System.Windows.Forms.Label();
@@ -52,28 +52,28 @@ namespace UserInterface
             this.chartHeartbeat.BorderlineColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(45)))), ((int)(((byte)(105)))));
             this.chartHeartbeat.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
             this.chartHeartbeat.BorderlineWidth = 2;
-            chartArea1.AxisX.LabelStyle.ForeColor = System.Drawing.Color.White;
-            chartArea1.AxisX.LineColor = System.Drawing.Color.White;
-            chartArea1.AxisX.MajorGrid.Enabled = false;
-            chartArea1.AxisY.LabelStyle.ForeColor = System.Drawing.Color.White;
-            chartArea1.AxisY.LineColor = System.Drawing.Color.White;
-            chartArea1.AxisY.MajorGrid.Enabled = false;
-            chartArea1.AxisY.Maximum = 760D;
-            chartArea1.AxisY.Minimum = 680D;
-            chartArea1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(27)))));
-            chartArea1.BorderWidth = 0;
-            chartArea1.Name = "ChartArea1";
-            this.chartHeartbeat.ChartAreas.Add(chartArea1);
+            chartArea2.AxisX.LabelStyle.ForeColor = System.Drawing.Color.White;
+            chartArea2.AxisX.LineColor = System.Drawing.Color.White;
+            chartArea2.AxisX.MajorGrid.Enabled = false;
+            chartArea2.AxisY.LabelStyle.ForeColor = System.Drawing.Color.White;
+            chartArea2.AxisY.LineColor = System.Drawing.Color.White;
+            chartArea2.AxisY.MajorGrid.Enabled = false;
+            chartArea2.AxisY.Maximum = 760D;
+            chartArea2.AxisY.Minimum = 680D;
+            chartArea2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(27)))));
+            chartArea2.BorderWidth = 0;
+            chartArea2.Name = "ChartArea1";
+            this.chartHeartbeat.ChartAreas.Add(chartArea2);
             this.chartHeartbeat.Location = new System.Drawing.Point(46, 95);
             this.chartHeartbeat.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.chartHeartbeat.Name = "chartHeartbeat";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series1.Color = System.Drawing.Color.White;
-            series1.Font = new System.Drawing.Font("Red Hat Display", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chartHeartbeat.Series.Add(series1);
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series2.Color = System.Drawing.Color.White;
+            series2.Font = new System.Drawing.Font("Red Hat Display", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chartHeartbeat.Series.Add(series2);
             this.chartHeartbeat.Size = new System.Drawing.Size(1173, 326);
             this.chartHeartbeat.TabIndex = 11;
             this.chartHeartbeat.Text = "chartHeartRate";
@@ -184,7 +184,7 @@ namespace UserInterface
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "RealTimeMonitoring_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "HeartRate_Form";
+            this.Text = "Real-Time Monitoring - Smart Health Desktop";
             ((System.ComponentModel.ISupportInitialize)(this.chartHeartbeat)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctboxBrooch)).EndInit();
             this.ResumeLayout(false);

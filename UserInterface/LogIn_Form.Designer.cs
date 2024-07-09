@@ -212,7 +212,7 @@ namespace UserInterface
             this.MinimumSize = new System.Drawing.Size(528, 663);
             this.Name = "LogIn_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "LogInScreen_Form";
+            this.Text = "Login - Smart Health Desktop";
             ((System.ComponentModel.ISupportInitialize)(this.pictboxBackground)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

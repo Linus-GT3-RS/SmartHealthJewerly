@@ -129,7 +129,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SelectDiffPatient_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "SelectDiffPatient_Form";
+            this.Text = "Patient Select - Smart Health Desktop";
             this.ResumeLayout(false);
 
         }

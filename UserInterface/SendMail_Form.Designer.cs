@@ -107,7 +107,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SendMail_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "SendMail_Form";
+            this.Text = "Contact All - Smart Health Desktop";
             this.ResumeLayout(false);
             this.PerformLayout();
 
