@@ -41,7 +41,6 @@ namespace UserInterface
             this.lblBrightness = new System.Windows.Forms.Label();
             this.pctboxBrooch = new System.Windows.Forms.PictureBox();
             this.btnExit = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.chartHeartbeat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctboxBrooch)).BeginInit();
             this.SuspendLayout();
@@ -71,6 +70,7 @@ namespace UserInterface
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             series1.Color = System.Drawing.Color.White;
+            series1.Font = new System.Drawing.Font("Red Hat Display", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             this.chartHeartbeat.Series.Add(series1);
@@ -80,65 +80,60 @@ namespace UserInterface
             // 
             // lblBPM
             // 
-            this.lblBPM.AutoSize = true;
             this.lblBPM.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(27)))));
-            this.lblBPM.Font = new System.Drawing.Font("Microsoft Sans Serif", 31.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBPM.Font = new System.Drawing.Font("Red Hat Display", 31.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBPM.Location = new System.Drawing.Point(1059, 569);
             this.lblBPM.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblBPM.Name = "lblBPM";
-            this.lblBPM.Size = new System.Drawing.Size(114, 61);
+            this.lblBPM.Size = new System.Drawing.Size(150, 94);
             this.lblBPM.TabIndex = 12;
             this.lblBPM.Text = "322";
             // 
             // lblHumidity
             // 
-            this.lblHumidity.AutoSize = true;
             this.lblHumidity.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(27)))));
-            this.lblHumidity.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHumidity.Font = new System.Drawing.Font("Red Hat Display", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHumidity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(223)))), ((int)(((byte)(233)))));
             this.lblHumidity.Location = new System.Drawing.Point(140, 665);
             this.lblHumidity.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblHumidity.Name = "lblHumidity";
-            this.lblHumidity.Size = new System.Drawing.Size(66, 36);
+            this.lblHumidity.Size = new System.Drawing.Size(100, 55);
             this.lblHumidity.TabIndex = 15;
             this.lblHumidity.Text = "322";
             // 
             // lblEnvTemp
             // 
-            this.lblEnvTemp.AutoSize = true;
             this.lblEnvTemp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(27)))));
-            this.lblEnvTemp.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEnvTemp.Font = new System.Drawing.Font("Red Hat Display", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEnvTemp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(223)))), ((int)(((byte)(233)))));
             this.lblEnvTemp.Location = new System.Drawing.Point(140, 520);
             this.lblEnvTemp.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEnvTemp.Name = "lblEnvTemp";
-            this.lblEnvTemp.Size = new System.Drawing.Size(66, 36);
+            this.lblEnvTemp.Size = new System.Drawing.Size(100, 56);
             this.lblEnvTemp.TabIndex = 14;
             this.lblEnvTemp.Text = "322";
             // 
             // lblBodyTemp
             // 
-            this.lblBodyTemp.AutoSize = true;
             this.lblBodyTemp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(27)))));
-            this.lblBodyTemp.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBodyTemp.Font = new System.Drawing.Font("Red Hat Display", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBodyTemp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(223)))), ((int)(((byte)(233)))));
             this.lblBodyTemp.Location = new System.Drawing.Point(343, 520);
             this.lblBodyTemp.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblBodyTemp.Name = "lblBodyTemp";
-            this.lblBodyTemp.Size = new System.Drawing.Size(66, 36);
+            this.lblBodyTemp.Size = new System.Drawing.Size(85, 50);
             this.lblBodyTemp.TabIndex = 13;
             this.lblBodyTemp.Text = "322";
             // 
             // lblBrightness
             // 
-            this.lblBrightness.AutoSize = true;
             this.lblBrightness.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(27)))));
-            this.lblBrightness.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBrightness.Font = new System.Drawing.Font("Red Hat Display", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBrightness.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(223)))), ((int)(((byte)(233)))));
             this.lblBrightness.Location = new System.Drawing.Point(343, 665);
             this.lblBrightness.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblBrightness.Name = "lblBrightness";
-            this.lblBrightness.Size = new System.Drawing.Size(66, 36);
+            this.lblBrightness.Size = new System.Drawing.Size(85, 55);
             this.lblBrightness.TabIndex = 16;
             this.lblBrightness.Text = "322";
             // 
@@ -169,14 +164,6 @@ namespace UserInterface
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(27)))));
-            this.panel1.Location = new System.Drawing.Point(330, 498);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(108, 71);
-            this.panel1.TabIndex = 19;
-            // 
             // RealTimeMonitoring_Form
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -191,8 +178,7 @@ namespace UserInterface
             this.Controls.Add(this.lblHumidity);
             this.Controls.Add(this.lblBPM);
             this.Controls.Add(this.chartHeartbeat);
-            this.Controls.Add(this.panel1);
-            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Red Hat Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(223)))), ((int)(((byte)(233)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -202,7 +188,6 @@ namespace UserInterface
             ((System.ComponentModel.ISupportInitialize)(this.chartHeartbeat)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctboxBrooch)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -215,6 +200,5 @@ namespace UserInterface
         private System.Windows.Forms.Label lblBrightness;
         private System.Windows.Forms.PictureBox pctboxBrooch;
         public System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.Panel panel1;
     }
 }

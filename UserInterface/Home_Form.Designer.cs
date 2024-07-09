@@ -40,18 +40,15 @@ namespace UserInterface
             this.btnViewMotionData = new System.Windows.Forms.Button();
             this.btnOpenUserSettings = new System.Windows.Forms.Button();
             this.lblCurPatientName = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblLoginName
             // 
-            this.lblLoginName.AutoSize = true;
             this.lblLoginName.Font = new System.Drawing.Font("Red Hat Display", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLoginName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(69)))), ((int)(((byte)(78)))));
             this.lblLoginName.Location = new System.Drawing.Point(831, 21);
             this.lblLoginName.Name = "lblLoginName";
-            this.lblLoginName.Size = new System.Drawing.Size(267, 29);
+            this.lblLoginName.Size = new System.Drawing.Size(438, 29);
             this.lblLoginName.TabIndex = 0;
             this.lblLoginName.Text = "You are logged in as Name";
             // 
@@ -162,22 +159,11 @@ namespace UserInterface
             this.lblCurPatientName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(27)))), ((int)(((byte)(49)))));
             this.lblCurPatientName.Font = new System.Drawing.Font("Red Hat Display SemiBold", 25.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCurPatientName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(223)))), ((int)(((byte)(233)))));
-            this.lblCurPatientName.Location = new System.Drawing.Point(100, 178);
-            this.lblCurPatientName.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.lblCurPatientName.Location = new System.Drawing.Point(102, 177);
             this.lblCurPatientName.Name = "lblCurPatientName";
-            this.lblCurPatientName.Size = new System.Drawing.Size(798, 57);
+            this.lblCurPatientName.Size = new System.Drawing.Size(666, 51);
             this.lblCurPatientName.TabIndex = 0;
             this.lblCurPatientName.Text = "Name\'s Health Data";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.Controls.Add(this.lblCurPatientName);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1920, 1080);
-            this.panel1.TabIndex = 2;
             // 
             // Home_Form
             // 
@@ -185,7 +171,7 @@ namespace UserInterface
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(27)))));
             this.BackgroundImage = global::UserInterface.Properties.Resources.Home_Design1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.ClientSize = new System.Drawing.Size(1622, 922);
             this.Controls.Add(this.btnOpenUserSettings);
             this.Controls.Add(this.btnViewMotionData);
             this.Controls.Add(this.btnSelectDiffPatient);
@@ -193,16 +179,15 @@ namespace UserInterface
             this.Controls.Add(this.btnRealTimeMonitoring);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.lblLoginName);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.lblCurPatientName);
             this.DoubleBuffered = true;
+            this.Font = new System.Drawing.Font("Red Hat Display", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Home_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home - Smart Health Desktop";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -216,6 +201,5 @@ namespace UserInterface
         private Label lblCurPatientName;
         public Button btnViewMotionData;
         public Button btnRealTimeMonitoring;
-        private Panel panel1;
     }
 }

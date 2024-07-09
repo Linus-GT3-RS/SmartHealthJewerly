@@ -39,6 +39,11 @@ namespace UserInterface
             InitializeComponent();
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 15, 15));
             circProgressBar.Value = 0;
+
+            DynamicScreenSize.AdjustFont(lblLoading);
+            DynamicScreenSize.AdjustFont(lblTitelTop);
+            DynamicScreenSize.AdjustFont(lblTitleBottom);
+            DynamicScreenSize.AdjustFont(circProgressBar);
         }
 
         private void SplashScreen_Form_Load(object sender, EventArgs e)

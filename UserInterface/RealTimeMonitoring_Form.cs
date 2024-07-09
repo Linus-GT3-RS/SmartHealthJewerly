@@ -37,6 +37,13 @@ namespace UserInterface
 
             InitializeComponent();
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 40, 40));
+
+            DynamicScreenSize.AdjustFont(lblBodyTemp);
+            DynamicScreenSize.AdjustFont(lblBPM);
+            DynamicScreenSize.AdjustFont(lblBrightness);
+            DynamicScreenSize.AdjustFont(lblEnvTemp);
+            DynamicScreenSize.AdjustFont(lblHumidity);
+
         }
 
       public void vPrintMeasurements()

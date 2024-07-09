@@ -36,6 +36,11 @@ namespace UserInterface
             txtboxMessage.Enter += OntxtboxMessage_Enter;
             txtboxMessage.Leave += OntxtboxMessage_Leave;
 
+            DynamicScreenSize.AdjustFont(txtboxMessage);
+            DynamicScreenSize.AdjustFont(txtboxSubject);
+            DynamicScreenSize.AdjustFont(btnSend);
+            DynamicScreenSize.AdjustFont(btnCancel);
+
         }
 
         private void OntxtboxMessage_Leave(object sender, EventArgs e)

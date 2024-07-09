@@ -32,106 +32,106 @@ namespace UserInterface
         /// </summary>
         private void InitializeComponent()
         {
-            this.usernameTextBox = new System.Windows.Forms.TextBox();
-            this.PasswordTextBox = new System.Windows.Forms.TextBox();
-            this.labelSignInText = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.labelSignIn = new System.Windows.Forms.Label();
+            this.txtboxUsername = new System.Windows.Forms.TextBox();
+            this.txtboxPassword = new System.Windows.Forms.TextBox();
+            this.lblDontHaveAccount = new System.Windows.Forms.Label();
+            this.checkboxRememberMe = new System.Windows.Forms.CheckBox();
+            this.lblForgotPW = new System.Windows.Forms.Label();
+            this.lblRegister = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
             this.pictboxBackground = new System.Windows.Forms.PictureBox();
             this.btnExit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictboxBackground)).BeginInit();
             this.SuspendLayout();
             // 
-            // usernameTextBox
+            // txtboxUsername
             // 
-            this.usernameTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(27)))));
-            this.usernameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.usernameTextBox.Font = new System.Drawing.Font("Red Hat Display", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usernameTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(223)))), ((int)(((byte)(233)))));
-            this.usernameTextBox.Location = new System.Drawing.Point(94, 269);
-            this.usernameTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.usernameTextBox.Name = "usernameTextBox";
-            this.usernameTextBox.Size = new System.Drawing.Size(295, 31);
-            this.usernameTextBox.TabIndex = 0;
-            this.usernameTextBox.TabStop = false;
-            this.usernameTextBox.Text = "Username";
-            this.usernameTextBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.emailTextBox_MouseClick);
-            this.usernameTextBox.TextChanged += new System.EventHandler(this.emailTextBox_TextChanged);
-            this.usernameTextBox.Leave += new System.EventHandler(this.emailTextBox_Leave);
+            this.txtboxUsername.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(27)))));
+            this.txtboxUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtboxUsername.Font = new System.Drawing.Font("Red Hat Display", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtboxUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(223)))), ((int)(((byte)(233)))));
+            this.txtboxUsername.Location = new System.Drawing.Point(94, 269);
+            this.txtboxUsername.Margin = new System.Windows.Forms.Padding(4);
+            this.txtboxUsername.Name = "txtboxUsername";
+            this.txtboxUsername.Size = new System.Drawing.Size(295, 31);
+            this.txtboxUsername.TabIndex = 0;
+            this.txtboxUsername.TabStop = false;
+            this.txtboxUsername.Text = "Username";
+            this.txtboxUsername.MouseClick += new System.Windows.Forms.MouseEventHandler(this.emailTextBox_MouseClick);
+            this.txtboxUsername.TextChanged += new System.EventHandler(this.emailTextBox_TextChanged);
+            this.txtboxUsername.Leave += new System.EventHandler(this.emailTextBox_Leave);
             // 
-            // PasswordTextBox
+            // txtboxPassword
             // 
-            this.PasswordTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(27)))));
-            this.PasswordTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.PasswordTextBox.Font = new System.Drawing.Font("Red Hat Display", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PasswordTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(223)))), ((int)(((byte)(233)))));
-            this.PasswordTextBox.Location = new System.Drawing.Point(94, 361);
-            this.PasswordTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.PasswordTextBox.Name = "PasswordTextBox";
-            this.PasswordTextBox.Size = new System.Drawing.Size(295, 31);
-            this.PasswordTextBox.TabIndex = 1;
-            this.PasswordTextBox.TabStop = false;
-            this.PasswordTextBox.Text = "Password";
-            this.PasswordTextBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PasswordTextBox_MouseClick);
-            this.PasswordTextBox.Leave += new System.EventHandler(this.PasswordTextBox_Leave);
+            this.txtboxPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(27)))));
+            this.txtboxPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtboxPassword.Font = new System.Drawing.Font("Red Hat Display", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtboxPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(223)))), ((int)(((byte)(233)))));
+            this.txtboxPassword.Location = new System.Drawing.Point(94, 361);
+            this.txtboxPassword.Margin = new System.Windows.Forms.Padding(4);
+            this.txtboxPassword.Name = "txtboxPassword";
+            this.txtboxPassword.Size = new System.Drawing.Size(295, 31);
+            this.txtboxPassword.TabIndex = 1;
+            this.txtboxPassword.TabStop = false;
+            this.txtboxPassword.Text = "Password";
+            this.txtboxPassword.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PasswordTextBox_MouseClick);
+            this.txtboxPassword.Leave += new System.EventHandler(this.PasswordTextBox_Leave);
             // 
-            // labelSignInText
+            // lblDontHaveAccount
             // 
-            this.labelSignInText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(27)))));
-            this.labelSignInText.Font = new System.Drawing.Font("Red Hat Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSignInText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(223)))), ((int)(((byte)(233)))));
-            this.labelSignInText.Location = new System.Drawing.Point(100, 573);
-            this.labelSignInText.Margin = new System.Windows.Forms.Padding(0);
-            this.labelSignInText.Name = "labelSignInText";
-            this.labelSignInText.Size = new System.Drawing.Size(220, 61);
-            this.labelSignInText.TabIndex = 5;
-            this.labelSignInText.Text = "Don\'t have an account?";
-            this.labelSignInText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblDontHaveAccount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(27)))));
+            this.lblDontHaveAccount.Font = new System.Drawing.Font("Red Hat Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDontHaveAccount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(223)))), ((int)(((byte)(233)))));
+            this.lblDontHaveAccount.ImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.lblDontHaveAccount.Location = new System.Drawing.Point(55, 590);
+            this.lblDontHaveAccount.Margin = new System.Windows.Forms.Padding(0);
+            this.lblDontHaveAccount.Name = "lblDontHaveAccount";
+            this.lblDontHaveAccount.Size = new System.Drawing.Size(260, 50);
+            this.lblDontHaveAccount.TabIndex = 5;
+            this.lblDontHaveAccount.Text = "Don\'t have an account?";
+            this.lblDontHaveAccount.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // checkBox1
+            // checkboxRememberMe
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(27)))));
-            this.checkBox1.Font = new System.Drawing.Font("Red Hat Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(223)))), ((int)(((byte)(233)))));
-            this.checkBox1.Location = new System.Drawing.Point(65, 425);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(164, 30);
-            this.checkBox1.TabIndex = 6;
-            this.checkBox1.TabStop = false;
-            this.checkBox1.Text = "Remember me";
-            this.checkBox1.UseVisualStyleBackColor = false;
+            this.checkboxRememberMe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(27)))));
+            this.checkboxRememberMe.Font = new System.Drawing.Font("Red Hat Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkboxRememberMe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(223)))), ((int)(((byte)(233)))));
+            this.checkboxRememberMe.Location = new System.Drawing.Point(72, 425);
+            this.checkboxRememberMe.Margin = new System.Windows.Forms.Padding(2);
+            this.checkboxRememberMe.Name = "checkboxRememberMe";
+            this.checkboxRememberMe.Size = new System.Drawing.Size(178, 30);
+            this.checkboxRememberMe.TabIndex = 6;
+            this.checkboxRememberMe.TabStop = false;
+            this.checkboxRememberMe.Text = "Remember me";
+            this.checkboxRememberMe.UseVisualStyleBackColor = false;
             // 
-            // label2
+            // lblForgotPW
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(27)))));
-            this.label2.Font = new System.Drawing.Font("Red Hat Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(223)))), ((int)(((byte)(233)))));
-            this.label2.Location = new System.Drawing.Point(309, 425);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(168, 26);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Forgot password?";
+            this.lblForgotPW.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(27)))));
+            this.lblForgotPW.Font = new System.Drawing.Font("Red Hat Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblForgotPW.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(223)))), ((int)(((byte)(233)))));
+            this.lblForgotPW.Location = new System.Drawing.Point(254, 425);
+            this.lblForgotPW.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblForgotPW.Name = "lblForgotPW";
+            this.lblForgotPW.Size = new System.Drawing.Size(216, 49);
+            this.lblForgotPW.TabIndex = 7;
+            this.lblForgotPW.Text = "Forgot password?";
+            this.lblForgotPW.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // labelSignIn
+            // lblRegister
             // 
-            this.labelSignIn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(27)))));
-            this.labelSignIn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.labelSignIn.Font = new System.Drawing.Font("Red Hat Display Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSignIn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(223)))), ((int)(((byte)(233)))));
-            this.labelSignIn.Location = new System.Drawing.Point(320, 583);
-            this.labelSignIn.Margin = new System.Windows.Forms.Padding(0);
-            this.labelSignIn.Name = "labelSignIn";
-            this.labelSignIn.Size = new System.Drawing.Size(96, 40);
-            this.labelSignIn.TabIndex = 8;
-            this.labelSignIn.Text = "Register";
-            this.labelSignIn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.labelSignIn.Click += new System.EventHandler(this.labelSignIn_Click);
+            this.lblRegister.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(27)))));
+            this.lblRegister.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblRegister.Font = new System.Drawing.Font("Red Hat Display Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRegister.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(223)))), ((int)(((byte)(233)))));
+            this.lblRegister.Location = new System.Drawing.Point(320, 583);
+            this.lblRegister.Margin = new System.Windows.Forms.Padding(0);
+            this.lblRegister.Name = "lblRegister";
+            this.lblRegister.Size = new System.Drawing.Size(96, 40);
+            this.lblRegister.TabIndex = 8;
+            this.lblRegister.Text = "Register";
+            this.lblRegister.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblRegister.Click += new System.EventHandler(this.labelSignIn_Click);
             // 
             // btnLogin
             // 
@@ -179,13 +179,14 @@ namespace UserInterface
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Font = new System.Drawing.Font("Red Hat Display Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(223)))), ((int)(((byte)(233)))));
-            this.btnExit.Location = new System.Drawing.Point(479, 13);
+            this.btnExit.Location = new System.Drawing.Point(449, 13);
             this.btnExit.Margin = new System.Windows.Forms.Padding(4);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(36, 31);
+            this.btnExit.Size = new System.Drawing.Size(66, 59);
             this.btnExit.TabIndex = 2;
             this.btnExit.TabStop = false;
             this.btnExit.Text = "X";
+            this.btnExit.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
@@ -195,14 +196,14 @@ namespace UserInterface
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(45)))), ((int)(((byte)(105)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(528, 673);
-            this.Controls.Add(this.labelSignInText);
-            this.Controls.Add(this.labelSignIn);
+            this.Controls.Add(this.lblDontHaveAccount);
+            this.Controls.Add(this.lblRegister);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnLogin);
-            this.Controls.Add(this.usernameTextBox);
-            this.Controls.Add(this.PasswordTextBox);
-            this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtboxUsername);
+            this.Controls.Add(this.txtboxPassword);
+            this.Controls.Add(this.checkboxRememberMe);
+            this.Controls.Add(this.lblForgotPW);
             this.Controls.Add(this.pictboxBackground);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -221,12 +222,12 @@ namespace UserInterface
         #endregion
 
         private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.TextBox usernameTextBox;
-        private System.Windows.Forms.TextBox PasswordTextBox;
-        private Label labelSignInText;
-        private CheckBox checkBox1;
-        private Label label2;
-      private Label labelSignIn;
+        private System.Windows.Forms.TextBox txtboxUsername;
+        private System.Windows.Forms.TextBox txtboxPassword;
+        private Label lblDontHaveAccount;
+        private CheckBox checkboxRememberMe;
+        private Label lblForgotPW;
+      private Label lblRegister;
         private PictureBox pictboxBackground;
         private Button btnExit;
     }

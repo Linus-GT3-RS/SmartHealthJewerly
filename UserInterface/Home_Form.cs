@@ -21,23 +21,8 @@ namespace UserInterface
 
             _normalRun = normalRun;
 
-            AdjustFont(lblCurPatientName, lblCurPatientName.Font.Size);
-        }
-
-
-        private void AdjustFont(Control control, float baseFontSize)
-        {
-            using (Graphics g = control.CreateGraphics())
-            {
-                float dpi = g.DpiX;
-                float scaleFactor = dpi / 125.0f; // 96 ist die Standard-DPI in Windows
-                control.Font = new Font(control.Font.FontFamily, baseFontSize / scaleFactor, control.Font.Style);
-            }
-
-            //foreach (Control childControl in control.Controls)
-            //{
-            //    AdjustFont(childControl, baseFontSize);
-            //}
+            DynamicScreenSize.AdjustFont(lblCurPatientName);
+            DynamicScreenSize.AdjustFont(lblLoginName);
         }
 
 
