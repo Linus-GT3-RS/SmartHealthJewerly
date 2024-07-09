@@ -48,7 +48,7 @@ namespace UserInterface
             this.lblLoginName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(69)))), ((int)(((byte)(78)))));
             this.lblLoginName.Location = new System.Drawing.Point(831, 21);
             this.lblLoginName.Name = "lblLoginName";
-            this.lblLoginName.Size = new System.Drawing.Size(438, 29);
+            this.lblLoginName.Size = new System.Drawing.Size(737, 29);
             this.lblLoginName.TabIndex = 0;
             this.lblLoginName.Text = "You are logged in as Name";
             // 

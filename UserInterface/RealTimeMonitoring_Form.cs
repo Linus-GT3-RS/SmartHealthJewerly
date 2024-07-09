@@ -43,8 +43,11 @@ namespace UserInterface
             DynamicScreenSize.AdjustFont(lblBrightness);
             DynamicScreenSize.AdjustFont(lblEnvTemp);
             DynamicScreenSize.AdjustFont(lblHumidity);
-
         }
+
+  
+
+
 
         public void vPrintMeasurements()
         {

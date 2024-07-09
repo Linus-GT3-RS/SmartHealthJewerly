@@ -62,7 +62,7 @@ namespace UserInterface
 
         public void Update_lblLoggingName()
         {
-            lblLoginName.Text = "You are logged in as " + Backend.Instance().GetProfile();
+            lblLoginName.Text = "You are logged in as " + Backend.Instance().GetProfile().sGetLoginname();
         }
 
         public void Update_lblCurPatientName()
