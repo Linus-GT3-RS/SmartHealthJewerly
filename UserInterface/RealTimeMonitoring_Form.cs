@@ -14,8 +14,8 @@ using System.Windows.Forms.DataVisualization.Charting;
 
 namespace UserInterface
 {
-   public partial class RealTimeMonitoring_Form : Form
-   {
+    public partial class RealTimeMonitoring_Form : Form
+    {
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
 
         private static extern IntPtr CreateRoundRectRgn
@@ -31,8 +31,8 @@ namespace UserInterface
         HeartRate heart;
         private bool _normalRun;
 
-      public RealTimeMonitoring_Form(bool normalRun)
-      {
+        public RealTimeMonitoring_Form(bool normalRun)
+        {
             _normalRun = normalRun;
 
             InitializeComponent();
@@ -46,11 +46,11 @@ namespace UserInterface
 
         }
 
-      public void vPrintMeasurements()
-      {
+        public void vPrintMeasurements()
+        {
 
-         //nicht in invoke ausführen, da der GUI Thread das berechnen sonst übernimmt
-         heart = (HeartRate)GlobalMeasurement.measurement._sensorsSingle[0];
+            //nicht in invoke ausführen, da der GUI Thread das berechnen sonst übernimmt
+            heart = (HeartRate)GlobalMeasurement.measurement._sensorsSingle[0];
             float brightnessValue = GlobalMeasurement.measurement._sensorsSingle[4].fGetSingleData();
             float BrightnessPercentage = (float)Math.Round(BackendCS.Converter.BrightnessConverter.convert(brightnessValue) * 100, 1);
             float environmentTemperature = GlobalMeasurement.measurement._sensorsSingle[1].fGetSingleData();
@@ -58,37 +58,37 @@ namespace UserInterface
             float bodyTemperature = GlobalMeasurement.measurement._sensorsSingle[3].fGetSingleData();
 
             BeginInvoke((Action)(() => //switch back to main thread
-         {
-            lblBPM.Text = "" + heart.fGetSingleData();
-             lblEnvTemp.Text = environmentTemperature.ToString("F1") + " °C";
-             lblHumidity.Text = environmentHumidity.ToString("F1") + "%";
-             lblBodyTemp.Text = bodyTemperature.ToString("F1") + " °C";
-             lblBrightness.Text = BrightnessPercentage + "%";
-             
-             fillSeries();
-            redrawCharts();
-         }));
-      }
+            {
+                lblBPM.Text = "" + heart.fGetSingleData();
+                lblEnvTemp.Text = environmentTemperature.ToString("F1") + " °C";
+                lblHumidity.Text = environmentHumidity.ToString("F1") + "%";
+                lblBodyTemp.Text = bodyTemperature.ToString("F1") + " °C";
+                lblBrightness.Text = BrightnessPercentage + "%";
 
-      private void fillSeries()
-      {
-         Series heartBeat = chartHeartbeat.Series["Series1"];
-         if (heartBeat.Points.Count > 500)
-         {
-            heartBeat.Points.RemoveAt(0); // Keep the number of points reasonable
-         }
+                fillSeries();
+                redrawCharts();
+            }));
+        }
 
-         heartBeat.Points.AddY(heart.iGetHeartRate());
-      }
+        private void fillSeries()
+        {
+            Series heartBeat = chartHeartbeat.Series["Series1"];
+            if (heartBeat.Points.Count > 500)
+            {
+                heartBeat.Points.RemoveAt(0); // Keep the number of points reasonable
+            }
 
-      private void redrawCharts()
-      {
-         chartHeartbeat.Invalidate();
-      }
+            heartBeat.Points.AddY(heart.iGetHeartRate());
+        }
+
+        private void redrawCharts()
+        {
+            chartHeartbeat.Invalidate();
+        }
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            if(_normalRun)
+            if (_normalRun)
             {
                 this.Hide();
             }

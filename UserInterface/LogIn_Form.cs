@@ -123,7 +123,7 @@ namespace UserInterface
             }
             else     //email wird schon genutzt
             {                
-                txtboxPassword.ForeColor = DesignColors.Error;
+                txtboxUsername.ForeColor = DesignColors.Error;
                 txtboxUsername.Text = "Username already used";
             }
          }
