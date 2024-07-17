@@ -1,3 +1,5 @@
+# HSO - Projekt 1 - Smart Health Jewerly
+
 !! Always create new branch when adding new stuff !!
 
 ### Git & Github with MCVS
