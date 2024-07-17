@@ -1,4 +1,4 @@
-# HSO - Projekt 1 - Smart Health Jewerly
+# HSO - AI4 - Projektmanagement / Projekt 1 - Smart Health Jewerly
 
 !! Always create new branch when adding new stuff !!
 
