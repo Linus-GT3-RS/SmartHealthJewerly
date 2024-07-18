@@ -44,7 +44,7 @@ namespace BackendCS
         }
     }
 
-    class Email : NotificationMethod
+    public class Email : NotificationMethod
     {
         public static void Send(string email, string subject, string message)
         {
@@ -53,7 +53,7 @@ namespace BackendCS
 
             SmtpClient smtpClient = new SmtpClient("smtp.gmail.com")
             {
-                Port = 587, 
+                Port = 587,
                 Credentials = new NetworkCredential(mail, pw),
                 EnableSsl = true,
             };
@@ -64,10 +64,17 @@ namespace BackendCS
                 Subject = subject,
                 Body = message
             };
+            try
+            {
+                mailMessage.To.Add(email);
+                smtpClient.Send(mailMessage);
+            }
+            catch (FormatException)
+            {
+            }
+            
 
-            mailMessage.To.Add(email);
-
-            smtpClient.Send(mailMessage);
+            
 
 
             Console.WriteLine("sending was successful");
@@ -76,9 +83,9 @@ namespace BackendCS
 
         static void Main(string[] args)
         {
-            
-           // Email.Send("eduard.wegele1511@gmail.com", "Warning", "Patient Life is in danger");
-           SMS.Send("+4917630548044", "Patient Life is in Danger");
+
+            //Email.Send("eduard.wegele1511@gmail.com", "Warning", "Patient Life is in danger");
+            SMS.Send("+4917630548044", "Patient Life is in Danger");
         }
     }
 }

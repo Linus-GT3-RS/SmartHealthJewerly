@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Linq;
+using System.Net.Mail;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading;
@@ -53,114 +54,136 @@ namespace UserInterface
 
         //check if textboxes are empty
         private bool checkTextBoxes()
-      {
-         bool isFine = true;
+        {
+            bool isFine = true;
 
-         //"email" == empty
-         if (txtboxUsername.Text == "Username" 
-                || txtboxUsername.Text == "" 
-                || txtboxUsername.Text == "Fill Field" 
-                || txtboxUsername.Text == "Username already used" 
-                || txtboxUsername.Text == "No User with this Username")
-         {
-            txtboxUsername.ForeColor = DesignColors.Error;
-            txtboxUsername.Text = "Fill Field";
-            isFine = false;
-         }
-
-         //"password" == empty
-         if (txtboxPassword.Text == "Password" 
-                || txtboxPassword.Text == "" 
-                || txtboxPassword.Text == "Fill Field" 
-                || txtboxPassword.Text == "Wrong Password")
-         {
-            txtboxPassword.ForeColor = DesignColors.Error;
-            txtboxPassword.Text = "Fill Field";
-            isFine = false;
-         }
-         return isFine;
-      }
-
-      private void LoginButton_Click(object sender, EventArgs e)
-      {
-         if (checkTextBoxes())
-         {
-            string email = txtboxUsername.Text;
-            string password = txtboxPassword.Text;
-            
-            int erfolgreich = _profileChangements.LogIn(email, password);
-
-            if (erfolgreich == 0)   // log in erfolgreich
-            {               
-               if(OnLoginSucces != null)
-               {
-                   OnLoginSucces(this, EventArgs.Empty);
-               }
-            }
-            else if (erfolgreich == 1)      //password falsch
+            //"email" == empty
+            if (txtboxUsername.Text == "Username"
+                   || txtboxUsername.Text == ""
+                   || txtboxUsername.Text == "Fill Field"
+                   || txtboxUsername.Text == "Username already used"
+                   || txtboxUsername.Text == "No User with this Username"
+                   || txtboxUsername.Text == "not an email")
             {
-               txtboxPassword.ForeColor = DesignColors.Error;
-               txtboxPassword.Text = "Wrong Password";
+                txtboxUsername.ForeColor = DesignColors.Error;
+                txtboxUsername.Text = "Fill Field";
+                isFine = false;
             }
-            else       //email nicht vorhanden
-            {  
-               txtboxUsername.ForeColor = DesignColors.Error;
-               txtboxUsername.Text = "No User with this Username";
-            }
-         }
-      }
 
-      private void labelSignIn_Click(object sender, EventArgs e)
-      {
-         if (checkTextBoxes())
-         {
-            string loginname = txtboxUsername.Text;
-            string password = txtboxPassword.Text;
-            
-            if (_profileChangements.SignIn(loginname, password))     //sign in erfolgreich
+            if (!IsValidEmail(txtboxUsername.Text))
             {
-                    OnLoginSucces?.Invoke(this, EventArgs.Empty);        
+                txtboxUsername.ForeColor = DesignColors.Error;
+                txtboxUsername.Text = "not an email";
+                isFine = false;
             }
-            else     //email wird schon genutzt
-            {                
+
+            //"password" == empty
+            if (txtboxPassword.Text == "Password"
+                   || txtboxPassword.Text == ""
+                   || txtboxPassword.Text == "Fill Field"
+                   || txtboxPassword.Text == "Wrong Password")
+            {
                 txtboxPassword.ForeColor = DesignColors.Error;
-                txtboxUsername.Text = "Username already used";
+                txtboxPassword.Text = "Fill Field";
+                isFine = false;
             }
-         }
-      }
+            return isFine;
+        }
+
+        private void LoginButton_Click(object sender, EventArgs e)
+        {
+            if (checkTextBoxes())
+            {
+                string email = txtboxUsername.Text;
+                string password = txtboxPassword.Text;
+
+                int erfolgreich = _profileChangements.LogIn(email, password);
+
+                if (erfolgreich == 0)   // log in erfolgreich
+                {
+                    if (OnLoginSucces != null)
+                    {
+                        OnLoginSucces(this, EventArgs.Empty);
+                    }
+                }
+                else if (erfolgreich == 1)      //password falsch
+                {
+                    txtboxPassword.ForeColor = DesignColors.Error;
+                    txtboxPassword.Text = "Wrong Password";
+                }
+                else       //email nicht vorhanden
+                {
+                    txtboxUsername.ForeColor = DesignColors.Error;
+                    txtboxUsername.Text = "No User with this Username";
+                }
+            }
+        }
+
+
+        static bool IsValidEmail(string email)
+        {
+            try
+            {
+                var mailAddress = new MailAddress(email);
+                return true;
+            }
+            catch (FormatException)
+            {
+                return false;
+            }
+        }
+
+        private void labelSignIn_Click(object sender, EventArgs e)
+        {
+            if (checkTextBoxes())
+            {
+                string loginname = txtboxUsername.Text;
+                string password = txtboxPassword.Text;
+
+                if (_profileChangements.SignIn(loginname, password))     //sign in erfolgreich
+                {
+                    OnLoginSucces?.Invoke(this, EventArgs.Empty);
+                }
+                else     //email wird schon genutzt
+                {
+                    txtboxUsername.ForeColor = DesignColors.Error;
+                    txtboxUsername.Text = "Username already used";
+                }
+            }
+        }
 
 
 
-      //events
-      private void PasswordTextBox_MouseClick(object sender, MouseEventArgs e)
-      {
-         txtboxPassword.ForeColor = DesignColors.Text;
-         txtboxPassword.Text = "";
-      }
-
-      private void emailTextBox_MouseClick(object sender, MouseEventArgs e)
-      {
-         txtboxUsername.ForeColor = DesignColors.Text;
-         txtboxUsername.Text = "";
-      }
-
-      private void emailTextBox_Leave(object sender, EventArgs e)
-      {
-         if (txtboxUsername.Text == "")
-         {
-            txtboxUsername.ForeColor = DesignColors.Text;
-            txtboxUsername.Text = "Username";
-         }
-      }
-
-      private void PasswordTextBox_Leave(object sender, EventArgs e)
-      {
-         if (txtboxPassword.Text == "")
-         {
+        //events
+        private void PasswordTextBox_MouseClick(object sender, MouseEventArgs e)
+        {
             txtboxPassword.ForeColor = DesignColors.Text;
-            txtboxPassword.Text = "Password";
-         }
-      }
+            txtboxPassword.Text = "";
+        }
+
+        private void emailTextBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            txtboxUsername.ForeColor = DesignColors.Text;
+            txtboxUsername.Text = "";
+        }
+
+        private void emailTextBox_Leave(object sender, EventArgs e)
+        {
+            if (txtboxUsername.Text == "")
+            {
+                txtboxUsername.ForeColor = DesignColors.Text;
+                txtboxUsername.Text = "Username";
+            }
+        }
+
+        private void PasswordTextBox_Leave(object sender, EventArgs e)
+        {
+            if (txtboxPassword.Text == "")
+            {
+                txtboxPassword.ForeColor = DesignColors.Text;
+                txtboxPassword.Text = "Password";
+            }
+        }
 
         private void emailTextBox_TextChanged(object sender, EventArgs e)
         {

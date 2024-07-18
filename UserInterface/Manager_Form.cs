@@ -45,12 +45,12 @@ namespace UserInterface
          _homeForm.btnRealTimeMonitoring.Click += show_HeartDataForm;
 
 
-            _windowState = HomeWindow.getHomeWindow();
+         _windowState = HomeWindow.getHomeWindow();
 
 
          //measurement = GlobalMeasurement.measurement;
          //measurement.vStartMeasurement();
-         //measurement.PrintData += vPrintMeasurements;    //event hinterlegen
+         //measurement.PrintData += vPrintMeasurements;
 
 
          //komplette App schließen
@@ -63,6 +63,8 @@ namespace UserInterface
 
          _heartrateDataForm = new RealTimeMonitoring_Form(true);
          _heartrateDataForm.btnExit.Click += hideHeartRateDataForm;
+         _heartrateDataForm.KeyDown += new KeyEventHandler(KeyDownEvent);
+         _heartrateDataForm.KeyPreview = true;
 
          /*
          var pfc = new PrivateFontCollection();
@@ -74,11 +76,32 @@ namespace UserInterface
          */
       }
 
+      private void KeyDownEvent(object sender, KeyEventArgs e)
+      {
+         // Überprüfen Sie, welche Taste gedrückt wurde
+         if (e.KeyCode == Keys.J)
+         {
+            _heartrateDataForm.SetBrooch_Good();
+         }
+         else if (e.KeyCode == Keys.K)
+         {
+            _heartrateDataForm.SetBrooch_Ok();
+         }
+         else if (e.KeyCode == Keys.L)
+         {
+            _heartrateDataForm.SetBrooch_Danger();
+            Task emailTask = Task.Run(() =>
+            {
+               BackendCS.Email.Send(Backend.Instance().GetProfile().sGetLoginname(), "Warning", "Your Patient's Life is in danger");
+            });
+         }
+      }
       private void vPrintMeasurements(PrintDataEventArgs printDataEventArgs)
       {
          lock (_lock)
          {
-            if (_windowState is MotionWindow) {
+            if (_windowState is MotionWindow)
+            {
                _motionDataForm.vPrintMeasurements();
             }
             if (_windowState is EnvironmentWindow)
@@ -95,10 +118,10 @@ namespace UserInterface
 
       private void LoginScreen_OnLoginSuccess(object sender, EventArgs e)
       {
-            _homeForm.Update_lblLoggingName();
-            _homeForm.Update_lblCurPatientName();
+         _homeForm.Update_lblLoggingName();
+         _homeForm.Update_lblCurPatientName();
 
-            var splashScreen = new SplashScreen_Form(false);
+         var splashScreen = new SplashScreen_Form(false);
          _loginForm.Hide();
          splashScreen.Show();
          splashScreen.VisibleChanged += SplashScreen_OnFormHiding;
@@ -106,7 +129,7 @@ namespace UserInterface
       }
 
       private void SplashScreen_OnFormHiding(object sender, EventArgs e)
-      {                    
+      {
          _homeForm.Show();
          _loginForm.Close();
       }
@@ -114,7 +137,7 @@ namespace UserInterface
       private void show_MotionDataForm(object sender, EventArgs e)
       {
          _windowState = MotionWindow.getMotionWindow();
-         _motionDataForm.Show();    
+         _motionDataForm.Show();
       }
 
       private void hideMotionDataForm(object sender, EventArgs e)

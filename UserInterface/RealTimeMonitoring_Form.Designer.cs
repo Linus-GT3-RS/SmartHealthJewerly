@@ -52,10 +52,12 @@ namespace UserInterface
             this.chartHeartbeat.BorderlineColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(45)))), ((int)(((byte)(105)))));
             this.chartHeartbeat.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
             this.chartHeartbeat.BorderlineWidth = 2;
+            chartArea1.AxisX.LabelStyle.Font = new System.Drawing.Font("Red Hat Display", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             chartArea1.AxisX.LabelStyle.ForeColor = System.Drawing.Color.White;
             chartArea1.AxisX.LineColor = System.Drawing.Color.White;
             chartArea1.AxisX.MajorGrid.Enabled = false;
             chartArea1.AxisY.LabelStyle.ForeColor = System.Drawing.Color.White;
+            chartArea1.AxisY.LabelStyle.Font = new System.Drawing.Font("Red Hat Display", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             chartArea1.AxisY.LineColor = System.Drawing.Color.White;
             chartArea1.AxisY.MajorGrid.Enabled = false;
             chartArea1.AxisY.Maximum = 760D;
@@ -63,6 +65,7 @@ namespace UserInterface
             chartArea1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(27)))));
             chartArea1.BorderWidth = 0;
             chartArea1.Name = "ChartArea1";
+
             this.chartHeartbeat.ChartAreas.Add(chartArea1);
             this.chartHeartbeat.Location = new System.Drawing.Point(46, 95);
             this.chartHeartbeat.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
