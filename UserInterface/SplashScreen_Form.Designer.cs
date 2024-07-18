@@ -127,6 +127,7 @@ namespace UserInterface
             this.Controls.Add(this.lblTitelTop);
             this.Controls.Add(this.circProgressBar);
             this.Cursor = System.Windows.Forms.Cursors.AppStarting;
+            this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.Color.Transparent;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);

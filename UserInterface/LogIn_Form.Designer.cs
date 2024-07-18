@@ -205,6 +205,7 @@ namespace UserInterface
             this.Controls.Add(this.checkboxRememberMe);
             this.Controls.Add(this.lblForgotPW);
             this.Controls.Add(this.pictboxBackground);
+            this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);

@@ -103,6 +103,7 @@
             this.Controls.Add(this.txtboxSubject);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSend);
+            this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Red Hat Display", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SendMail_Form";
