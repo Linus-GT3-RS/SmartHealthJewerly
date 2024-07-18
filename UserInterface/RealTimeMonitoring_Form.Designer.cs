@@ -31,8 +31,8 @@ namespace UserInterface
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea14 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series14 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.chartHeartbeat = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.lblBPM = new System.Windows.Forms.Label();
             this.lblHumidity = new System.Windows.Forms.Label();
@@ -52,30 +52,30 @@ namespace UserInterface
             this.chartHeartbeat.BorderlineColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(45)))), ((int)(((byte)(105)))));
             this.chartHeartbeat.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
             this.chartHeartbeat.BorderlineWidth = 2;
-            chartArea2.AxisX.LabelStyle.Font = new System.Drawing.Font("Red Hat Display", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea2.AxisX.LabelStyle.ForeColor = System.Drawing.Color.White;
-            chartArea2.AxisX.LineColor = System.Drawing.Color.White;
-            chartArea2.AxisX.MajorGrid.Enabled = false;
-            chartArea2.AxisY.LabelStyle.Font = new System.Drawing.Font("Red Hat Display", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea2.AxisY.LabelStyle.ForeColor = System.Drawing.Color.White;
-            chartArea2.AxisY.LineColor = System.Drawing.Color.White;
-            chartArea2.AxisY.MajorGrid.Enabled = false;
-            chartArea2.AxisY.Maximum = 760D;
-            chartArea2.AxisY.Minimum = 680D;
-            chartArea2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(27)))));
-            chartArea2.BorderWidth = 0;
-            chartArea2.Name = "ChartArea1";
-            this.chartHeartbeat.ChartAreas.Add(chartArea2);
+            chartArea14.AxisX.LabelStyle.Font = new System.Drawing.Font("Red Hat Display", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea14.AxisX.LabelStyle.ForeColor = System.Drawing.Color.White;
+            chartArea14.AxisX.LineColor = System.Drawing.Color.White;
+            chartArea14.AxisX.MajorGrid.Enabled = false;
+            chartArea14.AxisY.LabelStyle.Font = new System.Drawing.Font("Red Hat Display", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea14.AxisY.LabelStyle.ForeColor = System.Drawing.Color.White;
+            chartArea14.AxisY.LineColor = System.Drawing.Color.White;
+            chartArea14.AxisY.MajorGrid.Enabled = false;
+            chartArea14.AxisY.Maximum = 760D;
+            chartArea14.AxisY.Minimum = 680D;
+            chartArea14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(27)))));
+            chartArea14.BorderWidth = 0;
+            chartArea14.Name = "ChartArea1";
+            this.chartHeartbeat.ChartAreas.Add(chartArea14);
             this.chartHeartbeat.Location = new System.Drawing.Point(46, 95);
             this.chartHeartbeat.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.chartHeartbeat.Name = "chartHeartbeat";
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series2.Color = System.Drawing.Color.White;
-            series2.Font = new System.Drawing.Font("Red Hat Display", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chartHeartbeat.Series.Add(series2);
+            series14.ChartArea = "ChartArea1";
+            series14.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series14.Color = System.Drawing.Color.White;
+            series14.Font = new System.Drawing.Font("Red Hat Display", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series14.Legend = "Legend1";
+            series14.Name = "Series1";
+            this.chartHeartbeat.Series.Add(series14);
             this.chartHeartbeat.Size = new System.Drawing.Size(1173, 326);
             this.chartHeartbeat.TabIndex = 11;
             this.chartHeartbeat.Text = "chartHeartRate";
@@ -95,9 +95,9 @@ namespace UserInterface
             // lblHumidity
             // 
             this.lblHumidity.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(27)))));
-            this.lblHumidity.Font = new System.Drawing.Font("Red Hat Display", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHumidity.Font = new System.Drawing.Font("Red Hat Display", 16F);
             this.lblHumidity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(223)))), ((int)(((byte)(233)))));
-            this.lblHumidity.Location = new System.Drawing.Point(140, 665);
+            this.lblHumidity.Location = new System.Drawing.Point(137, 665);
             this.lblHumidity.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblHumidity.Name = "lblHumidity";
             this.lblHumidity.Size = new System.Drawing.Size(122, 55);
@@ -107,9 +107,9 @@ namespace UserInterface
             // lblEnvTemp
             // 
             this.lblEnvTemp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(27)))));
-            this.lblEnvTemp.Font = new System.Drawing.Font("Red Hat Display", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEnvTemp.Font = new System.Drawing.Font("Red Hat Display", 16F);
             this.lblEnvTemp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(223)))), ((int)(((byte)(233)))));
-            this.lblEnvTemp.Location = new System.Drawing.Point(140, 520);
+            this.lblEnvTemp.Location = new System.Drawing.Point(137, 520);
             this.lblEnvTemp.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEnvTemp.Name = "lblEnvTemp";
             this.lblEnvTemp.Size = new System.Drawing.Size(122, 56);
@@ -119,9 +119,9 @@ namespace UserInterface
             // lblBodyTemp
             // 
             this.lblBodyTemp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(27)))));
-            this.lblBodyTemp.Font = new System.Drawing.Font("Red Hat Display", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBodyTemp.Font = new System.Drawing.Font("Red Hat Display", 16F);
             this.lblBodyTemp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(223)))), ((int)(((byte)(233)))));
-            this.lblBodyTemp.Location = new System.Drawing.Point(343, 520);
+            this.lblBodyTemp.Location = new System.Drawing.Point(334, 520);
             this.lblBodyTemp.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblBodyTemp.Name = "lblBodyTemp";
             this.lblBodyTemp.Size = new System.Drawing.Size(98, 50);
@@ -131,9 +131,9 @@ namespace UserInterface
             // lblBrightness
             // 
             this.lblBrightness.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(27)))));
-            this.lblBrightness.Font = new System.Drawing.Font("Red Hat Display", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBrightness.Font = new System.Drawing.Font("Red Hat Display", 16F);
             this.lblBrightness.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(223)))), ((int)(((byte)(233)))));
-            this.lblBrightness.Location = new System.Drawing.Point(343, 665);
+            this.lblBrightness.Location = new System.Drawing.Point(334, 665);
             this.lblBrightness.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblBrightness.Name = "lblBrightness";
             this.lblBrightness.Size = new System.Drawing.Size(98, 55);

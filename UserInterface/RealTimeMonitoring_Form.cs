@@ -5,8 +5,10 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Reflection.Emit;
 using System.Runtime.InteropServices;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -45,13 +47,11 @@ namespace UserInterface
             DynamicScreenSize.AdjustFont(lblHumidity);
         }
 
-  
-
+        public static int counter = 0;
 
 
         public void vPrintMeasurements()
         {
-
             //nicht in invoke ausführen, da der GUI Thread das berechnen sonst übernimmt
             heart = (HeartRate)GlobalMeasurement.measurement._sensorsSingle[0];
             float brightnessValue = GlobalMeasurement.measurement._sensorsSingle[4].fGetSingleData();
@@ -62,15 +62,24 @@ namespace UserInterface
 
             BeginInvoke((Action)(() => //switch back to main thread
             {
-                lblBPM.Text = "" + heart.fGetSingleData();
-                lblEnvTemp.Text = environmentTemperature.ToString("F1") + " °C";
-                lblHumidity.Text = environmentHumidity.ToString("F1") + "%";
-                lblBodyTemp.Text = bodyTemperature.ToString("F1") + " °C";
-                lblBrightness.Text = BrightnessPercentage + "%";
-
                 fillSeries();
                 redrawCharts();
             }));
+
+            if (counter == 0)
+            {
+                BeginInvoke((Action)(() => //switch back to main thread
+                {
+                 
+                        lblBPM.Text = "" + heart.fGetSingleData();
+                        lblEnvTemp.Text = environmentTemperature.ToString("F1") + " °";
+                        lblHumidity.Text = environmentHumidity.ToString("F1") + " %";
+                        lblBodyTemp.Text = bodyTemperature.ToString("F1") + " °";
+                        lblBrightness.Text = BrightnessPercentage + " %";
+                   
+                }));
+            }
+            counter = (counter + 1) % 50;
         }
 
         private void fillSeries()
