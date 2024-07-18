@@ -23,7 +23,6 @@ namespace UserInterface
       private Home_Form _homeForm;
       private MotionData_Form _motionDataForm;
       private RealTimeMonitoring_Form _heartrateDataForm;
-      //private EnvironmentData_Form _environmentDataForm;
 
       private WindowState _windowState;
       public Manager_Form()
@@ -58,7 +57,6 @@ namespace UserInterface
          _homeForm.FormClosed += HomeForm_OnFormClosed;
 
 
-
          _motionDataForm = new MotionData_Form(true);
          _motionDataForm.btnExit.Click += hideHeartRateDataForm;
 
@@ -66,9 +64,6 @@ namespace UserInterface
          _heartrateDataForm = new RealTimeMonitoring_Form(true);
          _heartrateDataForm.btnExit.Click += hideHeartRateDataForm;
 
-
-         //_environmentDataForm = new EnvironmentData_Form();
-         //_environmentDataForm.button1.Click += hideEnvironementDataForm;
          /*
          var pfc = new PrivateFontCollection();
          pfc.AddFontFile(@"Fonts\Red_Hat_Display\RedHatDisplay-VariableFont_wght.ttf");
@@ -142,22 +137,6 @@ namespace UserInterface
          _heartrateDataForm.Hide();
          showHomeForm(sender, e);
       }
-
-
-      //private void show_EnvironementDataForm(object sender, EventArgs e)
-      //{
-      //   lock (_lock)
-      //   {
-      //      _windowState = EnvironmentWindow.getEnvironmentWindow();
-      //      _environmentDataForm.Show();
-      //   }
-      //}
-
-      //private void hideEnvironementDataForm(object sender, EventArgs e)
-      //{
-      //   _environmentDataForm.Hide();
-      //   showHomeForm(sender, e);
-      //}
 
       // is needed because SplashScreen is still open  ---- maybe fixxed later
       private void showHomeForm(object sender, EventArgs e)
