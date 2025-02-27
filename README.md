@@ -1,5 +1,10 @@
 # HSO - AI4 - Projektmanagement / Projekt 1 - Smart Health Jewerly
 
+Projektarbeit zu einer "Smart Health Jewelry" (z.B. Brosche oder Ring), welche Vitalwerte wie Herzschlag / Temperatur mittels Sensoren misst und Kontaktpersonen bei kritischen Werten benachrichtigt.  Für einen tieferen Einblick können Ärzte und Familienmitglieder zusätzlich die Daten in einer eigenen Desktopanwendung betrachten.
+
+---------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------
+
 !! Always create new branch when adding new stuff !!
 
 ### Git & Github with MCVS
