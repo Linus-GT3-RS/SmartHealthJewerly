@@ -5,8 +5,8 @@ For a more in-depth analysis, doctors and family members can access the collecte
 
 ---------------------------------------------------------------------------------------------------------------------------------
 
+Preview of the Desktop Application
 ![image](https://github.com/user-attachments/assets/bf64c689-f26f-4eb3-aef6-0ee11425ad7b)
-
 
 ---------------------------------------------------------------------------------------------------------------------------------
 
