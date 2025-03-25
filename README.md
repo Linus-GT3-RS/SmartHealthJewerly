@@ -1,32 +1,14 @@
 # HSO - AI4 - Projektmanagement / Projekt 1 - Smart Health Jewerly
 
-Projektarbeit zu einer "Smart Health Jewelry" (z.B. Brosche oder Ring), welche Vitalwerte wie Herzschlag / Temperatur mittels Sensoren misst und Kontaktpersonen bei kritischen Werten benachrichtigt.  Für einen tieferen Einblick können Ärzte und Familienmitglieder zusätzlich die Daten in einer eigenen Desktopanwendung betrachten.
+Project work on a "Smart Health Jewelry", such as a brooch or ring, that uses sensors to measure vital signs like heart rate and temperature. In case of critical values, it automatically notifies designated contacts.
+For a more in-depth analysis, doctors and family members can access the collected data through a dedicated desktop application
 
 ---------------------------------------------------------------------------------------------------------------------------------
+
+![image](https://github.com/user-attachments/assets/bf64c689-f26f-4eb3-aef6-0ee11425ad7b)
+
+
 ---------------------------------------------------------------------------------------------------------------------------------
-
-!! Always create new branch when adding new stuff !!
-
-### Git & Github with MCVS
-
-[Clone this Repo to your local MCVS-Environment](https://www.youtube.com/watch?v=BWqpTpo1kfw&t=458s)
-
-[How to work with Git & Github in MCVS: watch from opened timestamp till end](https://www.youtube.com/watch?t=458&v=BWqpTpo1kfw&feature=youtu.be) 
-
-[solve Merge Conflicts with VS22](https://www.youtube.com/watch?v=ziQlAo8H5w8) 
-
-
-
-### Python
-[How to install Python in Visual Studio](https://www.youtube.com/watch?v=oUwz2mc4BFA)
-
-[Call Pythoncode in C#](https://www.youtube.com/watch?v=1sOTTXlIhZo)
-
-Feel free to add useful stuff / information yourself
-
-### Quality
-[Drastically improve quality of text and images in MCVS executable](https://www.youtube.com/watch?v=oIxpqXHdZAQ)
-
 
 ### Links to used images / icons
 Logo and more was created using [hotpot.ai/art-generator](https://hotpot.ai/ai-image-generator/create)
