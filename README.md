@@ -4,9 +4,10 @@ Project work on a "Smart Health Jewelry", such as a brooch or ring, that uses se
 For a more in-depth analysis, doctors and family members can access the collected data through a dedicated desktop application
 
 ---------------------------------------------------------------------------------------------------------------------------------
+[Preview video of the Desktop Application](https://www.youtube.com/watch?v=0rm-nsXD2pk)
 
-Preview of the Desktop Application
-![image](https://github.com/user-attachments/assets/bf64c689-f26f-4eb3-aef6-0ee11425ad7b)
+![Preview of the Desktop Application](https://github.com/user-attachments/assets/bf64c689-f26f-4eb3-aef6-0ee11425ad7b)
+
 
 ---------------------------------------------------------------------------------------------------------------------------------
 
